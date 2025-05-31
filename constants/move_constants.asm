@@ -184,6 +184,8 @@
 	const STRUGGLE     ; b1
 DEF NUM_ATTACKS EQU const_value - 1
 
+DEF CANNOT_MOVE EQU $ff
+
 	; Moves do double duty as animation identifiers.
 
 	const SHOWPIC_ANIM
