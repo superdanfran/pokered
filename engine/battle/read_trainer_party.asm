@@ -31,14 +31,16 @@ ReadTrainer:
 ; and hl points to the trainer class.
 ; Our next task is to iterate through the trainers,
 ; decrementing b each time, until we get to the right one.
-.outer
+.nextTrainer
 	dec b
 	jr z, .IterateTrainer
-.inner
 	ld a, [hli]
-	and a
-	jr nz, .inner
-	jr .outer
+	add l
+	ld l, a
+	adc h
+	sub l
+	ld h, a
+	jr .nextTrainer
 
 ; if the first byte of trainer data is FF,
 ; - each pokemon has a specific level
@@ -47,19 +49,22 @@ ReadTrainer:
 ; else the first byte is the level of every pokemon on the team
 .IterateTrainer
 	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	dec c
 	cp $FF ; is the trainer special?
 	jr z, .SpecialTrainer ; if so, check for special moves
 	ld [wCurEnemyLevel], a
 .LoopTrainerData
 	ld a, [hli]
-	and a ; have we reached the end of the trainer data?
-	jr z, .FinishUp
 	ld [wCurPartySpecies], a
 	ld a, ENEMY_PARTY_DATA
 	ld [wMonDataLocation], a
 	push hl
 	call AddPartyMon
 	pop hl
+	dec c ; have we reached the end of the trainer data?
+	jr z, .FinishUp
 	jr .LoopTrainerData
 .SpecialTrainer
 ; if this code is being run:
@@ -67,8 +72,7 @@ ReadTrainer:
 ;      (as opposed to the whole team being of the same level)
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
 	ld a, [hli]
-	and a ; have we reached the end of the trainer data?
-	jr z, .AddLoneMove
+	dec c
 	ld [wCurEnemyLevel], a
 	ld a, [hli]
 	ld [wCurPartySpecies], a
@@ -77,7 +81,8 @@ ReadTrainer:
 	push hl
 	call AddPartyMon
 	pop hl
-	jr .SpecialTrainer
+	dec c ; have we reached the end of the trainer data?
+	jr nz, .SpecialTrainer
 .AddLoneMove
 ; does the trainer have a single monster with a different move?
 	ld a, [wLoneAttackNo] ; Brock is 01, Misty is 02, Erika is 04, etc

@@ -63,6 +63,8 @@ MACRO end_trainer
 		fail "Party size too large"
 	endc
 
+	; replace terminator byte with size byte
+	db _tr_size ; new way to skip trainers
 	; level or magic value for multi level
 	db _tr_lv
 
@@ -78,6 +80,4 @@ MACRO end_trainer
 			db _tr_pk{d:p}_species
 		endc
 	endr
-
-	db 0 ; terminator
 ENDM
