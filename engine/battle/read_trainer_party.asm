@@ -52,24 +52,8 @@ ReadTrainer:
 	ld c, a
 	ld a, [hli]
 	dec c
-	cp $FF ; is the trainer special?
-	jr z, .SpecialTrainer ; if so, check for special moves
-	ld [wCurEnemyLevel], a
+	ld [wEnemyPartyFlags], a
 .LoopTrainerData
-	ld a, [hli]
-	ld [wCurPartySpecies], a
-	ld a, ENEMY_PARTY_DATA
-	ld [wMonDataLocation], a
-	push hl
-	call AddPartyMon
-	pop hl
-	dec c ; have we reached the end of the trainer data?
-	jr z, .FinishUp
-	jr .LoopTrainerData
-.SpecialTrainer
-; if this code is being run:
-; - each pokemon has a specific level
-;      (as opposed to the whole team being of the same level)
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
 	ld a, [hli]
 	dec c
@@ -82,7 +66,7 @@ ReadTrainer:
 	call AddPartyMon
 	pop hl
 	dec c ; have we reached the end of the trainer data?
-	jr nz, .SpecialTrainer
+	jr nz, .LoopTrainerData
 .AddLoneMove
 ; does the trainer have a single monster with a different move?
 	ld a, [wLoneAttackNo] ; Brock is 01, Misty is 02, Erika is 04, etc

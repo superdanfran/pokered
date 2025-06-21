@@ -51,6 +51,8 @@ INCLUDE "constants/event_constants.asm"
 INCLUDE "constants/text_constants.asm"
 INCLUDE "constants/menu_constants.asm"
 
+INCLUDE "constants/trainer_data_constants.asm"
+
 IF DEF(_RED_VC)
 INCLUDE "vc/pokered.constants.asm"
 ENDC

@@ -1,4 +1,3 @@
-INCLUDE "constants/trainer_data_constants.asm"
 INCLUDE "data/trainers/macros.asm"
 
 TrainerDataPointers:
