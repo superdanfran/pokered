@@ -1,3 +1,9 @@
+GetNextTrainerDataByte:
+	ld a, [wEnemyPartyBank]
+	call GetFarByte
+	inc hl
+	ret
+
 ReadTrainer:
 
 ; don't change any moves in a link battle
@@ -17,11 +23,15 @@ ReadTrainer:
 ; get the pointer to trainer data for this class
 	ld a, [wCurOpponent]
 	sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
+	ld c, a
 	add a
+	add c
 	ld hl, TrainerDataPointers
 	ld c, a
 	ld b, 0
 	add hl, bc ; hl points to trainer class
+	ld a, [hli]
+	ld [wEnemyPartyBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -34,7 +44,7 @@ ReadTrainer:
 .nextTrainer
 	dec b
 	jr z, .IterateTrainer
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	add l
 	ld l, a
 	adc h
@@ -48,17 +58,17 @@ ReadTrainer:
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
 ; else the first byte is the level of every pokemon on the team
 .IterateTrainer
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	ld c, a
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	dec c
 	ld [wEnemyPartyFlags], a
 .LoopTrainerData
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	dec c
 	ld [wCurEnemyLevel], a
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	ld [wCurPartySpecies], a
 	ld a, ENEMY_PARTY_DATA
 	ld [wMonDataLocation], a

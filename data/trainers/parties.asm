@@ -1,56 +1,5 @@
 INCLUDE "data/trainers/macros.asm"
 
-TrainerDataPointers:
-	table_width 2
-	dw YoungsterData
-	dw BugCatcherData
-	dw LassData
-	dw SailorData
-	dw JrTrainerMData
-	dw JrTrainerFData
-	dw PokemaniacData
-	dw SuperNerdData
-	dw HikerData
-	dw BikerData
-	dw BurglarData
-	dw EngineerData
-	dw UnusedJugglerData
-	dw FisherData
-	dw SwimmerData
-	dw CueBallData
-	dw GamblerData
-	dw BeautyData
-	dw PsychicData
-	dw RockerData
-	dw JugglerData
-	dw TamerData
-	dw BirdKeeperData
-	dw BlackbeltData
-	dw Rival1Data
-	dw ProfOakData
-	dw ChiefData
-	dw ScientistData
-	dw GiovanniData
-	dw RocketData
-	dw CooltrainerMData
-	dw CooltrainerFData
-	dw BrunoData
-	dw BrockData
-	dw MistyData
-	dw LtSurgeData
-	dw ErikaData
-	dw KogaData
-	dw BlaineData
-	dw SabrinaData
-	dw GentlemanData
-	dw Rival2Data
-	dw Rival3Data
-	dw LoreleiData
-	dw ChannelerData
-	dw AgathaData
-	dw LanceData
-	assert_table_length NUM_TRAINERS
-
 	def_trainer_class NOBODY
 
 ; if first byte != TRAINERTYPE_MULTI_LEVELS, then
