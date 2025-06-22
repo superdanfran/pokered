@@ -1754,10 +1754,15 @@ GiovanniData:
 ; Viridian Gym
 	def_trainer 3, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 45, RHYHORN
+		tr_moves STOMP, TAIL_WHIP, FURY_ATTACK, HORN_DRILL
 	tr_mon 42, DUGTRIO
+		tr_moves GROWL, DIG, SAND_ATTACK, SLASH
 	tr_mon 44, NIDOQUEEN
+		tr_moves SCRATCH, TAIL_WHIP, BODY_SLAM, POISON_STING
 	tr_mon 45, NIDOKING
+		tr_moves TACKLE, HORN_ATTACK, POISON_STING, THRASH
 	tr_mon 50, RHYDON
+		tr_moves STOMP, TAIL_WHIP, FISSURE, HORN_DRILL
 	end_trainer
 
 
@@ -2133,10 +2138,15 @@ BrunoData:
 	def_trainer_class BRUNO
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 53, ONIX
+		tr_moves ROCK_THROW, RAGE, SLAM, HARDEN
 	tr_mon 55, HITMONCHAN
+		tr_moves ICE_PUNCH, THUNDERPUNCH, MEGA_PUNCH, COUNTER
 	tr_mon 55, HITMONLEE
+		tr_moves JUMP_KICK, FOCUS_ENERGY, HI_JUMP_KICK, MEGA_KICK
 	tr_mon 56, ONIX
+		tr_moves ROCK_THROW, RAGE, SLAM, HARDEN
 	tr_mon 58, MACHAMP
+		tr_moves LEER, FOCUS_ENERGY, FISSURE, SUBMISSION
 	end_trainer
 
 
@@ -2144,7 +2154,9 @@ BrockData:
 	def_trainer_class BROCK
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 12, GEODUDE
+		tr_moves TACKLE, DEFENSE_CURL
 	tr_mon 14, ONIX
+		tr_moves TACKLE, SCREECH, BIDE
 	end_trainer
 
 
@@ -2152,7 +2164,9 @@ MistyData:
 	def_trainer_class MISTY
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 18, STARYU
+		tr_moves TACKLE, WATER_GUN
 	tr_mon 21, STARMIE
+		tr_moves TACKLE, WATER_GUN, BUBBLEBEAM
 	end_trainer
 
 
@@ -2160,8 +2174,11 @@ LtSurgeData:
 	def_trainer_class LT_SURGE
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 21, VOLTORB
+		tr_moves TACKLE, SCREECH, SONICBOOM
 	tr_mon 18, PIKACHU
+		tr_moves THUNDERSHOCK, GROWL, THUNDER_WAVE, QUICK_ATTACK
 	tr_mon 24, RAICHU
+		tr_moves THUNDERSHOCK, GROWL, THUNDERBOLT
 	end_trainer
 
 
@@ -2169,8 +2186,11 @@ ErikaData:
 	def_trainer_class ERIKA
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 29, VICTREEBEL
+		tr_moves RAZOR_LEAF, WRAP, POISONPOWDER, SLEEP_POWDER
 	tr_mon 24, TANGELA
+		tr_moves CONSTRICT, BIND
 	tr_mon 29, VILEPLUME
+		tr_moves PETAL_DANCE, POISONPOWDER, MEGA_DRAIN, SLEEP_POWDER
 	end_trainer
 
 
@@ -2178,9 +2198,13 @@ KogaData:
 	def_trainer_class KOGA
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 37, KOFFING
+		tr_moves TACKLE, SMOG, SLUDGE, SMOKESCREEN
 	tr_mon 39, MUK
+		tr_moves DISABLE, POISON_GAS, MINIMIZE, SLUDGE
 	tr_mon 37, KOFFING
+		tr_moves TACKLE, SMOG, SLUDGE, SMOKESCREEN
 	tr_mon 43, WEEZING
+		tr_moves SMOG, SLUDGE, TOXIC, SELFDESTRUCT
 	end_trainer
 
 
@@ -2188,9 +2212,13 @@ BlaineData:
 	def_trainer_class BLAINE
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 42, GROWLITHE
+		tr_moves EMBER, LEER, TAKE_DOWN, AGILITY
 	tr_mon 40, PONYTA
+		tr_moves TAIL_WHIP, STOMP, GROWL, FIRE_SPIN
 	tr_mon 42, RAPIDASH
+		tr_moves TAIL_WHIP, STOMP, GROWL, FIRE_SPIN
 	tr_mon 47, ARCANINE
+		tr_moves ROAR, EMBER, FIRE_BLAST, TAKE_DOWN
 	end_trainer
 
 
@@ -2198,9 +2226,13 @@ SabrinaData:
 	def_trainer_class SABRINA
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 38, KADABRA
+		tr_moves DISABLE, PSYBEAM, RECOVER, PSYCHIC_M
 	tr_mon 37, MR_MIME
+		tr_moves CONFUSION, BARRIER, LIGHT_SCREEN, DOUBLESLAP
 	tr_mon 38, VENOMOTH
+		tr_moves POISONPOWDER, LEECH_LIFE, STUN_SPORE, PSYBEAM
 	tr_mon 43, ALAKAZAM
+		tr_moves PSYBEAM, RECOVER, PSYWAVE, REFLECT
 	end_trainer
 
 
@@ -2341,29 +2373,47 @@ Rival3Data:
 	def_trainer_class RIVAL3
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 61, PIDGEOT
+		tr_moves WHIRLWIND, WING_ATTACK, SKY_ATTACK, MIRROR_MOVE
 	tr_mon 59, ALAKAZAM
+		tr_moves PSYBEAM, RECOVER, PSYCHIC_M, REFLECT
 	tr_mon 61, RHYDON
+		tr_moves TAIL_WHIP, FURY_ATTACK, HORN_DRILL, LEER
 	tr_mon 61, ARCANINE
+		tr_moves ROAR, EMBER, LEER, TAKE_DOWN
 	tr_mon 63, EXEGGUTOR
+		tr_moves BARRAGE, HYPNOSIS, STOMP
 	tr_mon 65, BLASTOISE
+		tr_moves BITE, WITHDRAW, BLIZZARD, HYDRO_PUMP
 	end_trainer
 
 	def_trainer 2, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 61, PIDGEOT
+		tr_moves WHIRLWIND, WING_ATTACK, SKY_ATTACK, MIRROR_MOVE
 	tr_mon 59, ALAKAZAM
+		tr_moves PSYBEAM, RECOVER, PSYCHIC_M, REFLECT
 	tr_mon 61, RHYDON
+		tr_moves TAIL_WHIP, FURY_ATTACK, HORN_DRILL, LEER
 	tr_mon 61, GYARADOS
+		tr_moves DRAGON_RAGE, LEER, HYDRO_PUMP, HYPER_BEAM
 	tr_mon 63, ARCANINE
+		tr_moves ROAR, EMBER, LEER, TAKE_DOWN
 	tr_mon 65, VENUSAUR
+		tr_moves RAZOR_LEAF, GROWTH, MEGA_DRAIN, SOLARBEAM
 	end_trainer
 
 	def_trainer 3, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 61, PIDGEOT
+		tr_moves WHIRLWIND, WING_ATTACK, SKY_ATTACK, MIRROR_MOVE
 	tr_mon 59, ALAKAZAM
+		tr_moves PSYBEAM, RECOVER, PSYCHIC_M, REFLECT
 	tr_mon 61, RHYDON
+		tr_moves TAIL_WHIP, FURY_ATTACK, HORN_DRILL, LEER
 	tr_mon 61, EXEGGUTOR
+		tr_moves BARRAGE, HYPNOSIS, STOMP
 	tr_mon 63, GYARADOS
+		tr_moves DRAGON_RAGE, LEER, HYDRO_PUMP, HYPER_BEAM
 	tr_mon 65, CHARIZARD
+		tr_moves RAGE, SLASH, FIRE_BLAST, FIRE_SPIN
 	end_trainer
 
 
@@ -2371,10 +2421,15 @@ LoreleiData:
 	def_trainer_class LORELEI
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 54, DEWGONG
+		tr_moves GROWL, AURORA_BEAM, REST, TAKE_DOWN
 	tr_mon 53, CLOYSTER
+		tr_moves SUPERSONIC, CLAMP, AURORA_BEAM, SPIKE_CANNON
 	tr_mon 54, SLOWBRO
+		tr_moves GROWL, WATER_GUN, WITHDRAW, AMNESIA
 	tr_mon 56, JYNX
+		tr_moves DOUBLESLAP, ICE_PUNCH, BODY_SLAM, THRASH
 	tr_mon 56, LAPRAS
+		tr_moves BODY_SLAM, CONFUSE_RAY, BLIZZARD, HYDRO_PUMP
 	end_trainer
 
 
@@ -2501,10 +2556,15 @@ AgathaData:
 	def_trainer_class AGATHA
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 56, GENGAR
+		tr_moves CONFUSE_RAY, NIGHT_SHADE, HYPNOSIS, DREAM_EATER
 	tr_mon 56, GOLBAT
+		tr_moves SUPERSONIC, CONFUSE_RAY, WING_ATTACK, HAZE
 	tr_mon 55, HAUNTER
+		tr_moves CONFUSE_RAY, NIGHT_SHADE, HYPNOSIS, DREAM_EATER
 	tr_mon 58, ARBOK
+		tr_moves BITE, GLARE, SCREECH, ACID
 	tr_mon 60, GENGAR
+		tr_moves CONFUSE_RAY, NIGHT_SHADE, TOXIC, DREAM_EATER
 	end_trainer
 
 
@@ -2512,8 +2572,13 @@ LanceData:
 	def_trainer_class LANCE
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 58, GYARADOS
+		tr_moves DRAGON_RAGE, LEER, HYDRO_PUMP, HYPER_BEAM
 	tr_mon 56, DRAGONAIR
+		tr_moves AGILITY, SLAM, DRAGON_RAGE, HYPER_BEAM
 	tr_mon 56, DRAGONAIR
+		tr_moves AGILITY, SLAM, DRAGON_RAGE, HYPER_BEAM
 	tr_mon 60, AERODACTYL
+		tr_moves SUPERSONIC, BITE, TAKE_DOWN, HYPER_BEAM
 	tr_mon 62, DRAGONITE
+		tr_moves AGILITY, SLAM, BARRIER, HYPER_BEAM
 	end_trainer

@@ -33,6 +33,10 @@ MACRO tr_mon
 	; First, reset all stale data from the previous Trainer's mons.
 	def p = _tr_mons
 
+	for i, 1, NUM_MOVES + 1
+		def _tr_pk{d:p}_move{d:i} = NO_MOVE
+	endr
+
 	if _tr_lv == TRAINERTYPE_MULTI_LEVELS
 		assert _NARG == 2, "Trainer party requires a level for each mon"
 		; Then actually define the data. Level is required for multi.
@@ -47,11 +51,27 @@ MACRO tr_mon
 	def _tr_mons += 1
 ENDM
 
+; Usage: tr_moves <MOVE1>, [MOVE2], [MOVE3], [MOVE4]
+; MOVE* defines a mon's moves. You can specify between 1-4 moves.
+MACRO tr_moves
+	def _tr_flags |= TRAINERTYPE_MOVES
+	if _NARG > NUM_MOVES
+		fail "A mon may only have {d:NUM_MOVES} moves."
+	endc
+	for i, 1, _NARG + 1
+		def _tr_pk{d:p}_move{d:i} = \<i>
+	endr
+ENDM
+
 ; Write out the party data from stored trainer buffer.
 MACRO end_trainer
 	; First, write the byte length of the party.
 	; Pokémon data
 	def _tr_size += 2 ; level, species
+
+	if _tr_flags & TRAINERTYPE_MOVES
+		def _tr_size += NUM_MOVES
+	endc
 
 	def _tr_size *= _tr_mons
 
@@ -76,5 +96,11 @@ MACRO end_trainer
 		endc
 
 		db _tr_pk{d:p}_level, _tr_pk{d:p}_species
+
+		if _tr_flags & TRAINERTYPE_MOVES
+			for i, 1, NUM_MOVES + 1
+				db _tr_pk{d:p}_move{d:i}
+			endr
+		endc
 	endr
 ENDM

@@ -63,10 +63,21 @@ ReadTrainer:
 	call GetNextTrainerDataByte
 	dec c
 	ld [wEnemyPartyFlags], a
+	; c is remaining trainer data size
+	; so trainer data ends at hl + c
+	; set c to l + c to stop reading when l == c
+	ld a, l
+	add c
+	ld c, a
+	push bc
 .LoopTrainerData
-; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
+	pop bc
+	ld a, l
+	sub c ; have we reached the end of the trainer data?
+	jr z, .FinishUp
+	push bc
+
 	call GetNextTrainerDataByte
-	dec c
 	ld [wCurEnemyLevel], a
 	call GetNextTrainerDataByte
 	ld [wCurPartySpecies], a
@@ -75,71 +86,35 @@ ReadTrainer:
 	push hl
 	call AddPartyMon
 	pop hl
-	dec c ; have we reached the end of the trainer data?
-	jr nz, .LoopTrainerData
-.AddLoneMove
-; does the trainer have a single monster with a different move?
-	ld a, [wLoneAttackNo] ; Brock is 01, Misty is 02, Erika is 04, etc
-	and a
-	jr z, .AddTeamMove
-	dec a
-	add a
-	ld c, a
-	ld b, 0
-	ld hl, LoneMoves
-	add hl, bc
-	ld a, [hli]
-	ld d, [hl]
-	ld hl, wEnemyMon1Moves + 2
+
+; tr_moves loading
+; flag check
+	ld a, [wEnemyPartyFlags]
+	and TRAINERTYPE_MOVES
+	jr z, .noMoves
+
+; actual loading
+	ld a, [wEnemyPartyCount]
+	dec a ; last mon in team
+
+	push hl
+	ld hl, wEnemyMon1Moves
 	ld bc, wEnemyMon2 - wEnemyMon1
 	call AddNTimes
-	ld [hl], d
-	jr .FinishUp
-.AddTeamMove
-; check if our trainer's team has special moves
+	ld d, h
+	ld e, l
+	pop hl
 
-; get trainer class number
-	ld a, [wCurOpponent]
-	sub OPP_ID_OFFSET
-	ld b, a
-	ld hl, TeamMoves
+	ld b, NUM_MOVES
+.copyMoves
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .copyMoves
 
-; iterate through entries in TeamMoves, checking each for our trainer class
-.IterateTeamMoves
-	ld a, [hli]
-	cp b
-	jr z, .GiveTeamMoves ; is there a match?
-	inc hl ; if not, go to the next entry
-	inc a
-	jr nz, .IterateTeamMoves
-
-; no matches found. is this trainer champion rival?
-	ld a, b
-	cp RIVAL3
-	jr z, .ChampionRival
-	jr .FinishUp ; nope
-.GiveTeamMoves
-	ld a, [hl]
-	ld [wEnemyMon5Moves + 2], a
-	jr .FinishUp
-.ChampionRival ; give moves to his team
-
-; pidgeot
-	ld a, SKY_ATTACK
-	ld [wEnemyMon1Moves + 2], a
-
-; starter
-	ld a, [wRivalStarter]
-	cp STARTER3
-	ld b, MEGA_DRAIN
-	jr z, .GiveStarterMove
-	cp STARTER1
-	ld b, FIRE_BLAST
-	jr z, .GiveStarterMove
-	ld b, BLIZZARD ; must be squirtle
-.GiveStarterMove
-	ld a, b
-	ld [wEnemyMon6Moves + 2], a
+.noMoves
+	jr .LoopTrainerData
 .FinishUp
 ; clear wAmountMoneyWon addresses
 	xor a
