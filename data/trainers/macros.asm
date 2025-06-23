@@ -36,6 +36,7 @@ MACRO tr_mon
 	for i, 1, NUM_MOVES + 1
 		def _tr_pk{d:p}_move{d:i} = NO_MOVE
 	endr
+	redef _tr_pk{d:p}_dvs EQUS "ATKDEFDV_TRAINER, SPDSPCDV_TRAINER"
 
 	if _tr_lv == TRAINERTYPE_MULTI_LEVELS
 		assert _NARG == 2, "Trainer party requires a level for each mon"
@@ -63,6 +64,21 @@ MACRO tr_moves
 	endr
 ENDM
 
+; Usage: tr_dvs <ATK_DEF>, <SPD_SPC>
+MACRO tr_dvs
+	if _NARG != 2
+		fail "A mon needs 2 bytes of DVs"
+	endc
+	def _tr_flags |= TRAINERTYPE_DVS
+	; check if a constant was used
+	if STRFIND("\#", "_") != -1
+		redef _tr_pk{d:p}_dvs EQUS "{\#}"
+	else
+		redef _tr_pk{d:p}_dvs EQUS "\#"
+	endc
+	def _tr_pk{d:p}_dvs_explicit = TRUE
+ENDM
+
 ; Write out the party data from stored trainer buffer.
 MACRO end_trainer
 	; First, write the byte length of the party.
@@ -71,6 +87,10 @@ MACRO end_trainer
 
 	if _tr_flags & TRAINERTYPE_MOVES
 		def _tr_size += NUM_MOVES
+	endc
+
+	if _tr_flags & TRAINERTYPE_DVS
+		def _tr_size += 2
 	endc
 
 	def _tr_size *= _tr_mons
@@ -101,6 +121,10 @@ MACRO end_trainer
 			for i, 1, NUM_MOVES + 1
 				db _tr_pk{d:p}_move{d:i}
 			endr
+		endc
+
+		if _tr_flags & TRAINERTYPE_DVS
+			db _tr_pk{d:p}_dvs
 		endc
 	endr
 ENDM

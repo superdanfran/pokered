@@ -74,7 +74,7 @@ ReadTrainer:
 	pop bc
 	ld a, l
 	sub c ; have we reached the end of the trainer data?
-	jr z, .FinishUp
+	jp z, .FinishUp
 	push bc
 
 	call GetNextTrainerDataByte
@@ -114,7 +114,75 @@ ReadTrainer:
 	jr nz, .copyMoves
 
 .noMoves
-	jr .LoopTrainerData
+
+; tr_dvs loading
+; flag check
+	ld a, [wEnemyPartyFlags]
+	and TRAINERTYPE_DVS
+	jr z, .noDVs
+
+; actual loading
+	ld a, [wEnemyPartyCount]
+	dec a ; last mon in team
+
+	push hl
+	ld hl, wEnemyMon1DVs
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld d, h
+	ld e, l
+	pop hl
+
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+	call GetNextTrainerDataByte
+	ld [de], a
+
+.noDVs
+
+	ld a, [wEnemyPartyFlags]
+	and TRAINERTYPE_DVS | TRAINERTYPE_STAT_EXP
+	jr z, .LoopTrainerData
+
+	push hl
+
+	ld a, [wEnemyPartyCount]
+	dec a ; last mon in team
+	ld hl, wEnemyMon1MaxHP
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld d, h
+	ld e, l
+
+	ld a, [wEnemyPartyCount]
+	dec a ; last mon in team
+	ld hl, wEnemyMon1HPExp - 1
+	call AddNTimes
+
+	ld b, TRUE
+	push de
+	call CalcStats
+
+	ld a, [wEnemyPartyCount]
+	dec a ; last mon in team
+	ld hl, wEnemyMon1HP
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld d, h
+	ld e, l
+	pop hl
+
+; copy max HP into HP
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+
+	pop hl
+
+	jp .LoopTrainerData
 .FinishUp
 ; clear wAmountMoneyWon addresses
 	xor a

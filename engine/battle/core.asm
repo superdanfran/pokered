@@ -6134,10 +6134,16 @@ LoadEnemyMonData:
 	jr nz, .storeDVs
 	ld a, [wIsInBattle]
 	cp $2 ; is it a trainer battle?
-; fixed DVs for trainer mon
-	ld a, ATKDEFDV_TRAINER
-	ld b, SPDSPCDV_TRAINER
-	jr z, .storeDVs
+	jr nz, .randomDVs
+; load DVs from party data instead of using fixed ATKDEFDV_TRAINER and SPDSPCDV_TRAINER DVs
+	ld hl, wEnemyMon1DVs
+	ld a, [wWhichPokemon]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld a, [hli]
+	ld b, [hl]
+	jr .storeDVs
+.randomDVs
 ; random DVs for wild mon
 	call BattleRandom
 	ld b, a
