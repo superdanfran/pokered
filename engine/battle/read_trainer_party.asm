@@ -141,9 +141,37 @@ ReadTrainer:
 
 .noDVs
 
+; tr_stat_exp loading
+; flag check
+	ld a, [wEnemyPartyFlags]
+	and TRAINERTYPE_STAT_EXP
+	jr z, .noStatExp
+
+; actual loading
+	ld a, [wEnemyPartyCount]
+	dec a ; last mon in team
+
+	push hl
+	ld hl, wEnemyMon1HPExp
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld d, h
+	ld e, l
+	pop hl
+
+	ld b, NUM_STATS * 2
+.copyStatExp
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .copyStatExp
+
+.noStatExp
+
 	ld a, [wEnemyPartyFlags]
 	and TRAINERTYPE_DVS | TRAINERTYPE_STAT_EXP
-	jr z, .LoopTrainerData
+	jp z, .LoopTrainerData
 
 	push hl
 

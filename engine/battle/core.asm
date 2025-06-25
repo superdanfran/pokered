@@ -6156,14 +6156,27 @@ LoadEnemyMonData:
 	ld a, [wCurEnemyLevel]
 	ld [de], a
 	inc de
-	ld b, $0
+	ld a, [wIsInBattle]
+	dec a
+	ld b, a ; loads 0 for wild mons, gets discarded otherwise
+	jr z, .wildMonCalcStats
+	ld hl, wEnemyMon1MaxHP
+	ld a, [wWhichPokemon]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld b, wEnemyMonSpecial - wEnemyMonMaxHP + 2
+.copyEnemyMonStats
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec b
+	jr z,.copyHPAndStatusFromPartyData
+	jr .copyEnemyMonStats
+.wildMonCalcStats
 	ld hl, wEnemyMonHP
 	push hl
 	call CalcStats
 	pop hl
-	ld a, [wIsInBattle]
-	cp $2 ; is it a trainer battle?
-	jr z, .copyHPAndStatusFromPartyData
 	ld a, [wEnemyBattleStatus3]
 	bit TRANSFORMED, a ; is enemy mon transformed?
 	jr nz, .copyTypes ; if transformed, jump

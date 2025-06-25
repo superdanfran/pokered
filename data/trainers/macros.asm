@@ -37,6 +37,7 @@ MACRO tr_mon
 		def _tr_pk{d:p}_move{d:i} = NO_MOVE
 	endr
 	redef _tr_pk{d:p}_dvs EQUS "ATKDEFDV_TRAINER, SPDSPCDV_TRAINER"
+	redef _tr_pk{d:p}_stat_exp EQUS "0, 0, 0, 0, 0"
 
 	if _tr_lv == TRAINERTYPE_MULTI_LEVELS
 		assert _NARG == 2, "Trainer party requires a level for each mon"
@@ -79,6 +80,21 @@ MACRO tr_dvs
 	def _tr_pk{d:p}_dvs_explicit = TRUE
 ENDM
 
+; Usage: tr_stat_exp <HP>, <ATK>, <DEF>, <SPD>, <SPC>
+MACRO tr_stat_exp
+	if _NARG != NUM_STATS
+		fail "A mon needs {d:NUM_STATS} words of stat exp"
+	endc
+	def _tr_flags |= TRAINERTYPE_STAT_EXP
+	; check if a constant was used
+	if STRFIND("\#", "_") != -1
+		redef _tr_pk{d:p}_stat_exp EQUS "{\#}"
+	else
+		redef _tr_pk{d:p}_stat_exp EQUS "\#"
+	endc
+	def _tr_pk{d:p}_stat_exp_explicit = TRUE
+ENDM
+
 ; Write out the party data from stored trainer buffer.
 MACRO end_trainer
 	; First, write the byte length of the party.
@@ -91,6 +107,10 @@ MACRO end_trainer
 
 	if _tr_flags & TRAINERTYPE_DVS
 		def _tr_size += 2
+	endc
+
+	if _tr_flags & TRAINERTYPE_STAT_EXP
+		def _tr_size += NUM_STATS * 2
 	endc
 
 	def _tr_size *= _tr_mons
@@ -125,6 +145,10 @@ MACRO end_trainer
 
 		if _tr_flags & TRAINERTYPE_DVS
 			db _tr_pk{d:p}_dvs
+		endc
+
+		if _tr_flags & TRAINERTYPE_STAT_EXP
+			dw _tr_pk{d:p}_stat_exp
 		endc
 	endr
 ENDM
