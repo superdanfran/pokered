@@ -2582,3 +2582,5 @@ LanceData:
 	tr_mon 62, DRAGONITE
 		tr_moves AGILITY, SLAM, BARRIER, HYPER_BEAM
 	end_trainer
+
+end_trainer_parties
