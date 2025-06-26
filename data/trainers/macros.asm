@@ -38,6 +38,7 @@ MACRO tr_mon
 	endr
 	redef _tr_pk{d:p}_dvs EQUS "ATKDEFDV_TRAINER, SPDSPCDV_TRAINER"
 	redef _tr_pk{d:p}_stat_exp EQUS "0, 0, 0, 0, 0"
+	redef _tr_pk{d:p}_nickname EQUS ""
 
 	if _tr_lv == TRAINERTYPE_MULTI_LEVELS
 		assert _NARG == 2, "Trainer party requires a level for each mon"
@@ -95,6 +96,15 @@ MACRO tr_stat_exp
 	def _tr_pk{d:p}_stat_exp_explicit = TRUE
 ENDM
 
+; Usage: tr_nick NICKNAME
+; Adds a nickname to current mon
+; NICKNAME is formatted as "TEXT". Terminator ("@") is implicit.
+MACRO tr_nick
+	def _tr_flags |= TRAINERTYPE_NICKNAMES
+	redef _tr_pk{d:p}_nickname EQUS \1
+	def _tr_nick_lengths += CHARLEN(\1)
+ENDM
+
 ; Write out the party data from stored trainer buffer.
 MACRO end_trainer
 	; First, write the byte length of the party.
@@ -113,7 +123,13 @@ MACRO end_trainer
 		def _tr_size += NUM_STATS * 2
 	endc
 
+	if _tr_flags & TRAINERTYPE_NICKNAMES
+		def _tr_size += 1 ; terminator bytes
+	endc
+
 	def _tr_size *= _tr_mons
+
+	def _tr_size += _tr_nick_lengths
 
 	; Trainer flags
 	def _tr_size += 1
@@ -149,6 +165,10 @@ MACRO end_trainer
 
 		if _tr_flags & TRAINERTYPE_STAT_EXP
 			dw _tr_pk{d:p}_stat_exp
+		endc
+
+		if _tr_flags & TRAINERTYPE_NICKNAMES
+			db "{_tr_pk{d:p}_nickname}@"
 		endc
 	endr
 ENDM

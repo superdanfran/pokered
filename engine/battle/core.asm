@@ -6267,10 +6267,26 @@ LoadEnemyMonData:
 	inc de
 	ld a, [hl]     ; base exp
 	ld [de], a
+; load nick from party data during trainer battle
+	ld a, [wIsInBattle]
+	dec a
+	jr z, .useSpeciesName
+	ld a, [wEnemyPartyFlags]
+	and TRAINERTYPE_NICKNAMES
+	jr z, .useSpeciesName
+	ld a, [wWhichPokemon]
+	ld hl, wEnemyMon1Nick
+	ld bc, wEnemyMon2Nick - wEnemyMon1Nick
+	call AddNTimes
+	ld a, [hl]
+	cp "@" ; use species name when mon has no nickname
+	jr nz, .readyToLoadName
+.useSpeciesName
 	ld a, [wEnemyMonSpecies2]
 	ld [wNamedObjectIndex], a
 	call GetMonName
 	ld hl, wNameBuffer
+.readyToLoadName
 	ld de, wEnemyMonNick
 	ld bc, NAME_LENGTH
 	call CopyData
