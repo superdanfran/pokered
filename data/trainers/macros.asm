@@ -105,8 +105,10 @@ ENDM
 ; NICKNAME is formatted as "TEXT". Terminator ("@") is implicit.
 MACRO tr_nick
 	def _tr_flags |= TRAINERTYPE_NICKNAMES
+	def _tr_curr_nick_len = CHARLEN(\1)
+	assert _tr_curr_nick_len < NAME_LENGTH, "Nickname is too long, it should be less than {d:NAME_LENGTH} bytes long but is {d:_tr_curr_nick_len} bytes long"
 	redef _tr_pk{d:p}_nickname EQUS \1
-	def _tr_nick_lengths += CHARLEN(\1)
+	def _tr_nick_lengths += _tr_curr_nick_len
 ENDM
 
 ; Write out the party data from stored trainer buffer.

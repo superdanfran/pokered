@@ -169,7 +169,7 @@ ReadTrainer:
 
 .noStatExp
 
-; tr_stat_exp loading
+; tr_nick loading
 ; flag check
 	ld a, [wEnemyPartyFlags]
 	and TRAINERTYPE_NICKNAMES
