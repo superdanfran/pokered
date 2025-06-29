@@ -4,8 +4,10 @@ DEF _tr_def_in_progress = FALSE
 ; Usage: def_trainer_class <CLASS_CONSTANT>
 ; CLASS_CONSTANT is defined in trainer_constants.asm
 MACRO def_trainer_class
+	if _tr_def_in_progress
+		fail "Can't define a new trainer class before finshing the current trainer with end_trainer"
+	endc
 	assert \1 == _tr_class, "Trainer class ID mismatch"
-	assert !_tr_def_in_progress, "Can't define a new trainer class before finshing the current trainer with end_trainer"
 	def _tr_class += 1
 	def _tr_party = 1
 ENDM
@@ -14,7 +16,9 @@ ENDM
 ; TRAINER_INDEX is 1-based
 ; PARTY_LEVEL is the level for the whole party, defaults to TRAINERTYPE_MULTI_LEVELS to set mon levels individually
 MACRO def_trainer
-	assert !_tr_def_in_progress, "Can't define a new trainer before finishing the current one with end_trainer"
+	if _tr_def_in_progress
+		fail "Can't define a new trainer before finishing the current one with end_trainer"
+	endc
 	; Reset trainer macro state.
 	def _tr_flags = 0
 	def _tr_mons = 0
@@ -106,7 +110,7 @@ ENDM
 MACRO tr_nick
 	def _tr_flags |= TRAINERTYPE_NICKNAMES
 	def _tr_curr_nick_len = CHARLEN(\1)
-	assert _tr_curr_nick_len < NAME_LENGTH, "Nickname is too long, it should be less than {d:NAME_LENGTH} bytes long but is {d:_tr_curr_nick_len} bytes long"
+	assert fail, _tr_curr_nick_len < NAME_LENGTH, "Nickname \1 is too long, it should be less than {d:NAME_LENGTH} bytes long but is {d:_tr_curr_nick_len} bytes long"
 	redef _tr_pk{d:p}_nickname EQUS \1
 	def _tr_nick_lengths += _tr_curr_nick_len
 ENDM
@@ -181,6 +185,10 @@ MACRO end_trainer
 ENDM
 
 MACRO end_trainer_parties
-	assert !_tr_def_in_progress, "Can't end trainer parties without finishing the last trainer with end_trainer"
-	assert _tr_class == NUM_TRAINERS + 1, "Can't end trainer parties with a missing trainer class"
+	if _tr_def_in_progress
+		fail "Can't end trainer parties without finishing the last trainer with end_trainer"
+	endc
+	if _tr_class != NUM_TRAINERS + 1
+		fail "Number of trainer classes doesn't match the number of def_trainer_class calls"
+	endc
 ENDM
