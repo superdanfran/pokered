@@ -145,7 +145,7 @@ SECTION "OAM Buffer", WRAM0
 ; buffer for OAM data. Copied to OAM by DMA
 wShadowOAM::
 ; wShadowOAMSprite00 - wShadowOAMSprite39
-FOR n, NUM_SPRITE_OAM_STRUCTS
+FOR n, OAM_COUNT
 wShadowOAMSprite{02d:n}:: sprite_oam_struct wShadowOAMSprite{02d:n}
 ENDR
 wShadowOAMEnd::
@@ -154,13 +154,13 @@ wShadowOAMEnd::
 SECTION "Tilemap", WRAM0
 
 ; buffer for tiles that are visible on screen (20 columns by 18 rows)
-wTileMap:: ds SCREEN_WIDTH * SCREEN_HEIGHT
+wTileMap:: ds SCREEN_AREA
 
 ; This union spans 480 bytes.
 UNION
 ; buffer for temporarily saving and restoring current screen's tiles
 ; (e.g. if menus are drawn on top)
-wTileMapBackup:: ds SCREEN_WIDTH * SCREEN_HEIGHT
+wTileMapBackup:: ds SCREEN_AREA
 
 NEXTU
 ; buffer for the blocks surrounding the player (6 columns by 5 rows of 4x4-tile blocks)
@@ -170,7 +170,7 @@ NEXTU
 ; buffer for temporarily saving and restoring shadow OAM
 wShadowOAMBackup::
 ; wShadowOAMBackupSprite00 - wShadowOAMBackupSprite39
-FOR n, NUM_SPRITE_OAM_STRUCTS
+FOR n, OAM_COUNT
 wShadowOAMBackupSprite{02d:n}:: sprite_oam_struct wShadowOAMBackupSprite{02d:n}
 ENDR
 wShadowOAMBackupEnd::
@@ -346,7 +346,7 @@ wNPCMovementScriptBank:: db
 
 ; This union spans 180 bytes.
 UNION
-wVermilionDockTileMapBuffer:: ds 5 * BG_MAP_WIDTH + SCREEN_WIDTH
+wVermilionDockTileMapBuffer:: ds 5 * TILEMAP_WIDTH + SCREEN_WIDTH
 wVermilionDockTileMapBufferEnd::
 
 NEXTU
@@ -921,7 +921,7 @@ UNION
 wSerialOtherGameboyRandomNumberListBlock:: ds $11
 NEXTU
 ; second buffer for temporarily saving and restoring current screen's tiles (e.g. if menus are drawn on top)
-wTileMapBackup2:: ds SCREEN_WIDTH * SCREEN_HEIGHT
+wTileMapBackup2:: ds SCREEN_AREA
 ENDU
 
 ; This union spans 30 bytes.
