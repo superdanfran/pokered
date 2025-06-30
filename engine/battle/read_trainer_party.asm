@@ -94,16 +94,7 @@ ReadTrainer:
 	jr z, .noMoves
 
 ; actual loading
-	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-
-	push hl
-	ld hl, wEnemyMon1Moves
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes
-	ld d, h
-	ld e, l
-	pop hl
+	point_mon_data wEnemyMon1Moves
 
 	ld b, NUM_MOVES
 .copyMoves
@@ -122,16 +113,7 @@ ReadTrainer:
 	jr z, .noDVs
 
 ; actual loading
-	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-
-	push hl
-	ld hl, wEnemyMon1DVs
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes
-	ld d, h
-	ld e, l
-	pop hl
+	point_mon_data wEnemyMon1DVs
 
 	call GetNextTrainerDataByte
 	ld [de], a
@@ -148,16 +130,7 @@ ReadTrainer:
 	jr z, .noStatExp
 
 ; actual loading
-	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-
-	push hl
-	ld hl, wEnemyMon1HPExp
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes
-	ld d, h
-	ld e, l
-	pop hl
+	point_mon_data wEnemyMon1HPExp
 
 	ld b, NUM_STATS * 2
 .copyStatExp
@@ -176,16 +149,7 @@ ReadTrainer:
 	jr z, .noNicks
 
 ; actual loading
-	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-
-	push hl
-	ld hl, wEnemyMonNicks
-	ld bc, wEnemyMon2Nick - wEnemyMon1Nick
-	call AddNTimes
-	ld d, h
-	ld e, l
-	pop hl
+	point_mon_data wEnemyMonNicks, wEnemyMon2Nick - wEnemyMon1Nick
 
 .nickCopyLoop
 	call GetNextTrainerDataByte
@@ -203,16 +167,12 @@ ReadTrainer:
 	push hl
 
 	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-	ld hl, wEnemyMon1MaxHP
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes
+	add_n_times_1_based wEnemyMon1MaxHP, wEnemyMon2 - wEnemyMon1
 	ld d, h
 	ld e, l
 
 	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-	ld hl, wEnemyMon1HPExp - 1
+	ld hl, wEnemyMon1HPExp - 1 - (wEnemyMon2 - wEnemyMon1)
 	call AddNTimes
 
 	ld b, TRUE
@@ -220,10 +180,7 @@ ReadTrainer:
 	call CalcStats
 
 	ld a, [wEnemyPartyCount]
-	dec a ; last mon in team
-	ld hl, wEnemyMon1HP
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes
+	add_n_times_1_based wEnemyMon1HP, wEnemyMon2 - wEnemyMon1
 	ld d, h
 	ld e, l
 	pop hl
