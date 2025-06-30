@@ -83,9 +83,7 @@ ReadTrainer:
 	ld [wCurPartySpecies], a
 	ld a, ENEMY_PARTY_DATA
 	ld [wMonDataLocation], a
-	push hl
 	call AddPartyMon
-	pop hl
 
 ; tr_moves loading
 ; flag check
