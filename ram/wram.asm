@@ -1836,13 +1836,13 @@ wBagItems:: ds BAG_ITEM_CAPACITY * 2 + 1 ; now holds 50 items
 ENDU
 ;;;;;;;;;;
 
-; number of signs in the current map (up to 16)
+; number of signs in the current map (up to MAX_BG_EVENTS)
 wNumSigns:: db
 
-wSignCoords:: ds 16 * 2 ; Y, X
-wSignTextIDs:: ds 16
+wSignCoords:: ds MAX_BG_EVENTS * 2 ; Y, X
+wSignTextIDs:: ds MAX_BG_EVENTS
 
-; number of sprites on the current map (up to 16)
+; number of sprites on the current map (up to MAX_OBJECT_EVENTS)
 wNumSprites:: db
 
 ; these two variables track the X and Y offset in blocks from the last special warp used
@@ -1850,8 +1850,8 @@ wNumSprites:: db
 wYOffsetSinceLastSpecialWarp:: db
 wXOffsetSinceLastSpecialWarp:: db
 
-wMapSpriteData:: ds 16 * 2 ; movement byte 2, text ID
-wMapSpriteExtraData:: ds 16 * 2 ; trainer class/item ID, trainer set ID
+wMapSpriteData:: ds MAX_OBJECT_EVENTS * 2 ; movement byte 2, text ID
+wMapSpriteExtraData:: ds MAX_OBJECT_EVENTS * 2 ; trainer class/item ID, trainer set ID
 
 ; map height in 2x2 meta-tiles
 wCurrentMapHeight2:: db
