@@ -44,8 +44,8 @@ MACRO tr_mon
 	for i, 1, NUM_MOVES + 1
 		def _tr_pk{d:p}_move{d:i} = NO_MOVE
 	endr
-	redef _tr_pk{d:p}_dvs EQUS "ATKDEFDV_TRAINER, SPDSPCDV_TRAINER"
-	redef _tr_pk{d:p}_stat_exp EQUS "0, 0, 0, 0, 0"
+	redef _tr_pk{d:p}_dvs EQUS "8 all, 9 atk"
+	redef _tr_pk{d:p}_stat_exp EQUS "0 all"
 	redef _tr_pk{d:p}_nickname EQUS ""
 
 	if _tr_lv == TRAINERTYPE_MULTI_LEVELS
@@ -74,11 +74,8 @@ MACRO tr_moves
 	endr
 ENDM
 
-; Usage: tr_dvs <ATK_DEF>, <SPD_SPC>
+; Usage: tr_dvs n1 ALL|ATK|DEF|SPD|SPC, [n2 ATK|DEF|SPD|SPC]
 MACRO tr_dvs
-	if _NARG != 2
-		fail "A mon needs 2 bytes of DVs"
-	endc
 	def _tr_flags |= TRAINERTYPE_DVS
 	; check if a constant was used
 	if STRFIND("\#", "_") != -1
@@ -89,11 +86,8 @@ MACRO tr_dvs
 	def _tr_pk{d:p}_dvs_explicit = TRUE
 ENDM
 
-; Usage: tr_stat_exp <HP>, <ATK>, <DEF>, <SPD>, <SPC>
+; Usage: tr_stat_exp n1 ALL|HP|ATK|DEF|SPD|SPC, [n2 HP|ATK|DEF|SPD|SPC]
 MACRO tr_stat_exp
-	if _NARG != NUM_STATS
-		fail "A mon needs {d:NUM_STATS} words of stat exp"
-	endc
 	def _tr_flags |= TRAINERTYPE_STAT_EXP
 	; check if a constant was used
 	if STRFIND("\#", "_") != -1
@@ -113,6 +107,78 @@ MACRO tr_nick
 	assert fail, _tr_curr_nick_len < NAME_LENGTH, "Nickname \1 is too long, it should be less than {d:NAME_LENGTH} bytes long but is {d:_tr_curr_nick_len} bytes long"
 	redef _tr_pk{d:p}_nickname EQUS \1
 	def _tr_nick_lengths += _tr_curr_nick_len
+ENDM
+
+; Internal, shared by DVs and stat exp
+MACRO def_stat_props
+	rept _NARG
+		def _got_stat = 0
+		with_each_stat_all """
+			def x = STRFIND(STRUPR("\1"), " ?")
+			if !_got_stat && x != -1 && (!ignore_hp || STRCMP("?", "HP"))
+				redef _eval_stat EQUS STRSLICE("\1", 0, x)
+				def ?_STAT_PROP = \{_eval_stat}
+				if ?_STAT_PROP <= MAX_STAT_PROP
+					def _got_stat = 1
+				endc
+			endc
+			"""
+		if !_got_stat
+			fail "invalid {prop_name} \1"
+		endc
+		if ALL_STAT_PROP != 0
+			with_each_stat "def ?_STAT_PROP = {ALL_STAT_PROP}"
+			def ALL_STAT_PROP = 0 ; allows stuff like "8 all, 9 atk"
+		endc
+		shift
+	endr
+ENDM
+
+DEF DV_SPREADS_COUNT = 0
+DEF STAT_EXP_SPREADS_COUNT = 0
+DEF MONS_WITH_DV_SPREAD = 0
+DEF MONS_WITH_STAT_EXP_SPREAD = 0
+
+; Internal
+MACRO def_dvs
+	def MAX_STAT_PROP = 15
+	with_each_dv_stat "def ?_STAT_PROP = 8"
+	def ATK_STAT_PROP = 9
+	def ALL_STAT_PROP = 0
+	redef prop_name EQUS "DV"
+	def ignore_hp = 1
+	def_stat_props \#
+ENDM
+
+; Internal
+MACRO dv_spread
+	def_dvs \#
+	if !def(DV_SPREAD_FOR_{d:ATK_STAT_PROP}_{d:DEF_STAT_PROP}_{d:SPD_STAT_PROP}_{d:SPC_STAT_PROP})
+		def DV_SPREAD_FOR_{d:ATK_STAT_PROP}_{d:DEF_STAT_PROP}_{d:SPD_STAT_PROP}_{d:SPC_STAT_PROP} = DV_SPREADS_COUNT
+		redef DV_SPREADS_COUNT += 1
+	endc
+	dn {d:ATK_STAT_PROP}, {d:DEF_STAT_PROP}, {d:SPD_STAT_PROP}, {d:SPC_STAT_PROP}
+	redef MONS_WITH_DV_SPREAD += 1
+ENDM
+
+; Internal
+MACRO def_stat_exp
+	def MAX_STAT_PROP = $ffff
+	with_each_stat_all "def ?_STAT_PROP = 0"
+	redef prop_name EQUS "stat exp"
+	def ignore_hp = 0
+	def_stat_props \#
+ENDM
+
+; Internal
+MACRO stat_exp_spread
+	def_stat_exp \#
+	if !def(STAT_EXP_SPREAD_FOR_{d:ATK_STAT_PROP}_{d:DEF_STAT_PROP}_{d:SPD_STAT_PROP}_{d:SPC_STAT_PROP})
+		def STAT_EXP_SPREAD_FOR_{d:ATK_STAT_PROP}_{d:DEF_STAT_PROP}_{d:SPD_STAT_PROP}_{d:SPC_STAT_PROP} = STAT_EXP_SPREADS_COUNT
+		redef STAT_EXP_SPREADS_COUNT += 1
+	endc
+	dw {d:HP_STAT_PROP}, {d:ATK_STAT_PROP}, {d:DEF_STAT_PROP}, {d:SPD_STAT_PROP}, {d:SPC_STAT_PROP}
+	redef MONS_WITH_STAT_EXP_SPREAD += 1
 ENDM
 
 ; Write out the party data from stored trainer buffer.
@@ -170,11 +236,11 @@ MACRO end_trainer
 		endc
 
 		if _tr_flags & TRAINERTYPE_DVS
-			db _tr_pk{d:p}_dvs
+			dv_spread {_tr_pk{d:p}_dvs}
 		endc
 
 		if _tr_flags & TRAINERTYPE_STAT_EXP
-			dw _tr_pk{d:p}_stat_exp
+			stat_exp_spread {_tr_pk{d:p}_stat_exp}
 		endc
 
 		if _tr_flags & TRAINERTYPE_NICKNAMES
@@ -191,4 +257,9 @@ MACRO end_trainer_parties
 	if _tr_class != NUM_TRAINERS + 1
 		fail "Number of trainer classes doesn't match the number of def_trainer_class calls"
 	endc
+	def _dvs_waste = (MONS_WITH_DV_SPREAD - DV_SPREADS_COUNT) ; spread size is 2 but index for a spread table is 1 so n * (2 - 1) = n * 1 = n
+	println "You defined {d:DV_SPREADS_COUNT} distinct DV spreads for a total of {d:MONS_WITH_DV_SPREAD} mons, which is {d:_dvs_waste} bytes wasted compared to using a spread table"
+	def _stat_exp_waste = (MONS_WITH_STAT_EXP_SPREAD - STAT_EXP_SPREADS_COUNT) * ((NUM_STATS * 2) - 1) ; spread size is 10 but index for a spread table is 1 so n * (10 - 1) = n * 9
+	println "You defined {d:STAT_EXP_SPREADS_COUNT} distinct stat exp spreads for a total of {d:MONS_WITH_STAT_EXP_SPREAD} mons, which is {d:_stat_exp_waste} bytes wasted compared to using a spread table"
+	purge _dvs_waste, _stat_exp_waste
 ENDM
