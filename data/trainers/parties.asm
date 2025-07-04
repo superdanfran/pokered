@@ -2584,3 +2584,19 @@ LanceData:
 	end_trainer
 
 end_trainer_parties
+
+SECTION "DV and stat exp spreads", ROMX
+
+DVSpreads:
+	table_width 2
+	FOR idx, DV_SPREADS_COUNT
+		dn DV_SPREAD_{d:idx}_ATK, DV_SPREAD_{d:idx}_DEF, DV_SPREAD_{d:idx}_SPD, DV_SPREAD_{d:idx}_SPC
+	ENDR
+	assert_table_length DV_SPREADS_COUNT
+
+StatExpSpreads:
+	table_width NUM_STATS * 2
+	FOR idx, STAT_EXP_SPREADS_COUNT
+		with_each_stat "bigdw STAT_EXP_SPREAD_{d:idx}_?"
+	ENDR
+	assert_table_length STAT_EXP_SPREADS_COUNT

@@ -114,10 +114,15 @@ ReadTrainer:
 	point_mon_data wEnemyMon1DVs
 
 	call GetNextTrainerDataByte
-	ld [de], a
-	inc de
-	call GetNextTrainerDataByte
-	ld [de], a
+	; a is now the DVSpreads index
+	push hl
+	ld hl, DVSpreads
+	ld bc, 2
+	call AddNTimes
+	; hl now points to the correct DVs spread
+	ld a, BANK(DVSpreads)
+	call FarCopyData2
+	pop hl
 
 .noDVs
 
@@ -130,13 +135,16 @@ ReadTrainer:
 ; actual loading
 	point_mon_data wEnemyMon1HPExp
 
-	ld b, NUM_STATS * 2
-.copyStatExp
 	call GetNextTrainerDataByte
-	ld [de], a
-	inc de
-	dec b
-	jr nz, .copyStatExp
+	; a is now the StatExpSpreads index
+	push hl
+	ld hl, StatExpSpreads
+	ld bc, NUM_STATS * 2
+	call AddNTimes
+	; hl now points to the correct stat exp spread
+	ld a, BANK(StatExpSpreads)
+	call FarCopyData2
+	pop hl
 
 .noStatExp
 
