@@ -60,10 +60,10 @@ TrainerDataPointers:
 
 YoungsterData:
 ; Route 3
-	db 11, RATTATA, EKANS, 0
-	db 14, SPEAROW, 0
+	db 14, RATTATA, EKANS, 0
+	db 15, PIDGEOTTO, 0
 ; Mt. Moon 1F
-	db 10, RATTATA, RATTATA, ZUBAT, 0
+	db 18, ZUBAT, KRABBY, FARFETCHD, 0
 ; Route 24
 	db 14, RATTATA, EKANS, ZUBAT, 0
 ; Route 25
@@ -83,15 +83,15 @@ YoungsterData:
 BugCatcherData:
 ; Viridian Forest
 	db 6, WEEDLE, CATERPIE, 0
-	db 7, WEEDLE, KAKUNA, WEEDLE, 0
-	db 9, WEEDLE, 0
+	db 9, KAKUNA, VENONAT, PARAS, 0
+	db 10, BUTTERFREE, 0
 ; Route 3
-	db 10, CATERPIE, WEEDLE, CATERPIE, 0
-	db 9, WEEDLE, KAKUNA, CATERPIE, METAPOD, 0
-	db 11, CATERPIE, METAPOD, 0
+	db 14, VENONAT, PARAS, BEEDRILL, 0
+	db 13, PARAS, VENONAT, METAPOD, BEEDRILL, 0
+	db 15, BUTTERFREE, BEEDRILL, 0
 ; Mt. Moon 1F
-	db 11, WEEDLE, KAKUNA, 0
-	db 10, CATERPIE, METAPOD, CATERPIE, 0
+	db 16, VENONAT, BEEDRILL, 0
+	db 16, PARAS, VENONAT, BUTTERFREE, 0
 ; Route 24
 	db 14, CATERPIE, WEEDLE, 0
 ; Route 6
@@ -105,14 +105,14 @@ BugCatcherData:
 
 LassData:
 ; Route 3
-	db 9, PIDGEY, PIDGEY, 0
-	db 10, RATTATA, NIDORAN_M, 0
-	db 14, JIGGLYPUFF, 0
+	db 14, PIDGEY, NIDORAN_F, 0
+	db 16, NIDORAN_M, SPEAROW, 0
+	db 17, JIGGLYPUFF, 0
 ; Route 4
 	db 31, PARAS, PARAS, PARASECT, 0
 ; Mt. Moon 1F
-	db 11, ODDISH, BELLSPROUT, 0
-	db 14, CLEFAIRY, 0
+	db 17, CLEFAIRY, 0
+	db 17, GOLDEEN, HORSEA, 0
 ; Route 24
 	db 16, PIDGEY, NIDORAN_F, 0
 	db 14, PIDGEY, NIDORAN_F, 0
@@ -216,9 +216,9 @@ PokemaniacData:
 
 SuperNerdData:
 ; Mt. Moon 1F
-	db 11, MAGNEMITE, VOLTORB, 0
+	db 18, GEODUDE, KOFFING, 0
 ; Mt. Moon B2F
-	db 12, GRIMER, VOLTORB, KOFFING, 0
+	db 19, VOLTORB, SHELLDER, EXEGGCUTE, 0
 ; Route 8
 	db 20, VOLTORB, KOFFING, VOLTORB, MAGNEMITE, 0
 	db 22, GRIMER, MUK, GRIMER, 0
@@ -235,7 +235,7 @@ SuperNerdData:
 
 HikerData:
 ; Mt. Moon 1F
-	db 10, GEODUDE, GEODUDE, ONIX, 0
+	db 18, RHYHORN, MACHOP, PSYDUCK, 0
 ; Route 25
 	db 15, MACHOP, GEODUDE, 0
 	db 13, GEODUDE, GEODUDE, MACHOP, GEODUDE, 0
@@ -485,13 +485,13 @@ BlackbeltData:
 	db 43, MACHOKE, MACHOP, MACHOKE, 0
 
 Green1Data:
-	db 5, SQUIRTLE, 0
-	db 5, BULBASAUR, 0
-	db 5, CHARMANDER, 0
+	db 3, MEW, 0
+	db 3, MEW, 0
+	db 3, MEW, 0
 ; Route 22
-	db $FF, 9, PIDGEY, 8, SQUIRTLE, 0
-	db $FF, 9, PIDGEY, 8, BULBASAUR, 0
-	db $FF, 9, PIDGEY, 8, CHARMANDER, 0
+	db $FF, 9, EEVEE, 8, MEW, 0
+	db $FF, 9, EEVEE, 8, MEW, 0
+	db $FF, 9, EEVEE, 8, MEW, 0
 ; Cerulean City
 	db $FF, 18, PIDGEOTTO, 15, ABRA, 15, RATTATA, 17, SQUIRTLE, 0
 	db $FF, 18, PIDGEOTTO, 15, ABRA, 15, RATTATA, 17, BULBASAUR, 0
@@ -543,10 +543,10 @@ GiovanniData:
 
 RocketData:
 ; Mt. Moon B2F
-	db 13, RATTATA, ZUBAT, 0
-	db 11, SANDSHREW, RATTATA, ZUBAT, 0
-	db 12, ZUBAT, EKANS, 0
-	db 16, RATICATE, 0
+	db 18, ABRA, DRATINI, ARBOK, 0
+	db 19, DROWZEE, GOLBAT, 0
+	db 20, RATICATE, 0
+	db 20, GASTLY, KADABRA, 0
 ; Cerulean City
 	db 17, MACHOP, DROWZEE, 0
 ; Route 24
@@ -641,7 +641,7 @@ BrunoData:
 	db $FF, 53, ONIX, 55, HITMONCHAN, 55, HITMONLEE, 56, ONIX, 58, MACHAMP, 0
 
 BrockData:
-	db $FF, 12, GEODUDE, 14, ONIX, 0
+	db $FF, 15, GOLEM, KABUTO, OMANYTE, AERODACTYL, 0
 
 MistyData:
 	db $FF, 18, STARYU, 21, STARMIE, 0
