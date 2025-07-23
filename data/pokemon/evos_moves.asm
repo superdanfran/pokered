@@ -706,11 +706,11 @@ ArbokEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 10, POISON_STING
-	db 17, BITE
-	db 27, GLARE
-	db 36, SCREECH
-	db 47, ACID
+	db 10, GLARE
+	db 17, GLARE
+	db 21, FISSURE
+	db 36, GLARE
+	db 47, GUNK_SHOT
 	db 0
 
 ParasectEvosMoves:
