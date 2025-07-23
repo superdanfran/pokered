@@ -515,11 +515,11 @@ BlastoiseEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 24, BITE
-	db 31, WITHDRAW
-	db 42, SKULL_BASH
+	db 8, HYDRO_PUMP
+	db 15, EARTHQUAKE
+	db 24, BODY_SLAM
+	db 31, BLIZZARD
+	db 42, BODY_SLAM
 	db 52, HYDRO_PUMP
 	db 0
 
@@ -2000,10 +2000,10 @@ SquirtleEvosMoves:
 	db EVOLVE_LEVEL, 16, WARTORTLE
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 22, BITE
-	db 28, WITHDRAW
+	db 8, BITE
+	db 13, HEADBUTT
+	db 16, BUBBLEBEAM
+	db 28, WATERFALL
 	db 35, SKULL_BASH
 	db 42, HYDRO_PUMP
 	db 0
@@ -2026,11 +2026,11 @@ WartortleEvosMoves:
 	db EVOLVE_LEVEL, 36, BLASTOISE
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 24, BITE
-	db 31, WITHDRAW
-	db 39, SKULL_BASH
+	db 8, WATERFALL
+	db 15, WATERFALL
+	db 24, DIG
+	db 31, DIG
+	db 39, DIG
 	db 47, HYDRO_PUMP
 	db 0
 
