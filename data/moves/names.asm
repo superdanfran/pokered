@@ -176,4 +176,5 @@ MoveNames::
 	li "DRACO METEOR"
 	li "ROCK WRECKER"
 	li "STRUGGLE"
+	li "GUNK SHOT"
 	assert_list_length NUM_ATTACKS

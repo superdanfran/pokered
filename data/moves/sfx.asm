@@ -177,5 +177,6 @@ MoveSoundTable:
 	db SFX_BATTLE_36,          $00, $80 ; DRACO_METEOR
 	db SFX_BATTLE_36,          $f0, $20 ; ROCK_WRECKER
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
+	db SFX_BATTLE_2A,          $20, $20 ; GUNK_SHOT
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80
