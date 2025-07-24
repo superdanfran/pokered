@@ -176,5 +176,6 @@ Moves:
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move GUNK_SHOT,	   POISON_SIDE_EFFECT2,        120, POISON,        80,  5
+	move WINGBEAT,     ATTACK_TWICE_EFFECT,			40, FLYING,		   95, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
