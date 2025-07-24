@@ -166,5 +166,6 @@ MoveNames::
 	li "SUBSTITUTE"
 	li "GUNK SHOT"
 	li "WINGBEAT"
+	li "X-SCISSOR"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

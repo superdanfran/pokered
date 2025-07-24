@@ -56,7 +56,7 @@ ItemPrices::
 	bcd3 4000  ; MAX_REVIVE
 	bcd3 700   ; GUARD_SPEC
 	bcd3 500   ; SUPER_REPEL
-	bcd3 700   ; MAX_REPEL
+	bcd3 1     ; MAX_REPEL
 	bcd3 650   ; DIRE_HIT
 	bcd3 10    ; COIN
 	bcd3 200   ; FRESH_WATER
