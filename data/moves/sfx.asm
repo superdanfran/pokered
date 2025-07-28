@@ -167,6 +167,14 @@ MoveSoundTable:
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
 	db SFX_BATTLE_2A,          $20, $20 ; GUNK_SHOT
 	db SFX_BATTLE_12,          $10, $a0 ; WINGBEAT
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; X_SCISSOR
+	db SFX_BATTLE_29,          $1f, $20 ; BLAST_BURN
+	db SFX_BATTLE_2A,          $00, $80 ; HYDRO_CANNON
+	db SFX_BATTLE_12,          $20, $e0 ; FRENZY_PLANT
+	db SFX_BATTLE_24,          $00, $80 ; DRAIN_PUNCH
+	db SFX_BATTLE_0B,          $01, $80 ; MACH_PUNCH
+	db SFX_BATTLE_25,          $00, $10 ; EXTREMESPEED
+	db SFX_BATTLE_36,          $00, $80 ; DRACO_METEOR
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

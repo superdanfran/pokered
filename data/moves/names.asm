@@ -167,5 +167,12 @@ MoveNames::
 	li "GUNK SHOT"
 	li "WINGBEAT"
 	li "X-SCISSOR"
+	li "BLAST BURN"
+	li "HYDRO BLAST"
+	li "FRENZY PLANT"
+	li "DRAIN PUNCH"
+	li "MACH PUNCH"
+	li "EXTREMESPEED"
+	li "DRACO METEOR"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

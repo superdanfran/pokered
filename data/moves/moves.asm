@@ -140,7 +140,7 @@ Moves:
 	move WATERFALL,    NO_ADDITIONAL_EFFECT,        80, WATER,        100, 15
 	move CLAMP,        TRAPPING_EFFECT,             35, WATER,         75, 10
 	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20
-	move SKULL_BASH,   CHARGE_EFFECT,              100, NORMAL,       100, 15
+	move SKULL_BASH,   RECOIL_EFFECT,              120, NORMAL,       100,  5
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
 	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      10, NORMAL,       100, 35
 	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20
@@ -178,5 +178,12 @@ Moves:
 	move GUNK_SHOT,	   POISON_SIDE_EFFECT2,        120, POISON,        80,  5
 	move WINGBEAT,     ATTACK_TWICE_EFFECT,			40, FLYING,		   95, 10
 	move X_SCISSOR,	   NO_ADDITIONAL_EFFECT,		80, BUG,		  100, 10
+	move BLAST_BURN,   HYPER_BEAM_EFFECT,          150, FIRE,          90,  5
+	move HYDRO_CANNON, HYPER_BEAM_EFFECT,          150, WATER,         90,  5
+	move FRENZY_PLANT, HYPER_BEAM_EFFECT,          150, GRASS,         90,  5
+	move DRAIN_PUNCH,  DRAIN_HP_EFFECT,             60, FIGHTING,     100,  5
+	move MACH_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 20
+	move EXTREMESPEED, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5
+	move DRACO_METEOR, RECOIL_EFFECT,			   130, DRAGON,		   90,  5
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

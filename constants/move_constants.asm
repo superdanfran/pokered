@@ -173,7 +173,14 @@
 	const GUNK_SHOT    ; a5
 	const WINGBEAT	   ; a6
 	const X_SCISSOR    ; a7
-	const STRUGGLE     ; a8
+	const BLAST_BURN   ; a8
+	const HYDRO_CANNON ; a9
+	const FRENZY_PLANT ; aa
+	const DRAIN_PUNCH  ; ab
+	const MACH_PUNCH   ; ac
+	const EXTREMESPEED ; ad
+	const DRACO_METEOR ; ae
+	const STRUGGLE     ; af
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
