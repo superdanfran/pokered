@@ -6163,10 +6163,16 @@ LoadEnemyMonData:
 	jr nz, .storeDVs
 	ld a, [wIsInBattle]
 	cp $2 ; is it a trainer battle?
-; fixed DVs for trainer mon
-	ld a, ATKDEFDV_TRAINER
-	ld b, SPDSPCDV_TRAINER
-	jr z, .storeDVs
+	jr nz, .randomDVs
+; load DVs from party data instead of using fixed ATKDEFDV_TRAINER and SPDSPCDV_TRAINER DVs
+	ld hl, wEnemyMon1DVs
+	ld a, [wWhichPokemon]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld a, [hli]
+	ld b, [hl]
+	jr .storeDVs
+.randomDVs
 ; random DVs for wild mon
 	call BattleRandom
 	ld b, a
@@ -6179,14 +6185,27 @@ LoadEnemyMonData:
 	ld a, [wCurEnemyLevel]
 	ld [de], a
 	inc de
-	ld b, $0
+	ld a, [wIsInBattle]
+	dec a
+	ld b, a ; loads 0 for wild mons, gets discarded otherwise
+	jr z, .wildMonCalcStats
+	ld hl, wEnemyMon1MaxHP
+	ld a, [wWhichPokemon]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld b, wEnemyMonSpecial - wEnemyMonMaxHP + 2
+.copyEnemyMonStats
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec b
+	jr z,.copyHPAndStatusFromPartyData
+	jr .copyEnemyMonStats
+.wildMonCalcStats
 	ld hl, wEnemyMonHP
 	push hl
 	call CalcStats
 	pop hl
-	ld a, [wIsInBattle]
-	cp $2 ; is it a trainer battle?
-	jr z, .copyHPAndStatusFromPartyData
 	ld a, [wEnemyBattleStatus3]
 	bit TRANSFORMED, a ; is enemy mon transformed?
 	jr nz, .copyTypes ; if transformed, jump
@@ -6277,10 +6296,26 @@ LoadEnemyMonData:
 	inc de
 	ld a, [hl]     ; base exp
 	ld [de], a
+; load nick from party data during trainer battle
+	ld a, [wIsInBattle]
+	dec a
+	jr z, .useSpeciesName
+	ld a, [wEnemyPartyFlags]
+	and TRAINERTYPE_NICKNAMES
+	jr z, .useSpeciesName
+	ld a, [wWhichPokemon]
+	ld hl, wEnemyMon1Nick
+	ld bc, wEnemyMon2Nick - wEnemyMon1Nick
+	call AddNTimes
+	ld a, [hl]
+	cp "@" ; use species name when mon has no nickname
+	jr nz, .readyToLoadName
+.useSpeciesName
 	ld a, [wEnemyMonSpecies2]
 	ld [wNamedObjectIndex], a
 	call GetMonName
 	ld hl, wNameBuffer
+.readyToLoadName
 	ld de, wEnemyMonNick
 	ld bc, NAME_LENGTH
 	call CopyData

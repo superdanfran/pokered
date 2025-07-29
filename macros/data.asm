@@ -64,7 +64,10 @@ MACRO dc ; "crumbs"
 ENDM
 
 MACRO bigdw ; big-endian word
-	db HIGH(\1), LOW(\1)
+	REPT _NARG
+		db HIGH(\1), LOW(\1)
+		SHIFT
+	ENDR
 ENDM
 
 MACRO dba ; dbw bank, address
@@ -80,3 +83,14 @@ MACRO dab ; dwb address, bank
 		SHIFT
 	ENDR
 ENDM
+
+MACRO with_each ; with_each FOO, BAR, "DEF BASE_? = 42"
+	for _element, 1, _NARG ; iterates with FOO and BAR
+		redef _eval_buffer EQUS STRRPL(\<_NARG>, "?", "\<_element>") ; redef _eval_buffer EQUS STRRPL("DEF BASE_? = 42", "?", "FOO") ; redef _eval_buffer EQUS STRRPL("DEF BASE_? = 42", "?", "BAR")
+		{_eval_buffer} ; DEF BASE_FOO = 42 ; DEF BASE_BAR = 42
+	endr
+ENDM
+
+DEF with_each_dv_stat EQUS "with_each ATK, DEF, SPD, SPC,"
+DEF with_each_stat EQUS "with_each HP, ATK, DEF, SPD, SPC,"
+DEF with_each_stat_all EQUS "with_each ALL, HP, ATK, DEF, SPD, SPC,"
