@@ -180,7 +180,8 @@
 	const MACH_PUNCH   ; ac
 	const EXTREMESPEED ; ad
 	const DRACO_METEOR ; ae
-	const STRUGGLE     ; af
+	const ROCK_WRECKER ; af
+	const STRUGGLE     ; b1
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

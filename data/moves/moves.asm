@@ -185,5 +185,6 @@ Moves:
 	move MACH_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 20
 	move EXTREMESPEED, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5
 	move DRACO_METEOR, RECOIL_EFFECT,			   130, DRAGON,		   90,  5
+	move ROCK_WRECKER, HYPER_BEAM_EFFECT,          150, ROCK,          90,  5
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

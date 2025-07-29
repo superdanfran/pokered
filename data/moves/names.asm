@@ -174,5 +174,6 @@ MoveNames::
 	li "MACH PUNCH"
 	li "EXTREMESPEED"
 	li "DRACO METEOR"
+	li "ROCK WRECKER"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

@@ -174,6 +174,7 @@ AttackAnimationPointers:
 	dw MachPunchAnim
 	dw ExtremeSpeedAnim
 	dw DracoMeteorAnim
+	dw RockWreckerAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -615,6 +616,7 @@ SeismicTossAnim:
 	battle_anim NO_MOVE, SE_SHAKE_SCREEN
 	db -1 ; end
 
+RockWreckerAnim:
 StrengthAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
 	battle_anim NO_MOVE, SE_RESET_MON_POSITION

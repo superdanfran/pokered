@@ -578,10 +578,11 @@ OnixEvosMoves:
 	db 0
 ; Learnset
 	db 15, BIND
-	db 19, ROCK_THROW
-	db 25, RAGE
-	db 33, SLAM
-	db 43, HARDEN
+	db 19, BIND
+	db 25, BIND
+	db 33, BIND
+	db 43, BIND
+	db 60, ROCK_WRECKER
 	db 0
 
 FearowEvosMoves:

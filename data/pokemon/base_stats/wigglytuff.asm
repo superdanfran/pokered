@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/wigglytuff.pic", 0, 1 ; sprite dimensions
 	dw WigglytuffPicFront, WigglytuffPicBack
 
-	db PSYCHIC, BLIZZARD, DOUBLE_EDGE, THUNDER_WAVE ; level 1 learnset
+	db PSYCHIC_M, BLIZZARD, DOUBLE_EDGE, THUNDER_WAVE ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset

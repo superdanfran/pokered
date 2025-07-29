@@ -7,10 +7,10 @@
 	db 25 ; catch rate
 	db 129 ; base exp
 
-	INCBIN "gfx/pokemon/front/clefable.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front_rg/clefable.pic", 0, 1 ; sprite dimensions
 	dw ClefablePicFront, ClefablePicBack
 
-	db BODY_SLAM, BLIZZARD, PSYCHIC, THUNDER_WAVE ; level 1 learnset
+	db BODY_SLAM, BLIZZARD, PSYCHIC_M, THUNDER_WAVE ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset

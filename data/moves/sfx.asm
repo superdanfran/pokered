@@ -175,6 +175,7 @@ MoveSoundTable:
 	db SFX_BATTLE_0B,          $01, $80 ; MACH_PUNCH
 	db SFX_BATTLE_25,          $00, $10 ; EXTREMESPEED
 	db SFX_BATTLE_36,          $00, $80 ; DRACO_METEOR
+	db SFX_BATTLE_36,          $f0, $20 ; ROCK_WRECKER
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80
