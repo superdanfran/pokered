@@ -422,7 +422,6 @@ def B_AUDENA_ENABLE_CH1 equ 0 ; 1 = channel 1 is running [ro]
 
 ; -- AUD3WAVE ($FF30-$FF3F) ---------------------------------------------------
 ; Audio channel 3 wave pattern RAM [r/w]
-def _AUD3WAVERAM equ $FF30 ; $FF30-$FF3F
 
 def rAUD3WAVE_0 equ $FF30
 def rAUD3WAVE_1 equ $FF31
@@ -440,8 +439,6 @@ def rAUD3WAVE_C equ $FF3C
 def rAUD3WAVE_D equ $FF3D
 def rAUD3WAVE_E equ $FF3E
 def rAUD3WAVE_F equ $FF3F
-
-def AUD3WAVE_SIZE equ 16
 
 ; -- LCDC ($FF40) -------------------------------------------------------------
 ; PPU graphics control
