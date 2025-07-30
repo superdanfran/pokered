@@ -10,7 +10,6 @@ Route25WildMons:
 	db 20, NIDORAN_F
 	db 20, NIDORAN_M
 	db 12, MR_MIME
-ENDC
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

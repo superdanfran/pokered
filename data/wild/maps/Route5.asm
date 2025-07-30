@@ -10,7 +10,6 @@ Route5WildMons:
 	db 22, LICKITUNG
 	db 22, TANGELA
 	db 23, SANDSHREW
-ENDC
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
