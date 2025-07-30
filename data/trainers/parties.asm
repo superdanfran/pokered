@@ -14,27 +14,27 @@ INCLUDE "data/trainers/macros.asm"
 YoungsterData:
 	def_trainer_class YOUNGSTER
 ; Route 3
-	def_trainer 1, 11
+	def_trainer 1, 14
 	tr_mon RATTATA
 	tr_mon EKANS
 	end_trainer
 
-	def_trainer 2, 14
-	tr_mon SPEAROW
+	def_trainer 2, 15
+	tr_mon PIDGEOTTO
 	end_trainer
 
 ; Mt. Moon 1F
-	def_trainer 3, 10
-	tr_mon RATTATA
-	tr_mon RATTATA
+	def_trainer 3, 18
 	tr_mon ZUBAT
+	tr_mon KRABBY
+	tr_mon FARFETCHD
 	end_trainer
 
 ; Route 24
-	def_trainer 4, 14
-	tr_mon RATTATA
-	tr_mon EKANS
-	tr_mon ZUBAT
+	def_trainer 4, 22
+	tr_mon BULBASAUR
+	tr_mon CHARMANDER
+	tr_mon SQUIRTLE
 	end_trainer
 
 ; Route 25
@@ -96,61 +96,61 @@ BugCatcherData:
 	end_trainer
 
 	def_trainer 2, 7
-	tr_mon WEEDLE
 	tr_mon KAKUNA
-	tr_mon WEEDLE
+	tr_mon VENONAT
+	tr_mon PARAS
 	end_trainer
 
 	def_trainer 3, 9
-	tr_mon WEEDLE
+	tr_mon BUTTERFREE
 	end_trainer
 
 ; Route 3
-	def_trainer 4, 10
-	tr_mon CATERPIE
-	tr_mon WEEDLE
-	tr_mon CATERPIE
+	def_trainer 4, 14
+	tr_mon VENONAT
+	tr_mon PARAS
+	tr_mon BEEDRILL
 	end_trainer
 
-	def_trainer 5, 9
-	tr_mon WEEDLE
-	tr_mon KAKUNA
-	tr_mon CATERPIE
+	def_trainer 5, 13
+	tr_mon PARAS
+	tr_mon VENONAT
 	tr_mon METAPOD
+	tr_mon BEEDRILL
 	end_trainer
 
-	def_trainer 6, 11
-	tr_mon CATERPIE
-	tr_mon METAPOD
+	def_trainer 6, 15
+	tr_mon BUTTERFREE
+	tr_mon BEEDRILL
 	end_trainer
 
 ; Mt. Moon 1F
-	def_trainer 7, 11
-	tr_mon WEEDLE
-	tr_mon KAKUNA
+	def_trainer 7, 16
+	tr_mon VENONAT
+	tr_mon BEEDRILL
 	end_trainer
 
-	def_trainer 8, 10
-	tr_mon CATERPIE
-	tr_mon METAPOD
-	tr_mon CATERPIE
+	def_trainer 8, 16
+	tr_mon PARAS
+	tr_mon VENONAT
+	tr_mon BUTTERFREE
 	end_trainer
 
 ; Route 24
-	def_trainer 9, 14
-	tr_mon CATERPIE
-	tr_mon WEEDLE
+	def_trainer 9, 19
+	tr_mon SCYTHER
+	tr_mon PINSIR
 	end_trainer
 
 ; Route 6
-	def_trainer 10, 16
-	tr_mon WEEDLE
-	tr_mon CATERPIE
-	tr_mon WEEDLE
+	def_trainer 10, 24
+	tr_mon BUTTERFREE
+	tr_mon BEEDRILL
+	tr_mon PARASECT
 	end_trainer
 
-	def_trainer 11, 20
-	tr_mon BUTTERFREE
+	def_trainer 11, 100
+	tr_mon WEEDLE
 	end_trainer
 
 ; Unused
@@ -161,15 +161,15 @@ BugCatcherData:
 	end_trainer
 
 ; Route 9
-	def_trainer 13, 19
-	tr_mon BEEDRILL
-	tr_mon BEEDRILL
+	def_trainer 13, 100
+	tr_mon KAKUNA
+	tr_mon METAPOD
 	end_trainer
 
-	def_trainer 14, 20
-	tr_mon CATERPIE
-	tr_mon WEEDLE
-	tr_mon VENONAT
+	def_trainer 14, 39
+	tr_mon VENOMOTH
+	tr_mon SCYTHER
+	tr_mon PINSIR
 	end_trainer
 
 
@@ -1562,54 +1562,57 @@ BlackbeltData:
 
 Rival1Data:
 	def_trainer_class RIVAL1
-	def_trainer 1, 5
-	tr_mon SQUIRTLE
+	def_trainer 1, 3
+	tr_mon MEW
+		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 2, 5
-	tr_mon BULBASAUR
+	def_trainer 2, 3
+	tr_mon MEW
+		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 3, 5
-	tr_mon CHARMANDER
+	def_trainer 3, 3
+	tr_mon MEW
+		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
 ; Route 22
 	def_trainer 4, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 9, PIDGEY
-	tr_mon 8, SQUIRTLE
+	tr_mon 9, EEVEE
+	tr_mon 8, MEW
 	end_trainer
 
 	def_trainer 5, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 9, PIDGEY
-	tr_mon 8, BULBASAUR
+	tr_mon 9, EEVEE
+	tr_mon 8, MEW
 	end_trainer
 
 	def_trainer 6, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 9, PIDGEY
-	tr_mon 8, CHARMANDER
+	tr_mon 9, EEVEE
+	tr_mon 8, MEW
 	end_trainer
 
 ; Cerulean City
 	def_trainer 7, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 18, PIDGEOTTO
-	tr_mon 15, ABRA
-	tr_mon 15, RATTATA
-	tr_mon 17, SQUIRTLE
+	tr_mon 20, DRATINI
+	tr_mon 20, KADABRA
+	tr_mon 19, DRAGONAIR
+	tr_mon 20, MEW
 	end_trainer
 
 	def_trainer 8, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 18, PIDGEOTTO
-	tr_mon 15, ABRA
-	tr_mon 15, RATTATA
-	tr_mon 17, BULBASAUR
+	tr_mon 20, DRATINI
+	tr_mon 20, KADABRA
+	tr_mon 19, DRAGONAIR
+	tr_mon 20, MEW
 	end_trainer
 
 	def_trainer 9, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 18, PIDGEOTTO
-	tr_mon 15, ABRA
-	tr_mon 15, RATTATA
-	tr_mon 17, CHARMANDER
+	tr_mon 20, DRATINI
+	tr_mon 20, KADABRA
+	tr_mon 19, DRAGONAIR
+	tr_mon 20, MEW
 	end_trainer
 
 
@@ -2153,32 +2156,46 @@ BrunoData:
 BrockData:
 	def_trainer_class BROCK
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 12, GEODUDE
-		tr_moves TACKLE, DEFENSE_CURL
-	tr_mon 14, ONIX
-		tr_moves TACKLE, SCREECH, BIDE
+	tr_mon 15, GOLEM
+		tr_moves EXPLOSION, EARTHQUAKE, ROCK_SLIDE, BODY_SLAM
+	tr_mon 15, KABUTO
+		tr_moves BLIZZARD, WATERFALL, SLASH
+	tr_mon 15, OMANYTE
+		tr_moves BLIZZARD, WATERFALL
+	tr_mon 15, AERODACTYL
+		tr_moves FLY
 	end_trainer
 
 
 MistyData:
 	def_trainer_class MISTY
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 18, STARYU
-		tr_moves TACKLE, WATER_GUN
-	tr_mon 21, STARMIE
-		tr_moves TACKLE, WATER_GUN, BUBBLEBEAM
+	tr_mon 26, VAPOREON
+		tr_moves ICE_BEAM, BODY_SLAM, SAND_ATTACK, WATERFALL
+	tr_mon 26, POLIWRATH
+		tr_moves LOVELY_KISS, ICE_BEAM, EARTHQUAKE, WATERFALL
+	tr_mon 26, DEWGONG
+		tr_moves HORN_DRILL, ICE_BEAM, BODY_SLAM, WATERFALL
+	tr_mon 26, STARMIE
+		tr_moves THUNDER_WAVE, BLIZZARD, THUNDERBOLT, RECOVER
 	end_trainer
 
 
 LtSurgeData:
 	def_trainer_class LT_SURGE
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 21, VOLTORB
-		tr_moves TACKLE, SCREECH, SONICBOOM
-	tr_mon 18, PIKACHU
-		tr_moves THUNDERSHOCK, GROWL, THUNDER_WAVE, QUICK_ATTACK
-	tr_mon 24, RAICHU
-		tr_moves THUNDERSHOCK, GROWL, THUNDERBOLT
+	tr_mon 39, ELECTRODE
+		tr_moves THUNDER_WAVE, EXPLOSION, THUNDERBOLT
+	tr_mon 39, MAGNETON
+		tr_moves THUNDER_WAVE, THUNDERBOLT, DOUBLE_TEAM, DOUBLE_EDGE
+	tr_mon 39, PORYGON
+		tr_moves THUNDER_WAVE, BLIZZARD, THUNDERBOLT, RECOVER
+	tr_mon 39, JOLTEON
+		tr_moves THUNDER_WAVE, THUNDERBOLT, BODY_SLAM, SAND_ATTACK
+	tr_mon 39, ELECTABUZZ
+		tr_moves THUNDER_WAVE, THUNDERBOLT, ICE_PUNCH, PSYCHIC_M
+	tr_mon 39, RAICHU
+		tr_moves THUNDER_WAVE, THUNDERBOLT, SURF, BODY_SLAM
 	end_trainer
 
 
@@ -2270,150 +2287,156 @@ Rival2Data:
 	def_trainer_class RIVAL2
 ; SS Anne 2F
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 19, PIDGEOTTO
-	tr_mon 16, RATICATE
-	tr_mon 18, KADABRA
-	tr_mon 20, WARTORTLE
+	tr_mon 30, JOLTEON
+	tr_mon 30, FLAREON
+	tr_mon 31, VAPOREON
+	tr_mon 31, MEW
 	end_trainer
 
 	def_trainer 2, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 19, PIDGEOTTO
-	tr_mon 16, RATICATE
-	tr_mon 18, KADABRA
-	tr_mon 20, IVYSAUR
+	tr_mon 30, FLAREON
+	tr_mon 30, VAPOREON
+	tr_mon 31, JOLTEON
+	tr_mon 31, MEW
 	end_trainer
 
 	def_trainer 3, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 19, PIDGEOTTO
-	tr_mon 16, RATICATE
-	tr_mon 18, KADABRA
-	tr_mon 20, CHARMELEON
+	tr_mon 30, VAPOREON
+	tr_mon 30, JOLTEON
+	tr_mon 31, FLAREON
+	tr_mon 31, MEW
 	end_trainer
 
 ; Pokémon Tower 2F
 	def_trainer 4, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 25, PIDGEOTTO
-	tr_mon 23, GROWLITHE
-	tr_mon 22, EXEGGCUTE
-	tr_mon 20, KADABRA
-	tr_mon 25, WARTORTLE
+	tr_mon 53, GOLEM
+	tr_mon 53, PIDGEOT
+	tr_mon 53, VENUSAUR
+	tr_mon 53, CHARIZARD
+	tr_mon 53, BLASTOISE
+	tr_mon 53, MEW
 	end_trainer
 
 	def_trainer 5, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 25, PIDGEOTTO
-	tr_mon 23, GYARADOS
-	tr_mon 22, GROWLITHE
-	tr_mon 20, KADABRA
-	tr_mon 25, IVYSAUR
+	tr_mon 53, PIDGEOT
+	tr_mon 53, GOLEM
+	tr_mon 53, VENUSAUR
+	tr_mon 53, BLASTOISE
+	tr_mon 53, CHARIZARD
+	tr_mon 53, MEW
 	end_trainer
 
 	def_trainer 6, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 25, PIDGEOTTO
-	tr_mon 23, EXEGGCUTE
-	tr_mon 22, GYARADOS
-	tr_mon 20, KADABRA
-	tr_mon 25, CHARMELEON
+	tr_mon 53, PIDGEOT
+	tr_mon 53, GOLEM
+	tr_mon 53, BLASTOISE
+	tr_mon 53, VENUSAUR
+	tr_mon 53, CHARIZARD
+	tr_mon 53, MEW
 	end_trainer
 
 ; Silph Co. 7F
 	def_trainer 7, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 37, PIDGEOT
-	tr_mon 38, GROWLITHE
-	tr_mon 35, EXEGGCUTE
-	tr_mon 35, ALAKAZAM
-	tr_mon 40, BLASTOISE
+	tr_mon 70, DODRIO
+	tr_mon 70, SANDSLASH
+	tr_mon 70, ARCANINE
+	tr_mon 70, EXEGGUTOR
+	tr_mon 70, GYARADOS
+	tr_mon 70, MEW
 	end_trainer
 
 	def_trainer 8, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 37, PIDGEOT
-	tr_mon 38, GYARADOS
-	tr_mon 35, GROWLITHE
-	tr_mon 35, ALAKAZAM
-	tr_mon 40, VENUSAUR
+	tr_mon 70, SANDSLASH
+	tr_mon 70, DODRIO
+	tr_mon 70, EXEGGUTOR
+	tr_mon 70, GYARADOS
+	tr_mon 70, ARCANINE
+	tr_mon 70, MEW
 	end_trainer
 
 	def_trainer 9, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 37, PIDGEOT
-	tr_mon 38, EXEGGCUTE
-	tr_mon 35, GYARADOS
-	tr_mon 35, ALAKAZAM
-	tr_mon 40, CHARIZARD
+	tr_mon 70, SANDSLASH
+	tr_mon 70, DODRIO
+	tr_mon 70, ARCANINE
+	tr_mon 70, EXEGGUTOR
+	tr_mon 70, GYARADOS
+	tr_mon 70, MEW
 	end_trainer
 
 ; Route 22
 	def_trainer 10, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 47, PIDGEOT
-	tr_mon 45, RHYHORN
-	tr_mon 45, GROWLITHE
-	tr_mon 47, EXEGGCUTE
-	tr_mon 50, ALAKAZAM
-	tr_mon 53, BLASTOISE
+	tr_mon 85, JOLTEON
+	tr_mon 85, RHYDON
+	tr_mon 85, TAUROS
+	tr_mon 85, EXEGGUTOR
+	tr_mon 85, STARMIE
+	tr_mon 85, MEW
 	end_trainer
 
 	def_trainer 11, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 47, PIDGEOT
-	tr_mon 45, RHYHORN
-	tr_mon 45, GYARADOS
-	tr_mon 47, GROWLITHE
-	tr_mon 50, ALAKAZAM
-	tr_mon 53, VENUSAUR
+	tr_mon 85, JOLTEON
+	tr_mon 85, RHYDON
+	tr_mon 85, TAUROS
+	tr_mon 85, EXEGGUTOR
+	tr_mon 85, STARMIE
+	tr_mon 85, MEW
 	end_trainer
 
 	def_trainer 12, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 47, PIDGEOT
-	tr_mon 45, RHYHORN
-	tr_mon 45, EXEGGCUTE
-	tr_mon 47, GYARADOS
-	tr_mon 50, ALAKAZAM
-	tr_mon 53, CHARIZARD
+	tr_mon 85, JOLTEON
+	tr_mon 85, RHYDON
+	tr_mon 85, TAUROS
+	tr_mon 85, EXEGGUTOR
+	tr_mon 85, STARMIE
+	tr_mon 85, MEW
 	end_trainer
 
 
 Rival3Data:
 	def_trainer_class RIVAL3
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 61, PIDGEOT
-		tr_moves WHIRLWIND, WING_ATTACK, SKY_ATTACK, MIRROR_MOVE
-	tr_mon 59, ALAKAZAM
-		tr_moves PSYBEAM, RECOVER, PSYCHIC_M, REFLECT
-	tr_mon 61, RHYDON
-		tr_moves TAIL_WHIP, FURY_ATTACK, HORN_DRILL, LEER
-	tr_mon 61, ARCANINE
-		tr_moves ROAR, EMBER, LEER, TAKE_DOWN
-	tr_mon 63, EXEGGUTOR
-		tr_moves BARRAGE, HYPNOSIS, STOMP
-	tr_mon 65, BLASTOISE
-		tr_moves BITE, WITHDRAW, BLIZZARD, HYDRO_PUMP
+	tr_mon 115, MEW
+		tr_moves PSYCHIC_M, SOFTBOILED, THUNDER_WAVE, BODY_SLAM
+	tr_mon 115, JOLTEON
+		tr_moves THUNDERBOLT, THUNDER_WAVE, BODY_SLAM, SAND_ATTACK
+	tr_mon 115, EXEGGUTOR
+		tr_moves STUN_SPORE, SLEEP_POWDER, PSYCHIC_M
+	tr_mon 115, STARMIE
+		tr_moves THUNDER_WAVE, BLIZZARD, THUNDERBOLT, RECOVER
+	tr_mon 115, TAUROS
+		tr_moves HYPER_BEAM, BODY_SLAM, EARTHQUAKE
+	tr_mon 115, MEWTWO
+		tr_moves PSYCHIC_M, RECOVER, THUNDER_WAVE, BODY_SLAM
 	end_trainer
 
 	def_trainer 2, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 61, PIDGEOT
-		tr_moves WHIRLWIND, WING_ATTACK, SKY_ATTACK, MIRROR_MOVE
-	tr_mon 59, ALAKAZAM
-		tr_moves PSYBEAM, RECOVER, PSYCHIC_M, REFLECT
-	tr_mon 61, RHYDON
-		tr_moves TAIL_WHIP, FURY_ATTACK, HORN_DRILL, LEER
-	tr_mon 61, GYARADOS
-		tr_moves DRAGON_RAGE, LEER, HYDRO_PUMP, HYPER_BEAM
-	tr_mon 63, ARCANINE
-		tr_moves ROAR, EMBER, LEER, TAKE_DOWN
-	tr_mon 65, VENUSAUR
-		tr_moves RAZOR_LEAF, GROWTH, MEGA_DRAIN, SOLARBEAM
+	tr_mon 115, MEW
+		tr_moves PSYCHIC_M, SOFTBOILED, THUNDER_WAVE, BODY_SLAM
+	tr_mon 115, JOLTEON
+		tr_moves THUNDERBOLT, THUNDER_WAVE, BODY_SLAM, SAND_ATTACK
+	tr_mon 115, EXEGGUTOR
+		tr_moves STUN_SPORE, SLEEP_POWDER, PSYCHIC_M
+	tr_mon 115, STARMIE
+		tr_moves THUNDER_WAVE, BLIZZARD, THUNDERBOLT, RECOVER
+	tr_mon 115, TAUROS
+		tr_moves HYPER_BEAM, BODY_SLAM, EARTHQUAKE
+	tr_mon 115, MEWTWO
+		tr_moves PSYCHIC_M, RECOVER, THUNDER_WAVE, BODY_SLAM
 	end_trainer
 
 	def_trainer 3, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 61, PIDGEOT
-		tr_moves WHIRLWIND, WING_ATTACK, SKY_ATTACK, MIRROR_MOVE
-	tr_mon 59, ALAKAZAM
-		tr_moves PSYBEAM, RECOVER, PSYCHIC_M, REFLECT
-	tr_mon 61, RHYDON
-		tr_moves TAIL_WHIP, FURY_ATTACK, HORN_DRILL, LEER
-	tr_mon 61, EXEGGUTOR
-		tr_moves BARRAGE, HYPNOSIS, STOMP
-	tr_mon 63, GYARADOS
-		tr_moves DRAGON_RAGE, LEER, HYDRO_PUMP, HYPER_BEAM
-	tr_mon 65, CHARIZARD
-		tr_moves RAGE, SLASH, FIRE_BLAST, FIRE_SPIN
+	tr_mon 115, MEW
+		tr_moves PSYCHIC_M, SOFTBOILED, THUNDER_WAVE, BODY_SLAM
+	tr_mon 115, JOLTEON
+		tr_moves THUNDERBOLT, THUNDER_WAVE, BODY_SLAM, SAND_ATTACK
+	tr_mon 115, EXEGGUTOR
+		tr_moves STUN_SPORE, SLEEP_POWDER, PSYCHIC_M
+	tr_mon 115, STARMIE
+		tr_moves THUNDER_WAVE, BLIZZARD, THUNDERBOLT, RECOVER
+	tr_mon 115, TAUROS
+		tr_moves HYPER_BEAM, BODY_SLAM, EARTHQUAKE
+	tr_mon 115, MEWTWO
+		tr_moves PSYCHIC_M, RECOVER, THUNDER_WAVE, BODY_SLAM
 	end_trainer
 
 
