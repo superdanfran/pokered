@@ -60,7 +60,7 @@ ItemUsePtrTable:
 	dw UnusableItem      ; DOME_FOSSIL
 	dw UnusableItem      ; HELIX_FOSSIL
 	dw UnusableItem      ; SECRET_KEY
-	dw UnusableItem      ; ITEM_2C
+	dw ItemUseVitamin    ; CANDY_BAG
 	dw UnusableItem      ; BIKE_VOUCHER
 	dw ItemUseXAccuracy  ; X_ACCURACY
 	dw ItemUseEvoStone   ; LEAF_STONE
@@ -856,6 +856,10 @@ ItemUseMedicine:
 	jr z, ItemUseMedicine ; if so, force another choice
 .checkItemType
 	ld a, [wCurItem]
+
+	cp CANDY_BAG
+	jp z, .useVitamin
+
 	cp REVIVE
 	jr nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
@@ -1270,6 +1274,8 @@ ItemUseMedicine:
 	ld a, [wCurItem]
 	cp RARE_CANDY
 	jp z, .useRareCandy
+	cp CANDY_BAG
+	jp z, .useRareCandy
 	push hl
 	sub HP_UP
 	add a
@@ -1415,6 +1421,9 @@ ItemUseMedicine:
 	ld [wCurItem], a
 	pop af
 	ld [wWhichPokemon], a
+	ld a, [wCurItem]
+	cp CANDY_BAG
+	ret z
 	jp RemoveUsedItem
 
 VitaminStatRoseText:
