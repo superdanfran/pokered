@@ -66,7 +66,7 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; LEAF_STONE
 	dw ItemUseCardKey    ; CARD_KEY
 	dw UnusableItem      ; NUGGET
-	dw UnusableItem      ; ITEM_32
+	dw ItemUseHealingKit ; HEALING_KIT
 	dw ItemUsePokeDoll   ; POKE_DOLL
 	dw ItemUseMedicine   ; FULL_HEAL
 	dw ItemUseMedicine   ; REVIVE
@@ -100,6 +100,41 @@ ItemUsePtrTable:
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXER
 	dw ItemUsePPRestore  ; MAX_ELIXER
+
+ItemUseHealingKit:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld hl, AskHealingKitText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .yes
+; not eat now
+	ld hl, RefusedHealingKitText
+	call PrintText
+	ret
+.yes
+	ld hl, UsedHealingKitText
+	call PrintText
+	ld a, SFX_HEAL_AILMENT
+	call PlaySound
+	push hl
+	pop hl
+	predef_jump HealParty
+
+UsedHealingKitText: ; new
+	text_far _UsedHealingKitText
+	text_end
+
+AskHealingKitText: ; new
+	text_far _AskHealingKitText
+	text_end
+
+RefusedHealingKitText: ; new
+	text_far _RefusedHealingKitText
+	text_end
 
 ItemUseBall:
 
