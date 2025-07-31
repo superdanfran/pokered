@@ -62,6 +62,11 @@ OakSpeech:
 	ld a, 1
 	ld [wItemQuantity], a
 	call AddItemToInventory  ; give CANDY_BAG
+	ld a, HEALING_KIT
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantity], a
+	call AddItemToInventory  ; give HEALING_KIT
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call PrepareForSpecialWarp
