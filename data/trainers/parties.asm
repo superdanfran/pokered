@@ -38,44 +38,44 @@ YoungsterData:
 	end_trainer
 
 ; Route 25
-	def_trainer 5, 15
-	tr_mon RATTATA
-	tr_mon SPEAROW
+	def_trainer 5, 23
+	tr_mon POLIWAG
+	tr_mon GROWLITHE
 	end_trainer
 
-	def_trainer 6, 17
-	tr_mon SLOWPOKE
+	def_trainer 6, 23
+	tr_mon DITTO
 	end_trainer
 
-	def_trainer 7, 14
-	tr_mon EKANS
-	tr_mon SANDSHREW
+	def_trainer 7, 23
+	tr_mon MEOWTH
+	tr_mon PIDGEOTTO
 	end_trainer
 
 ; SS Anne 1F Rooms
-	def_trainer 8, 21
-	tr_mon NIDORAN_M
+	def_trainer 8, 28
+	tr_mon LICKITUNG
 	end_trainer
 
 ; Route 11
-	def_trainer 9, 21
-	tr_mon EKANS
-	end_trainer
-
-	def_trainer 10, 19
-	tr_mon SANDSHREW
-	tr_mon ZUBAT
-	end_trainer
-
-	def_trainer 11, 17
-	tr_mon RATTATA
-	tr_mon RATTATA
+	def_trainer 9, 24
 	tr_mon RATICATE
 	end_trainer
 
-	def_trainer 12, 18
-	tr_mon NIDORAN_M
-	tr_mon NIDORINO
+	def_trainer 10, 25
+	tr_mon SANDSHREW
+	tr_mon GOLBAT
+	end_trainer
+
+	def_trainer 11, 24
+	tr_mon FARFETCHD
+	tr_mon NIDOQUEEN
+	end_trainer
+
+	def_trainer 12, 24
+	tr_mon RATICATE
+	tr_mon FEAROW
+	tr_mon NINETALES
 	end_trainer
 
 ; Unused
@@ -176,24 +176,24 @@ BugCatcherData:
 LassData:
 	def_trainer_class LASS
 ; Route 3
-	def_trainer 1, 9
+	def_trainer 1, 14
 	tr_mon PIDGEY
-	tr_mon PIDGEY
+	tr_mon NIDORAN_F
 	end_trainer
 
-	def_trainer 2, 10
-	tr_mon RATTATA
+	def_trainer 2, 16
 	tr_mon NIDORAN_M
+	tr_mon SPEAROW
 	end_trainer
 
-	def_trainer 3, 14
+	def_trainer 3, 17
 	tr_mon JIGGLYPUFF
 	end_trainer
 
 ; Route 4
-	def_trainer 4, 31
+	def_trainer 4, 18
 	tr_mon PARAS
-	tr_mon PARAS
+	tr_mon PONYTA
 	tr_mon PARASECT
 	end_trainer
 
