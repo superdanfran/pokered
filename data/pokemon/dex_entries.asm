@@ -30,8 +30,8 @@ PokedexEntryPointers:
 	dw BlastoiseDexEntry
 	dw PinsirDexEntry
 	dw TangelaDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw CrobatDexEntry
+	dw KingdraDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
 	dw FearowDexEntry
@@ -405,6 +405,20 @@ TangelaDexEntry:
 	db 3,3
 	dw 770
 	text_far _TangelaDexEntry
+	text_end
+
+CrobatDexEntry:
+	db "BAT@"
+	db 5,11
+	dw 1650
+	text_far _CrobatDexEntry
+	text_end
+
+KingdraDexEntry:
+	db "DRAGON@"
+	db 5,11
+	dw 3350
+	text_far _KingdraDexEntry
 	text_end
 
 GrowlitheDexEntry:

@@ -298,6 +298,26 @@ _TangelaDexEntry::
 	next "shake as it walks"
 	dex
 
+_CrobatDexEntry::
+	text "As a result of its"
+	next "pursuit of faster,"
+	next "yet more silent"
+	
+	page "flight, a new set"
+	next "of wings grew on"
+	next "its hind legs."
+	dex
+
+_KingdraDexEntry::
+	text "It sleeps deep on"
+	next "the ocean floor to"
+	next "build its energy."
+
+	page "It is said to"
+	next "cause tornadoes as"
+	next "it wakes"
+	dex
+
 _GrowlitheDexEntry::
 	text "Very protective"
 	next "of its territory."

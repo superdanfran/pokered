@@ -40,8 +40,8 @@ EvosMovesPointerTable:
 	dw BlastoiseEvosMoves
 	dw PinsirEvosMoves
 	dw TangelaEvosMoves
-	dw MissingNo1FEvosMoves
-	dw MissingNo20EvosMoves
+	dw CrobatEvosMoves
+	dw KingdraEvosMoves
 	dw GrowlitheEvosMoves
 	dw OnixEvosMoves
 	dw FearowEvosMoves
@@ -549,13 +549,13 @@ TangelaEvosMoves:
 	db 49, GROWTH
 	db 0
 
-MissingNo1FEvosMoves:
+CrobatEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 0
 
-MissingNo20EvosMoves:
+KingdraEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -1169,6 +1169,7 @@ HorseaEvosMoves:
 
 SeadraEvosMoves:
 ; Evolutions
+	db EVOLVE_LEVEL, 60, KINGDRA
 	db 0
 ; Learnset
 	db 19, SMOKESCREEN
@@ -1548,6 +1549,7 @@ HypnoEvosMoves:
 
 GolbatEvosMoves:
 ; Evolutions
+	db EVOLVE_LEVEL, 32, CROBAT
 	db 0
 ; Learnset
 	db 10, CONFUSE_RAY
