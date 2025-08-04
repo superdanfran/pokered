@@ -186,5 +186,9 @@ Moves:
 	move EXTREMESPEED, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5
 	move DRACO_METEOR, RECOIL_EFFECT,			   130, DRAGON,		   90,  5
 	move ROCK_WRECKER, HYPER_BEAM_EFFECT,          150, ROCK,          90,  5
+	move DRAIN_KISS,   DRAIN_HP_EFFECT,				50, FAIRY,		  100, 10
+	move CHARM_VOICE,  SWIFT_EFFECT,				40, FAIRY,        100, 15
+	move MOONBLAST,    SPECIAL_DOWN_SIDE_EFFECT,	95, FAIRY,        100, 15
+	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT,     90, FAIRY,         90, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

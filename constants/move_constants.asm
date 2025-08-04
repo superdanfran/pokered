@@ -181,7 +181,11 @@
 	const EXTREMESPEED ; ad
 	const DRACO_METEOR ; ae
 	const ROCK_WRECKER ; af
-	const STRUGGLE     ; b1
+	const DRAIN_KISS   ; b1
+	const CHARM_VOICE  ; b2
+	const MOONBLAST    ; b3
+	const PLAY_ROUGH   ; b4
+	const STRUGGLE     ; b5
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

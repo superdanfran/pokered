@@ -175,6 +175,10 @@ AttackAnimationPointers:
 	dw ExtremeSpeedAnim
 	dw DracoMeteorAnim
 	dw RockWreckerAnim
+	dw DrainKissAnim
+	dw CharmVoiceAnim
+	dw MoonblastAnim
+	dw PlayRoughAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -417,6 +421,7 @@ WrapAnim:
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
 	db -1 ; end
 
+PlayRoughAnim:
 TakeDownAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
 	battle_anim TAKE_DOWN, SE_DARK_SCREEN_FLASH
@@ -480,6 +485,7 @@ RoarAnim:
 	battle_anim ROAR, SUBANIM_1_SHOUT, 1, 6
 	db -1 ; end
 
+CharmVoiceAnim:
 SingAnim:
 	battle_anim SING, SUBANIM_0_HEART_1_MUSIC, 1, 6
 	battle_anim NO_MOVE, SUBANIM_1_MUSIC_CIRCLING_ENEMY, 1, 16
@@ -559,6 +565,7 @@ BubbleBeamAnim:
 	battle_anim BUBBLEBEAM, SUBANIM_0_WATER_BUBBLES, 0, 18
 	db -1 ; end
 
+MoonblastAnim:
 AuroraBeamAnim:
 	battle_anim AURORA_BEAM, SUBANIM_0_BEAM, 0, 3
 	battle_anim NO_MOVE, SE_DELAY_ANIMATION_10
@@ -1043,6 +1050,7 @@ LeechLifeAnim:
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
 	db -1 ; end
 
+DrainKissAnim:
 LovelyKissAnim:
 	battle_anim LOVELY_KISS, SUBANIM_0_HEART_1_MUSIC, 0, 6
 	db -1 ; end

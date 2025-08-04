@@ -357,4 +357,7 @@ INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
 INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
+
+SECTION "bank2D", ROMX
+
 INCLUDE "engine/items/tm_prices.asm"

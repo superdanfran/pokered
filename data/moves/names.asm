@@ -175,5 +175,9 @@ MoveNames::
 	li "EXTREMESPEED"
 	li "DRACO METEOR"
 	li "ROCK WRECKER"
+	li "DRAIN KISS"
+	li "CHARM VOICE"
+	li "MOONBLAST"
+	li "PLAY ROUGH"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
