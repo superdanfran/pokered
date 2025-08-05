@@ -206,5 +206,7 @@ Moves:
 	move WILL_O_WISP,  BURN_EFFECT,                  0, FIRE,          85, 15
 	move SCALD,		   BURN_SIDE_EFFECT1,           80, WATER,        100, 15
 	move AQUA_JET,     NO_ADDITIONAL_EFFECT,        40, WATER,        100, 20
+	move GIGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10
+	move MAGICAL_LEAF, SWIFT_EFFECT,				60, GRASS,        100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

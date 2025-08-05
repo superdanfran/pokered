@@ -201,7 +201,9 @@
 	const WILL_O_WISP  ; c3
 	const SCALD		   ; c4
 	const AQUA_JET     ; c5
- 	const STRUGGLE     ; c6
+	const GIGA_DRAIN   ; c6
+	const MAGICAL_LEAF ; c7
+ 	const STRUGGLE     ; c8
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

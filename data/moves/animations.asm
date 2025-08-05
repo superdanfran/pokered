@@ -195,6 +195,8 @@ AttackAnimationPointers:
 	dw WillOWispAnim
 	dw ScaldAnim
 	dw AquaJetAnim
+	dw GigaDrainAnim
+	dw MagicalLeafAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -664,6 +666,7 @@ AbsorbAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+GigaDrainAnim:
 MegaDrainAnim:
 	battle_anim MEGA_DRAIN, SE_LIGHT_SCREEN_PALETTE
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
@@ -684,6 +687,7 @@ GrowthAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+MagicalLeafAnim:
 RazorLeafAnim:
 	battle_anim RAZOR_LEAF, SE_LEAVES_FALLING
 	battle_anim SWIFT, SUBANIM_1_LEAVES_TOSS, 1, 1

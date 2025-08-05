@@ -196,6 +196,8 @@ MoveSoundTable:
 	db SFX_BATTLE_13,          $f1, $ff ; WILL_O_WISP
 	db SFX_BATTLE_24,          $20, $60 ; SCALD
 	db SFX_BATTLE_25,          $00, $10 ; AQUA_JET
+	db SFX_BATTLE_24,          $40, $c0 ; GIGA_DRAIN
+	db SFX_BATTLE_2B,          $1f, $60 ; MAGICAL_LEAF
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

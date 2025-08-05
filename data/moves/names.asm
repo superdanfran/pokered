@@ -194,5 +194,8 @@ MoveNames::
 	li "FLARE BLITZ"
 	li "WILL-O-WISP"
 	li "SCALD"
+	li "AQUA JET"
+	li "GIGA DRAIN"
+	li "MAGICAL LEAF"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
