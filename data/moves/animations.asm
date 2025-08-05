@@ -183,6 +183,11 @@ AttackAnimationPointers:
 	dw SuckerPunchAnim
 	dw NightSlashAnim
 	dw FeintAttackAnim
+	dw BulletPunchAnim
+	dw FlashCannonAnim
+	dw MetalClawAnim
+	dw IronHeadAnim
+	dw SmartStrikeAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -265,6 +270,7 @@ DoubleSlapAnim:
 	battle_anim DOUBLESLAP, SUBANIM_0_STAR_TWICE, 0, 5
 	db -1 ; end
 
+BulletPunchAnim:
 SuckerPunchAnim:
 MachPunchAnim:
 CometPunchAnim:
@@ -321,6 +327,7 @@ SwordsDanceAnim:
 	battle_anim SWORDS_DANCE, SUBANIM_1_SWORDS_CIRCLING, 1, 6
 	db -1 ; end
 
+MetalClawAnim:
 CutAnim:
 	battle_anim CUT, SE_DARK_SCREEN_FLASH
 	battle_anim NO_MOVE, SUBANIM_0_SLICE, 0, 4
@@ -386,10 +393,12 @@ SandAttackAnim:
 	battle_anim SAND_ATTACK, SUBANIM_1_SAND, 1, 6
 	db -1 ; end
 
+IronHeadAnim:
 HeadbuttAnim:
 	battle_anim HEADBUTT, SUBANIM_1_STAR_BIG, 1, 6
 	db -1 ; end
 
+SmartStrikeAnim:
 HornAttackAnim:
 	battle_anim HORN_ATTACK, SUBANIM_0_HORN_JAB_TWICE, 0, 6
 	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 6
@@ -1091,6 +1100,7 @@ SporeAnim:
 	battle_anim SPORE, SUBANIM_0_CIRCLES_FALLING, 0, 6
 	db -1 ; end
 
+FlashCannonAnim:
 FlashAnim:
 	battle_anim LEECH_SEED, SE_LIGHT_SCREEN_PALETTE
 	battle_anim GLARE, SE_DARK_SCREEN_FLASH
@@ -1169,7 +1179,7 @@ SuperFangAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-NightSlashAnim
+NightSlashAnim:
 XScissorAnim:
 SlashAnim:
 	battle_anim SLASH, SUBANIM_0_SCRATCHES, 0, 6

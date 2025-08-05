@@ -184,6 +184,11 @@ MoveSoundTable:
 	db SFX_BATTLE_0B,          $01, $80 ; SUCKER_PUNCH
 	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; NIGHT_SLASH
 	db SFX_FAINT_FALL,         $ff, $04 ; FEINT_ATTACK
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; BULLET_PUNCH
+	db SFX_BATTLE_36,          $00, $80 ; FLASH_CANNON
+	db SFX_BATTLE_0F,          $20, $40 ; METAL_CLAW
+	db SFX_SUPER_EFFECTIVE,    $20, $c0 ; IRON_HEAD
+	db SFX_SUPER_EFFECTIVE,    $20, $c0 ; SMART_STRIKE
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

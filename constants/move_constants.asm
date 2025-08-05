@@ -189,7 +189,12 @@
 	const SUCKER_PUNCH ; b6
 	const NIGHT_SLASH  ; b7
 	const FEINT_ATTACK ; b8
-	const STRUGGLE     ; b9
+	const BULLET_PUNCH ; b9
+	const FLASH_CANNON ; ba
+	const METAL_CLAW   ; bb
+	const IRON_HEAD    ; bc
+	const SMART_STRIKE ; bd
+ 	const STRUGGLE     ; be
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

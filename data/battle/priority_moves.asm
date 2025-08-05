@@ -5,6 +5,7 @@ PriorityMovesList:
         db COUNTER,        1
         db QUICK_ATTACK,   8
         db MACH_PUNCH,     8
-        db SUCKER_PUNCH,   8
+        db BULLET_PUNCH,   8
+        db SUCKER_PUNCH,   9
         db EXTREMESPEED,   9
         db -1 ; end

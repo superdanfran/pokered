@@ -183,5 +183,10 @@ MoveNames::
 	li "SUCKER PUNCH"
 	li "NIGHT SLASH"
 	li "FEINT ATTACK"
+	li "BULLET PUNCH"
+	li "FLASH CANNON"
+	li "METAL CLAW"
+	li "IRON HEAD"
+	li "SMART STRIKE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
