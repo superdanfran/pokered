@@ -190,5 +190,9 @@ Moves:
 	move CHARM_VOICE,  SWIFT_EFFECT,				40, FAIRY,        100, 15
 	move MOONBLAST,    SPECIAL_DOWN_SIDE_EFFECT,	95, FAIRY,        100, 15
 	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT,     90, FAIRY,         90, 10
+	move DARK_PULSE,   FLINCH_SIDE_EFFECT1,         80, DARK,         100, 15
+	move SUCKER_PUNCH, NO_ADDITIONAL_EFFECT,        40, DARK,         100, 15
+	move NIGHT_SLASH,  NO_ADDITIONAL_EFFECT,        70, DARK,         100, 20
+	move FEINT_ATTACK, SWIFT_EFFECT,				40, DARK,         100, 15
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

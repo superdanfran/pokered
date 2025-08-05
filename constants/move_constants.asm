@@ -185,7 +185,11 @@
 	const CHARM_VOICE  ; b2
 	const MOONBLAST    ; b3
 	const PLAY_ROUGH   ; b4
-	const STRUGGLE     ; b5
+	const DARK_PULSE   ; b5
+	const SUCKER_PUNCH ; b6
+	const NIGHT_SLASH  ; b7
+	const FEINT_ATTACK ; b8
+	const STRUGGLE     ; b9
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

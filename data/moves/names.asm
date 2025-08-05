@@ -179,5 +179,9 @@ MoveNames::
 	li "CHARM VOICE"
 	li "MOONBLAST"
 	li "PLAY ROUGH"
+	li "DARK PULSE"
+	li "SUCKER PUNCH"
+	li "NIGHT SLASH"
+	li "FEINT ATTACK"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

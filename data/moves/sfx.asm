@@ -180,6 +180,10 @@ MoveSoundTable:
 	db SFX_BATTLE_35,          $00, $80 ; CHARM_VOICE
 	db SFX_BATTLE_14,          $00, $20 ; MOONBLAST
 	db SFX_BATTLE_23,          $01, $c0 ; PLAY_ROUGH
+	db SFX_BATTLE_0C,          $f0, $f0 ; DARK_PULSE
+	db SFX_BATTLE_0B,          $01, $80 ; SUCKER_PUNCH
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; NIGHT_SLASH
+	db SFX_FAINT_FALL,         $ff, $04 ; FEINT_ATTACK
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80
