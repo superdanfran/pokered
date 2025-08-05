@@ -197,7 +197,9 @@
 	const DRAGON_PULSE ; be
 	const TWISTER      ; bf
 	const DRAGONBREATH ; c1
- 	const STRUGGLE     ; c2
+	const FLARE_BLITZ  ; c2
+	const WILL_O_WISP  ; c3
+ 	const STRUGGLE     ; c4
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

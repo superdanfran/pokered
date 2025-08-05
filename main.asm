@@ -241,6 +241,7 @@ SECTION "Battle Engine 8", ROMX
 
 INCLUDE "engine/battle/init_battle_variables.asm"
 INCLUDE "engine/battle/move_effects/paralyze.asm"
+INCLUDE "engine/battle/move_effects/burn.asm"
 
 
 SECTION "Hidden Objects 2", ROMX
@@ -356,8 +357,8 @@ INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
 INCLUDE "engine/movie/evolution.asm"
-INCLUDE "engine/overworld/elevator.asm"
 
 SECTION "bank2D", ROMX
 
 INCLUDE "engine/items/tm_prices.asm"
+INCLUDE "engine/overworld/elevator.asm"

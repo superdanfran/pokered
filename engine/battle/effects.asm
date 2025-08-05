@@ -1165,6 +1165,9 @@ ConfusionEffectFailed:
 ParalyzeEffect:
 	jpfar ParalyzeEffect_
 
+BurnEffect:					; new
+	jpfar BurnEffect_		; new
+
 SubstituteEffect:
 	jpfar SubstituteEffect_
 

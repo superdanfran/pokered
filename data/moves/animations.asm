@@ -191,6 +191,8 @@ AttackAnimationPointers:
 	dw DragonPulseAnim
 	dw TwisterAnim
 	dw DragonbreathAnim
+	dw FlareBlitzAnim
+	dw WillOWispAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -440,6 +442,7 @@ WrapAnim:
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
 	db -1 ; end
 
+FlareBlitzAnim:
 PlayRoughAnim:
 TakeDownAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
@@ -882,6 +885,7 @@ SmokeScreenAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+WillOWispAnim:
 ConfuseRayAnim:
 	battle_anim CONFUSE_RAY, SE_DARK_SCREEN_PALETTE
 	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG_TOSS, 1, 6
