@@ -188,5 +188,8 @@ MoveNames::
 	li "METAL CLAW"
 	li "IRON HEAD"
 	li "SMART STRIKE"
+	li "DRAGON PULSE"
+	li "TWISTER"
+	li "DRAGONBREATH"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

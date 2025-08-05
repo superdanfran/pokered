@@ -189,6 +189,9 @@ MoveSoundTable:
 	db SFX_BATTLE_0F,          $20, $40 ; METAL_CLAW
 	db SFX_SUPER_EFFECTIVE,    $20, $c0 ; IRON_HEAD
 	db SFX_SUPER_EFFECTIVE,    $20, $c0 ; SMART_STRIKE
+	db SFX_BATTLE_2A,          $00, $80 ; DRAGON_PULSE
+	db SFX_BATTLE_29,          $f0, $80 ; TWISTER
+	db SFX_BATTLE_29,          $f0, $80 ; DRAGONBREATH
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

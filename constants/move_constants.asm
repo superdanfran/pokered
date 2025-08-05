@@ -194,7 +194,10 @@
 	const METAL_CLAW   ; bb
 	const IRON_HEAD    ; bc
 	const SMART_STRIKE ; bd
- 	const STRUGGLE     ; be
+	const DRAGON_PULSE ; be
+	const TWISTER      ; bf
+	const DRAGONBREATH ; c1
+ 	const STRUGGLE     ; c2
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

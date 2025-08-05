@@ -188,6 +188,9 @@ AttackAnimationPointers:
 	dw MetalClawAnim
 	dw IronHeadAnim
 	dw SmartStrikeAnim
+	dw DragonPulseAnim
+	dw TwisterAnim
+	dw DragonbreathAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -333,6 +336,7 @@ CutAnim:
 	battle_anim NO_MOVE, SUBANIM_0_SLICE, 0, 4
 	db -1 ; end
 
+TwisterAnim:
 GustAnim:
 	battle_anim GUST, SUBANIM_1_TORNADO, 1, 6
 	battle_anim NO_MOVE, SUBANIM_0_STAR_THRICE, 0, 6
@@ -535,6 +539,7 @@ EmberAnim:
 	battle_anim EMBER, SUBANIM_1_FLAMES, 1, 6
 	db -1 ; end
 
+DragonbreathAnim:
 FlamethrowerAnim:
 	battle_anim FLAMETHROWER, SUBANIM_1_FLAME_BEAM, 1, 6
 	battle_anim FLAMETHROWER, SUBANIM_1_FLAME_COLUMN_1, 1, 6
@@ -707,6 +712,7 @@ StringShotAnim:
 	battle_anim STRING_SHOT, SUBANIM_0_STRING_SHOT, 0, 8
 	db -1 ; end
 
+DragonPulseAnim:
 DragonRageAnim:
 	battle_anim DRAGON_RAGE, SUBANIM_1_FLAME_BEAM, 1, 6
 	battle_anim NO_MOVE, SUBANIM_1_FLAME_COLUMN_1, 1, 6

@@ -199,5 +199,8 @@ Moves:
 	move METAL_CLAW,   NO_ADDITIONAL_EFFECT,        50, STEEL,        100, 20
 	move IRON_HEAD,    FLINCH_SIDE_EFFECT1,         80, STEEL,        100, 15
 	move SMART_STRIKE, SWIFT_EFFECT,				70, STEEL,        100, 15
+	move DRAGON_PULSE, NO_ADDITIONAL_EFFECT,        90, DRAGON,       100, 10
+	move TWISTER,      FLINCH_SIDE_EFFECT1,         40, DRAGON,       100, 20
+	move DRAGONBREATH, PARALYZE_SIDE_EFFECT2,       60, DRAGON,       100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
