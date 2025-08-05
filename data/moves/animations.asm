@@ -193,6 +193,8 @@ AttackAnimationPointers:
 	dw DragonbreathAnim
 	dw FlareBlitzAnim
 	dw WillOWispAnim
+	dw ScaldAnim
+	dw AquaJetAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -555,6 +557,7 @@ MistAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+ScaldAnim:
 WaterGunAnim:
 	battle_anim WATER_GUN, SUBANIM_0_WATER_DROPLETS, 0, 6
 	db -1 ; end
@@ -992,6 +995,7 @@ FireBlastAnim:
 	battle_anim NO_MOVE, SUBANIM_1_FLAME_COLUMN_2, 1, 6
 	db -1 ; end
 
+AquaJetAnim:
 WaterfallAnim:
 	battle_anim LEECH_SEED, SE_SLIDE_MON_DOWN
 	battle_anim HYDRO_PUMP, SUBANIM_0_WATER_COLUMNS, 0, 6

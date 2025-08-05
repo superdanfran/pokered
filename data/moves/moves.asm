@@ -204,5 +204,7 @@ Moves:
 	move DRAGONBREATH, PARALYZE_SIDE_EFFECT2,       60, DRAGON,       100, 20
 	move FLARE_BLITZ,  RECOIL_EFFECT,			   120, FIRE,		  100,  5
 	move WILL_O_WISP,  BURN_EFFECT,                  0, FIRE,          85, 15
+	move SCALD,		   BURN_SIDE_EFFECT1,           80, WATER,        100, 15
+	move AQUA_JET,     NO_ADDITIONAL_EFFECT,        40, WATER,        100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

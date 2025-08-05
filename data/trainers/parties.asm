@@ -1564,17 +1564,17 @@ Rival1Data:
 	def_trainer_class RIVAL1
 	def_trainer 1, 3
 	tr_mon MEW
-		tr_moves SUCKER_PUNCH, WILL_O_WISP, SMART_STRIKE, DRAIN_KISS
+		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
 	def_trainer 2, 3
 	tr_mon MEW
-		tr_moves SUCKER_PUNCH, WILL_O_WISP, SMART_STRIKE, DRAIN_KISS
+		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
 	def_trainer 3, 3
 	tr_mon MEW
-		tr_moves SUCKER_PUNCH, WILL_O_WISP, SMART_STRIKE, DRAIN_KISS
+		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
 ; Route 22

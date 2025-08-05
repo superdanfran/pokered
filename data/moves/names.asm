@@ -193,5 +193,6 @@ MoveNames::
 	li "DRAGONBREATH"
 	li "FLARE BLITZ"
 	li "WILL-O-WISP"
+	li "SCALD"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

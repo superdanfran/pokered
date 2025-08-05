@@ -199,7 +199,9 @@
 	const DRAGONBREATH ; c1
 	const FLARE_BLITZ  ; c2
 	const WILL_O_WISP  ; c3
- 	const STRUGGLE     ; c4
+	const SCALD		   ; c4
+	const AQUA_JET     ; c5
+ 	const STRUGGLE     ; c6
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff
