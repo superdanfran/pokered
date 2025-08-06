@@ -210,5 +210,9 @@ Moves:
 	move MAGICAL_LEAF, SWIFT_EFFECT,				60, GRASS,        100, 20
 	move ICE_SHARD,    NO_ADDITIONAL_EFFECT,        40, ICE,          100, 20
 	move ICICLE_SPEAR, TWO_TO_FIVE_ATTACKS_EFFECT,  20, ICE,          100, 15
+	move SLUDGE_BOMB,  POISON_SIDE_EFFECT2,         90, POISON,       100, 10
+	move SHADOW_BALL,  DEFENSE_DOWN_SIDE_EFFECT,    80, GHOST,        100, 15
+	move SHADOW_PUNCH, SWIFT_EFFECT,				60, GHOST,        100, 20
+	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

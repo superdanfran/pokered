@@ -199,6 +199,10 @@ AttackAnimationPointers:
 	dw MagicalLeafAnim
 	dw IceShardAnim
 	dw IcicleSpearAnim
+	dw SludgeBombAnim
+	dw ShadowBallAnim
+	dw ShadowPunchAnim
+	dw ShadowClawAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -299,6 +303,7 @@ PayDayAnim:
 	battle_anim PAY_DAY, SUBANIM_0_COIN_BOUNCE, 0, 4
 	db -1 ; end
 
+ShadowPunchAnim:
 FirePunchAnim:
 	battle_anim FIRE_PUNCH, SUBANIM_0_STAR_THRICE, 0, 6
 	battle_anim NO_MOVE, SUBANIM_1_FLAMES, 1, 6
@@ -338,6 +343,7 @@ SwordsDanceAnim:
 	battle_anim SWORDS_DANCE, SUBANIM_1_SWORDS_CIRCLING, 1, 6
 	db -1 ; end
 
+ShadowClawAnim:
 MetalClawAnim:
 CutAnim:
 	battle_anim CUT, SE_DARK_SCREEN_FLASH
@@ -792,6 +798,7 @@ ConfusionAnim:
 	battle_anim CONFUSION, SE_FLASH_SCREEN_LONG
 	db -1 ; end
 
+ShadowBallAnim:
 PsychicAnim:
 	battle_anim PSYCHIC_M, SE_FLASH_SCREEN_LONG
 	battle_anim NO_MOVE, SE_WAVY_SCREEN
@@ -982,6 +989,7 @@ SmogAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+SludgeBombAnim:
 GunkShotAnim:
 SludgeAnim:
 	battle_anim SLUDGE, SUBANIM_1_BLOB_TOSS, 1, 6

@@ -199,5 +199,9 @@ MoveNames::
 	li "MAGICAL LEAF"
 	li "ICE SHARD"
 	li "ICICLE SPEAR"
+	li "SLUDGE BOMB"
+	li "SHADOW BALL"
+	li "SHADOW PUNCH"
+	li "SHADOW CLAW"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

@@ -205,7 +205,11 @@
 	const MAGICAL_LEAF ; c7
 	const ICE_SHARD    ; c8
 	const ICICLE_SPEAR ; c9
- 	const STRUGGLE     ; ca
+	const SLUDGE_BOMB  ; ca
+	const SHADOW_BALL  ; cb
+	const SHADOW_PUNCH ; cc
+	const SHADOW_CLAW  ; cd
+ 	const STRUGGLE     ; ce
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

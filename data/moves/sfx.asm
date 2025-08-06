@@ -200,6 +200,10 @@ MoveSoundTable:
 	db SFX_BATTLE_2B,          $1f, $60 ; MAGICAL_LEAF
 	db SFX_POUND,              $00, $80 ; ICE_SHARD
 	db SFX_POUND,              $00, $80 ; ICICLE_SPEAR
+	db SFX_BATTLE_2A,          $20, $20 ; SLUDGE_BOMB
+	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_BALL
+	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_PUNCH
+	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_CLAW
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80
