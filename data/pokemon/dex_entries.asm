@@ -55,12 +55,12 @@ PokedexEntryPointers:
 	dw ElectabuzzDexEntry
 	dw MagnetonDexEntry
 	dw KoffingDexEntry
-	dw MissingNoDexEntry
+	dw Porygon2DexEntry
 	dw MankeyDexEntry
 	dw SeelDexEntry
 	dw DiglettDexEntry
 	dw TaurosDexEntry
-	dw MissingNoDexEntry
+	dw PorygonZDexEntry
 	dw MissingNoDexEntry
 	dw MissingNoDexEntry
 	dw FarfetchdDexEntry
@@ -582,6 +582,13 @@ KoffingDexEntry:
 	text_far _KoffingDexEntry
 	text_end
 
+Porygon2DexEntry:
+	db "VIRTUAL@"
+	db 2
+	dw 325
+	text_far _Porygon2DexEntry
+	text_end
+
 MankeyDexEntry:
 	db "PIG MONKEY@"
 	db 1,8
@@ -608,6 +615,13 @@ TaurosDexEntry:
 	db 4,7
 	dw 1950
 	text_far _TaurosDexEntry
+	text_end
+
+PorygonZDexEntry:
+	db "VIRTUAL@"
+	db 2,11
+	dw 340
+	text_far _PorygonZDexEntry
 	text_end
 
 FarfetchdDexEntry:

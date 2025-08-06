@@ -65,12 +65,12 @@ EvosMovesPointerTable:
 	dw ElectabuzzEvosMoves
 	dw MagnetonEvosMoves
 	dw KoffingEvosMoves
-	dw MissingNo38EvosMoves
+	dw Porygon2EvosMoves
 	dw MankeyEvosMoves
 	dw SeelEvosMoves
 	dw DiglettEvosMoves
 	dw TaurosEvosMoves
-	dw MissingNo3DEvosMoves
+	dw PorygonZEvosMoves
 	dw MissingNo3EEvosMoves
 	dw MissingNo3FEvosMoves
 	dw FarfetchdEvosMoves
@@ -772,7 +772,7 @@ ElectivireEvosMoves:
 
 MagmarEvosMoves:
 ; Evolutions
-	db EVOLVE_ITEM, FIRE_STONE, 1,
+	db EVOLVE_ITEM, FIRE_STONE, 1, MAGMORTAR
 	db 0
 ; Learnset
 	db 36, LEER
@@ -791,7 +791,7 @@ MagmortarEvosMoves:
 
 ElectabuzzEvosMoves:
 ; Evolutions
-	db EVOLVE_ITEM, THUNDER_STONE, 1,
+	db EVOLVE_ITEM, THUNDER_STONE, 1, ELECTIVIRE
 	db 0
 ; Learnset
 	db 34, THUNDERSHOCK
@@ -825,8 +825,9 @@ KoffingEvosMoves:
 	db 48, EXPLOSION
 	db 0
 
-MissingNo38EvosMoves:
+Porygon2EvosMoves:
 ; Evolutions
+    db EVOLVE_LEVEL, 60, PORYGONZ
 	db 0
 ; Learnset
 	db 0
@@ -878,7 +879,7 @@ TaurosEvosMoves:
 	db 51, TAKE_DOWN
 	db 0
 
-MissingNo3DEvosMoves:
+PorygonZEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -1940,6 +1941,7 @@ GeodudeEvosMoves:
 
 PorygonEvosMoves:
 ; Evolutions
+	db EVOLVE_LEVEL, 40, PORYGON2
 	db 0
 ; Learnset
 	db 23, PSYBEAM

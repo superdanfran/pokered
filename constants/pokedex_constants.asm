@@ -159,5 +159,7 @@
 	const DEX_KINGDRA    ; 153
 	const DEX_ELECTIVIRE ; 154
 	const DEX_MAGMORTAR  ; 155
+	const DEX_PORYGON2   ; 156
+	const DEX_PORYGONZ   ; 157
 
 DEF NUM_POKEMON EQU const_value - 1

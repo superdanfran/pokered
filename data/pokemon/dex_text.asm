@@ -547,6 +547,16 @@ _KoffingDexEntry::
 	next "without warning"
 	dex
 
+_Porygon2DexEntry::
+	text "Further research"
+	next "enhanced its abil-"
+	next "ities. Sometimes,"
+
+	page "it may exhibit mo-"
+	next "tions that were"
+	next "not programmed"
+	dex
+
 _MankeyDexEntry::
 	text "Extremely quick to"
 	next "anger. It could"
@@ -585,6 +595,16 @@ _TaurosDexEntry::
 	page "while whipping its"
 	next "body with its"
 	next "long tails"
+	dex
+
+_PorygonZDexEntry::
+	text "Its programming"
+	next "was modified to"
+	next "enable travel to"
+
+	page "alien dimensions."
+	next "It did not work as"
+	next "planned.."
 	dex
 
 _FarfetchdDexEntry::

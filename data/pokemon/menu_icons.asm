@@ -155,4 +155,6 @@ MonPartyData:
 	nybble ICON_WATER     ; Kingdra
 	nybble ICON_MON       ; Electivire
 	nybble ICON_MON       ; Magmortar
+	nybble ICON_MON       ; Porygon2
+	nybble ICON_MON       ; PorygonZ
 	end_nybble_array NUM_POKEMON
