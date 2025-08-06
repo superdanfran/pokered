@@ -49,9 +49,9 @@ PokedexEntryPointers:
 	dw PsyduckDexEntry
 	dw DrowzeeDexEntry
 	dw GolemDexEntry
-	dw MissingNoDexEntry
+	dw ElectivireDexEntry
 	dw MagmarDexEntry
-	dw MissingNoDexEntry
+	dw MagmortarDexEntry
 	dw ElectabuzzDexEntry
 	dw MagnetonDexEntry
 	dw KoffingDexEntry
@@ -540,11 +540,25 @@ GolemDexEntry:
 	text_far _GolemDexEntry
 	text_end
 
+ElectivireDexEntry:
+	db "THUNDERBOLT@"
+	db 4,7
+	dw 6620
+	text_far _ElectivireDexEntry
+	text_end
+
 MagmarDexEntry:
 	db "SPITFIRE@"
 	db 4,3
 	dw 980
 	text_far _MagmarDexEntry
+	text_end
+
+MagmortarDexEntry:
+	db "BLAST@"
+	db 16
+	dw 680
+	text_far _MagmortarDexEntry
 	text_end
 
 ElectabuzzDexEntry:

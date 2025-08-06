@@ -59,9 +59,9 @@ EvosMovesPointerTable:
 	dw PsyduckEvosMoves
 	dw DrowzeeEvosMoves
 	dw GolemEvosMoves
-	dw MissingNo32EvosMoves
+	dw ElectivireEvosMoves
 	dw MagmarEvosMoves
-	dw MissingNo34EvosMoves
+	dw MagmortarEvosMoves
 	dw ElectabuzzEvosMoves
 	dw MagnetonEvosMoves
 	dw KoffingEvosMoves
@@ -764,7 +764,7 @@ GolemEvosMoves:
 	db 43, EXPLOSION
 	db 0
 
-MissingNo32EvosMoves:
+ElectivireEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -772,6 +772,7 @@ MissingNo32EvosMoves:
 
 MagmarEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, FIRE_STONE, 1,
 	db 0
 ; Learnset
 	db 36, LEER
@@ -782,7 +783,7 @@ MagmarEvosMoves:
 	db 55, FLAMETHROWER
 	db 0
 
-MissingNo34EvosMoves:
+MagmortarEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -790,6 +791,7 @@ MissingNo34EvosMoves:
 
 ElectabuzzEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, THUNDER_STONE, 1,
 	db 0
 ; Learnset
 	db 34, THUNDERSHOCK

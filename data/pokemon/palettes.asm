@@ -154,4 +154,6 @@ MonsterPalettes:
 	db PAL_MEWMON    ; MEW
 	db PAL_PURPLEMON ; CROBAT
 	db PAL_CYANMON   ; KINGDRA
+	db PAL_YELLOWMON ; ELECTIVIRE
+	db PAL_REDMON    ; MAGMORTAR
 	assert_table_length NUM_POKEMON + 1

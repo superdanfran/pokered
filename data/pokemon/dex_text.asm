@@ -488,6 +488,16 @@ _GolemDexEntry::
 	next "without damage"
 	dex
 
+_ElectivireDexEntry::
+	text "Heedless of enemy"
+	next "attacks, it closes"
+	next "in, shoves its"
+
+	page "tails onto the"
+	next "foe, then looses"
+	next "high voltage"
+	dex
+
 _MagmarDexEntry::
 	text "Its body always"
 	next "burns with an"
@@ -496,6 +506,15 @@ _MagmarDexEntry::
 	page "enables it to"
 	next "hide perfectly"
 	next "among flames"
+	dex
+
+_MagmortarDexEntry::
+	text "When launching"
+	next "2000C fireballs,"
+	next "its body takes on"
+
+	page "a whitish hue from"
+	next "the intense heat"
 	dex
 
 _ElectabuzzDexEntry::

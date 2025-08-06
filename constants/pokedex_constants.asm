@@ -157,5 +157,7 @@
 	const DEX_MEW        ; 151
 	const DEX_CROBAT	 ; 152
 	const DEX_KINGDRA    ; 153
+	const DEX_ELECTIVIRE ; 154
+	const DEX_MAGMORTAR  ; 155
 
 DEF NUM_POKEMON EQU const_value - 1
