@@ -197,5 +197,7 @@ MoveNames::
 	li "AQUA JET"
 	li "GIGA DRAIN"
 	li "MAGICAL LEAF"
+	li "ICE SHARD"
+	li "ICICLE SPEAR"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

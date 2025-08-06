@@ -203,7 +203,9 @@
 	const AQUA_JET     ; c5
 	const GIGA_DRAIN   ; c6
 	const MAGICAL_LEAF ; c7
- 	const STRUGGLE     ; c8
+	const ICE_SHARD    ; c8
+	const ICICLE_SPEAR ; c9
+ 	const STRUGGLE     ; ca
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

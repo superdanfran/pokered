@@ -7,6 +7,7 @@ PriorityMovesList:
         db MACH_PUNCH,     8
         db BULLET_PUNCH,   8
         db AQUA_JET,       8
+        db ICE_SHARD,      8
         db SUCKER_PUNCH,   9
         db EXTREMESPEED,   9
         db -1 ; end

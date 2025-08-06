@@ -197,6 +197,8 @@ AttackAnimationPointers:
 	dw AquaJetAnim
 	dw GigaDrainAnim
 	dw MagicalLeafAnim
+	dw IceShardAnim
+	dw IcicleSpearAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1021,6 +1023,8 @@ SkullBashAnim:
 	battle_anim SKULL_BASH, SUBANIM_1_STAR_BIG, 1, 6
 	db -1 ; end
 
+IcicleSpearAnim:
+IceShardAnim:
 SpikeCannonAnim:
 	battle_anim SPIKE_CANNON, SUBANIM_1_STAR_BIG_MOVING, 1, 4
 	db -1 ; end

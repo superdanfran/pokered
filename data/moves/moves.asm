@@ -208,5 +208,7 @@ Moves:
 	move AQUA_JET,     NO_ADDITIONAL_EFFECT,        40, WATER,        100, 20
 	move GIGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10
 	move MAGICAL_LEAF, SWIFT_EFFECT,				60, GRASS,        100, 20
+	move ICE_SHARD,    NO_ADDITIONAL_EFFECT,        40, ICE,          100, 20
+	move ICICLE_SPEAR, TWO_TO_FIVE_ATTACKS_EFFECT,  20, ICE,          100, 15
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
