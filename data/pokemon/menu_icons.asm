@@ -157,4 +157,5 @@ MonPartyData:
 	nybble ICON_MON       ; Magmortar
 	nybble ICON_MON       ; Porygon2
 	nybble ICON_MON       ; PorygonZ
+	nybble ICON_SNAKE     ; Steelix
 	end_nybble_array NUM_POKEMON

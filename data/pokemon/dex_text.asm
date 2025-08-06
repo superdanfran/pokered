@@ -607,6 +607,16 @@ _PorygonZDexEntry::
 	next "planned.."
 	dex
 
+_SteelixDexEntry::
+	text "Its body has been"
+	next "compressed deep"
+	next "under the ground."
+
+	page "As a result, it is"
+	next "even harder than a"
+	next "diamond"
+	dex
+
 _FarfetchdDexEntry::
 	text "The sprig of"
 	next "green onions it"

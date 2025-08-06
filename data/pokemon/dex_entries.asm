@@ -61,7 +61,7 @@ PokedexEntryPointers:
 	dw DiglettDexEntry
 	dw TaurosDexEntry
 	dw PorygonZDexEntry
-	dw MissingNoDexEntry
+	dw SteelixDexEntry
 	dw MissingNoDexEntry
 	dw FarfetchdDexEntry
 	dw VenonatDexEntry
@@ -622,6 +622,13 @@ PorygonZDexEntry:
 	db 2,11
 	dw 340
 	text_far _PorygonZDexEntry
+	text_end
+
+SteelixDexEntry:
+	db "IRON SNAKE@"
+	db 30,2
+	dw 8818
+	text_far _SteelixDexEntry
 	text_end
 
 FarfetchdDexEntry:

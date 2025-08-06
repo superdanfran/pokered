@@ -1029,9 +1029,9 @@ MeowthEvosMoves:
 ; Learnset
 	db 12, BITE
 	db 17, PAY_DAY
-	db 24, SCREECH
-	db 33, FURY_SWIPES
-	db 44, SLASH
+	db 24, BITE
+	db 47, NIGHT_SLASH
+	db 58, HYPNOSIS
 	db 0
 
 KrabbyEvosMoves:
@@ -1677,11 +1677,11 @@ PersianEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, BITE
-	db 17, PAY_DAY
-	db 24, SCREECH
-	db 37, FURY_SWIPES
-	db 51, SLASH
+	db 12, NIGHT_SLASH
+	db 17, NIGHT_SLASH
+	db 24, NIGHT_SLASH
+	db 51, NIGHT_SLASH
+	db 63, HYPNOSIS
 	db 0
 
 MarowakEvosMoves:

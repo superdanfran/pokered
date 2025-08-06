@@ -161,5 +161,6 @@
 	const DEX_MAGMORTAR  ; 155
 	const DEX_PORYGON2   ; 156
 	const DEX_PORYGONZ   ; 157
+	const DEX_STEELIX    ; 158
 
 DEF NUM_POKEMON EQU const_value - 1
