@@ -214,5 +214,13 @@ Moves:
 	move SHADOW_BALL,  DEFENSE_DOWN_SIDE_EFFECT,    80, GHOST,        100, 15
 	move SHADOW_PUNCH, SWIFT_EFFECT,				60, GHOST,        100, 20
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 20
+	move AERIAL_ACE,   SWIFT_EFFECT,				60, FLYING,       100, 20
+	move NUZZLE,       PARALYZE_EFFECT,             20, ELECTRIC,     100,  5
+	move SHOCK_WAVE,   SWIFT_EFFECT,				60, ELECTRIC,     100, 10
+	move VOLT_TACKLE,  RECOIL_EFFECT,			   120, ELECTRIC,     100,  5
+	move DRILL_RUN,    NO_ADDITIONAL_EFFECT,        70, GROUND,       100, 20
+	move ACCELEROCK,   NO_ADDITIONAL_EFFECT,        40, ROCK,         100, 20
+	move HEAD_SMASH,   RECOIL_EFFECT,			   150, ROCK,         100,  5
+	move CROSS_POISON, POISON_SIDE_EFFECT2,         70, POISON,       100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

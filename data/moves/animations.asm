@@ -203,6 +203,14 @@ AttackAnimationPointers:
 	dw ShadowBallAnim
 	dw ShadowPunchAnim
 	dw ShadowClawAnim
+	dw AerialAceAnim
+	dw NuzzleAnim
+	dw ShockWaveAnim
+	dw VoltTackleAnim
+	dw DrillRunAnim
+	dw AccelerockAnim
+	dw HeadSmashAnim
+	dw CrossPoisonAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -343,6 +351,7 @@ SwordsDanceAnim:
 	battle_anim SWORDS_DANCE, SUBANIM_1_SWORDS_CIRCLING, 1, 6
 	db -1 ; end
 
+AerialAceAnim:
 ShadowClawAnim:
 MetalClawAnim:
 CutAnim:
@@ -427,6 +436,7 @@ FuryAttackAnim:
 	battle_anim NO_MOVE, SUBANIM_0_HORN_JAB_THRICE, 0, 2
 	db -1 ; end
 
+DrillRunAnim:
 HornDrillAnim:
 	battle_anim HORN_DRILL, SUBANIM_1_STAR_BIG, 1, 2
 	battle_anim NO_MOVE, SUBANIM_1_STAR_BIG, 1, 2
@@ -744,6 +754,7 @@ FireSpinAnim:
 	battle_anim NO_MOVE, SUBANIM_1_FLAME_COLUMN_3, 1, 6
 	db -1 ; end
 
+NuzzleAnim:
 ThunderShockAnim:
 	battle_anim THUNDERSHOCK, SUBANIM_1_LIGHTNING_BALL, 1, 2
 	db -1 ; end
@@ -753,12 +764,14 @@ ThunderBoltAnim:
 	battle_anim THUNDERBOLT, SUBANIM_1_LIGHTNING_BALL, 1, 1
 	db -1 ; end
 
+ShockWaveAnim:
 ThunderWaveAnim:
 	battle_anim THUNDER_WAVE, SUBANIM_1_LIGHTNING_BALL, 1, 2
 	battle_anim NO_MOVE, SUBANIM_0_BIND, 0, 2
 	battle_anim NO_MOVE, SUBANIM_0_BIND, 0, 4
 	db -1 ; end
 
+VoltTackleAnim:
 ThunderAnim:
 	battle_anim THUNDER, SE_DARK_SCREEN_PALETTE
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
@@ -820,6 +833,7 @@ AgilityAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+AccelerockAnim:
 ExtremeSpeedAnim:
 QuickAttackAnim:
 	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
@@ -1027,6 +1041,7 @@ SwiftAnim:
 	battle_anim SWIFT, SUBANIM_1_STARS_SMALL_TOSS, 1, 3
 	db -1 ; end
 
+HeadSmashAnim:
 SkullBashAnim:
 	battle_anim SKULL_BASH, SUBANIM_1_STAR_BIG, 1, 6
 	db -1 ; end
@@ -1209,6 +1224,7 @@ SuperFangAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+CrossPoisonAnim:
 NightSlashAnim:
 XScissorAnim:
 SlashAnim:

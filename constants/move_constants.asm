@@ -209,7 +209,15 @@
 	const SHADOW_BALL  ; cb
 	const SHADOW_PUNCH ; cc
 	const SHADOW_CLAW  ; cd
- 	const STRUGGLE     ; ce
+	const AERIAL_ACE   ; ce
+	const NUZZLE	   ; cf
+	const SHOCK_WAVE   ; e1
+	const VOLT_TACKLE  ; e2
+	const DRILL_RUN    ; e3
+	const ACCELEROCK   ; e4
+	const HEAD_SMASH   ; e5
+	const CROSS_POISON ; e6
+ 	const STRUGGLE     ; e7
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

@@ -203,5 +203,13 @@ MoveNames::
 	li "SHADOW BALL"
 	li "SHADOW PUNCH"
 	li "SHADOW CLAW"
+	li "AERIAL ACE"
+	li "NUZZLE"
+	li "SHOCK WAVE"
+	li "VOLT TACKLE"
+	li "DRILL RUN"
+	li "ACCELEROCK"
+	li "HEAD SMASH"
+	li "CROSS POISON"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

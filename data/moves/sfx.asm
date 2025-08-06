@@ -204,6 +204,14 @@ MoveSoundTable:
 	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_BALL
 	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_PUNCH
 	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_CLAW
+	db SFX_BATTLE_12,          $10, $a0 ; AERIAL_ACE
+	db SFX_BATTLE_2F,          $00, $20 ; NUZZLE
+	db SFX_BATTLE_2F,          $20, $80 ; SHOCK_WAVE
+	db SFX_BATTLE_26,          $1e, $20 ; VOLT_TACKLE
+	db SFX_BATTLE_29,          $0f, $e0 ; DRILL_RUN
+	db SFX_BATTLE_14,          $01, $e0 ; ACCELEROCK
+	db SFX_BATTLE_26,          $1e, $20 ; HEAD_SMASH
+	db SFX_BATTLE_0F,          $10, $c0 ; CROSS_POISON
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80
