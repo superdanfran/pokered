@@ -71,13 +71,13 @@ EvosMovesPointerTable:
 	dw DiglettEvosMoves
 	dw TaurosEvosMoves
 	dw PorygonZEvosMoves
-	dw MissingNo3EEvosMoves
-	dw MissingNo3FEvosMoves
+	dw SteelixEvosMoves
+	dw BellossomEvosMoves
 	dw FarfetchdEvosMoves
 	dw VenonatEvosMoves
 	dw DragoniteEvosMoves
-	dw MissingNo43EvosMoves
-	dw MissingNo44EvosMoves
+	dw TangrowthEvosMoves
+	dw LeafeonEvosMoves
 	dw MissingNo45EvosMoves
 	dw DoduoEvosMoves
 	dw PoliwagEvosMoves
@@ -539,6 +539,7 @@ PinsirEvosMoves:
 
 TangelaEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, LEAF_STONE, 1, TANGROWTH
 	db 0
 ; Learnset
 	db 29, ABSORB
@@ -575,6 +576,7 @@ GrowlitheEvosMoves:
 
 OnixEvosMoves:
 ; Evolutions
+	db EVOLVE_LEVEL, 65, STEELIX
 	db 0
 ; Learnset
 	db 15, BIND
@@ -885,13 +887,13 @@ PorygonZEvosMoves:
 ; Learnset
 	db 0
 
-MissingNo3EEvosMoves:
+SteelixEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 0
 
-MissingNo3FEvosMoves:
+BellossomEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -933,13 +935,13 @@ DragoniteEvosMoves:
 	db 90, DRACO_METEOR
 	db 0
 
-MissingNo43EvosMoves:
+TangrowthEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 0
 
-MissingNo44EvosMoves:
+LeafeonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -1263,6 +1265,7 @@ EeveeEvosMoves:
 	db EVOLVE_ITEM, FIRE_STONE, 1, FLAREON
 	db EVOLVE_ITEM, THUNDER_STONE, 1, JOLTEON
 	db EVOLVE_ITEM, WATER_STONE, 1, VAPOREON
+	db EVOLVE_ITEM, LEAF_STONE, 1, LEAFEON
 	db 0
 ; Learnset
 	db 20, DOUBLE_EDGE

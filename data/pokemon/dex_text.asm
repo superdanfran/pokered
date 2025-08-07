@@ -617,6 +617,16 @@ _SteelixDexEntry::
 	next "diamond"
 	dex
 
+_BellossomDexEntry::
+	text "Bellossom gather"
+	next "at times and ap-"
+	next "pear to dance."
+
+	page "They say that the"
+	next "dance is a ritual"
+	next "to summon the sun"
+	dex
+
 _FarfetchdDexEntry::
 	text "The sprig of"
 	next "green onions it"
@@ -645,6 +655,26 @@ _DragoniteDexEntry::
 	page "Its intelligence"
 	next "is said to match"
 	next "that of humans"
+	dex
+
+_TangrowthDexEntry::
+	text "Its arms are made"
+	next "of plants that"
+	next "bind themselves to"
+
+	page "things. They grow"
+	next "back right away if"
+	next "cut"
+	dex
+
+_LeafeonDexEntry::
+	text "Just like a plant,"
+	next "it uses photosyn-"
+	next "thesis. As a res-"
+
+	page "ult, it is always"
+	next "enveloped in clear"
+	next "air"
 	dex
 
 _DoduoDexEntry::

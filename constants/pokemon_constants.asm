@@ -69,12 +69,12 @@
 	const TAUROS             ; $3C
 	const PORYGONZ           ; $3D
 	const STEELIX            ; $3E
-	const_skip               ; $3F
+	const BELLOSSOM          ; $3F
 	const FARFETCHD          ; $40
 	const VENONAT            ; $41
 	const DRAGONITE          ; $42
-	const_skip               ; $43
-	const_skip               ; $44
+	const TANGROWTH          ; $43
+	const LEAFEON            ; $44
 	const_skip               ; $45
 	const DODUO              ; $46
 	const POLIWAG            ; $47

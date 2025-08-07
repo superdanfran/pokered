@@ -162,5 +162,8 @@
 	const DEX_PORYGON2   ; 156
 	const DEX_PORYGONZ   ; 157
 	const DEX_STEELIX    ; 158
+	const DEX_BELLOSSOM  ; 159
+	const DEX_TANGROWTH  ; 160
+	const DEX_LEAFEON    ; 161
 
 DEF NUM_POKEMON EQU const_value - 1

@@ -630,6 +630,13 @@ SteelixDexEntry:
 	dw 8818
 	text_far _SteelixDexEntry
 	text_end
+	
+BellossomDexEntry:
+	db "FLOWER@"
+	db 1,4
+	dw 58
+	text_far _BellossomDexEntry
+	text_end
 
 FarfetchdDexEntry:
 	db "WILD DUCK@"
@@ -650,6 +657,20 @@ DragoniteDexEntry:
 	db 7,3
 	dw 4630
 	text_far _DragoniteDexEntry
+	text_end
+
+TangrowthDexEntry:
+	db "VINE@"
+	db 6,7
+	dw 1286
+	text_far _TangrowthDexEntry
+	text_end
+
+LeafeonDexEntry:
+	db "VERDANT@"
+	db 3,3
+	dw 255
+	text_far _LeafeonDexEntry
 	text_end
 
 DoduoDexEntry:

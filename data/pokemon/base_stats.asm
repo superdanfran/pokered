@@ -158,4 +158,7 @@ INCLUDE "data/pokemon/base_stats/magmortar.asm"
 INCLUDE "data/pokemon/base_stats/porygon2.asm"
 INCLUDE "data/pokemon/base_stats/porygonz.asm"
 INCLUDE "data/pokemon/base_stats/steelix.asm"
+INCLUDE "data/pokemon/base_stats/bellossom.asm"
+INCLUDE "data/pokemon/base_stats/tangrowth.asm"
+INCLUDE "data/pokemon/base_stats/leafeon.asm"
 	assert_table_length NUM_POKEMON

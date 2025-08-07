@@ -1563,17 +1563,17 @@ BlackbeltData:
 Rival1Data:
 	def_trainer_class RIVAL1
 	def_trainer 1, 3
-	tr_mon STEELIX
+	tr_mon MEW
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
 	def_trainer 2, 3
-	tr_mon STEELIX
+	tr_mon MEW
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
 	def_trainer 3, 3
-	tr_mon STEELIX
+	tr_mon MEW
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
@@ -1794,14 +1794,14 @@ GiovanniData:
 
 ; Viridian Gym
 	def_trainer 3, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 90, PERSIAN
-		tr_moves HYPNOSIS, SLASH
 	tr_mon 90, DUGTRIO
 		tr_moves EARTHQUAKE, FISSURE, SLASH, BODY_SLAM
+	tr_mon 90, PERSIAN
+		tr_moves HYPNOSIS, SLASH, NIGHT_SLASH, NIGHT_SLASH
 	tr_mon 90, ZAPDOS
 		tr_moves THUNDER_WAVE, THUNDERBOLT, DRILL_PECK
-	tr_mon 90, GENGAR
-		tr_moves HYPNOSIS, PSYCHIC_M, EXPLOSION, NIGHT_SHADE
+	tr_mon 90, STEELIX
+		tr_moves EARTHQUAKE, IRON_HEAD, BODY_SLAM, EXPLOSION
 	tr_mon 90, TAUROS
 		tr_moves HYPER_BEAM, BODY_SLAM, EARTHQUAKE
 	tr_mon 90, MEWTWO
@@ -2250,18 +2250,18 @@ LtSurgeData:
 ErikaData:
 	def_trainer_class ERIKA
 	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
-	tr_mon 54, VILEPLUME
-		tr_moves SLEEP_POWDER, STUN_SPORE, PETAL_DANCE
+	tr_mon 54, BELLOSSOM
+		tr_moves SLEEP_POWDER, PETAL_DANCE
 	tr_mon 54, CLEFABLE
 		tr_moves THUNDER_WAVE, BLIZZARD, MOONBLAST, SOFTBOILED
 	tr_mon 54, VENUSAUR
-		tr_moves SLEEP_POWDER, RAZOR_LEAF, DOUBLE_TEAM, BODY_SLAM
-	tr_mon 54, TANGELA
-		tr_moves SLEEP_POWDER, STUN_SPORE, WRAP
-	tr_mon 54, VICTREEBEL
-		tr_moves LOVELY_KISS, STUN_SPORE, RAZOR_LEAF, BODY_SLAM
+		tr_moves SLEEP_POWDER, GIGA_DRAIN, DOUBLE_TEAM, GUNK_SHOT
+	tr_mon 54, TANGROWTH
+		tr_moves TOXIC, BODY_SLAM, GIGA_DRAIN, WRAP
+	tr_mon 54, LEAFEON
+		tr_moves SWORDS_DANCE, BODY_SLAM, RAZOR_LEAF, LEECH_SEED
 	tr_mon 54, EXEGGUTOR
-		tr_moves SLEEP_POWDER, STUN_SPORE, PSYCHIC_M
+		tr_moves SLEEP_POWDER, STUN_SPORE, PSYCHIC_M, GIGA_DRAIN
 	end_trainer
 
 

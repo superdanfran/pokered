@@ -158,4 +158,7 @@ MonPartyData:
 	nybble ICON_MON       ; Porygon2
 	nybble ICON_MON       ; PorygonZ
 	nybble ICON_SNAKE     ; Steelix
+	nybble ICON_GRASS     ; Bellossom
+	nybble ICON_GRASS     ; Tangrowth
+	nybble ICON_GRASS     ; Leafeon
 	end_nybble_array NUM_POKEMON
