@@ -677,6 +677,16 @@ _LeafeonDexEntry::
 	next "air"
 	dex
 
+_GlaceonDexEntry::
+	text "As a protective"
+	next "technique, it can"
+	next "completely freeze"
+
+	page "its fur to make"
+	next "its hairs stand"
+	next "like needles"
+	dex
+
 _DoduoDexEntry::
 	text "A bird that makes"
 	next "up for its poor"
@@ -765,6 +775,34 @@ _KrabbyDexEntry::
 	page "used for balance"
 	next "when walking"
 	next "sideways"
+	dex
+
+_EspeonDexEntry::
+	text "It uses the fine"
+	next "hair that covers"
+	next "its body to sense"
+
+	page "air currents and"
+	next "predict its en-"
+	next "emy's actions"
+	dex
+
+_UmbreonDexEntry::
+	text "When darkness"
+	next "falls, the rings"
+	next "on the body begin"
+
+	page "to glow, striking"
+	next "fear in the hearts"
+	next "of anyone nearby"
+	dex
+
+_SylveonDexEntry::
+	text "It sends a sooth-"
+	next "ing aura from its"
+	next "ribbonlike feelers"
+
+	page "to calm fights"
 	dex
 
 _VulpixDexEntry::

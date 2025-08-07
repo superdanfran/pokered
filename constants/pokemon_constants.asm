@@ -75,7 +75,7 @@
 	const DRAGONITE          ; $42
 	const TANGROWTH          ; $43
 	const LEAFEON            ; $44
-	const_skip               ; $45
+	const GLACEON            ; $45
 	const DODUO              ; $46
 	const POLIWAG            ; $47
 	const JYNX               ; $48
@@ -85,9 +85,9 @@
 	const DITTO              ; $4C
 	const MEOWTH             ; $4D
 	const KRABBY             ; $4E
-	const_skip               ; $4F
-	const_skip               ; $50
-	const_skip               ; $51
+	const ESPEON             ; $4F
+	const UMBREON            ; $50
+	const SYLVEON            ; $51
 	const VULPIX             ; $52
 	const NINETALES          ; $53
 	const PIKACHU            ; $54

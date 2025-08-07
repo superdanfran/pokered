@@ -161,4 +161,8 @@ INCLUDE "data/pokemon/base_stats/steelix.asm"
 INCLUDE "data/pokemon/base_stats/bellossom.asm"
 INCLUDE "data/pokemon/base_stats/tangrowth.asm"
 INCLUDE "data/pokemon/base_stats/leafeon.asm"
+INCLUDE "data/pokemon/base_stats/glaceon.asm"
+INCLUDE "data/pokemon/base_stats/espeon.asm"
+INCLUDE "data/pokemon/base_stats/umbreon.asm"
+INCLUDE "data/pokemon/base_stats/sylveon.asm"
 	assert_table_length NUM_POKEMON

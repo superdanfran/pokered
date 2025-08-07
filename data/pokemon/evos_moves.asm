@@ -78,7 +78,7 @@ EvosMovesPointerTable:
 	dw DragoniteEvosMoves
 	dw TangrowthEvosMoves
 	dw LeafeonEvosMoves
-	dw MissingNo45EvosMoves
+	dw GlaceonEvosMoves
 	dw DoduoEvosMoves
 	dw PoliwagEvosMoves
 	dw JynxEvosMoves
@@ -88,9 +88,9 @@ EvosMovesPointerTable:
 	dw DittoEvosMoves
 	dw MeowthEvosMoves
 	dw KrabbyEvosMoves
-	dw MissingNo4FEvosMoves
-	dw MissingNo50EvosMoves
-	dw MissingNo51EvosMoves
+	dw EspeonEvosMoves
+	dw UmbreonEvosMoves
+	dw SylveonEvosMoves
 	dw VulpixEvosMoves
 	dw NinetalesEvosMoves
 	dw PikachuEvosMoves
@@ -576,7 +576,7 @@ GrowlitheEvosMoves:
 
 OnixEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 65, STEELIX
+	db EVOLVE_ITEM, METAL_COAT, 1, STEELIX
 	db 0
 ; Learnset
 	db 15, BIND
@@ -947,7 +947,7 @@ LeafeonEvosMoves:
 ; Learnset
 	db 0
 
-MissingNo45EvosMoves:
+GlaceonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -1048,19 +1048,19 @@ KrabbyEvosMoves:
 	db 40, HARDEN
 	db 0
 
-MissingNo4FEvosMoves:
+EspeonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 0
 
-MissingNo50EvosMoves:
+UmbreonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 0
 
-MissingNo51EvosMoves:
+SylveonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -1266,6 +1266,10 @@ EeveeEvosMoves:
 	db EVOLVE_ITEM, THUNDER_STONE, 1, JOLTEON
 	db EVOLVE_ITEM, WATER_STONE, 1, VAPOREON
 	db EVOLVE_ITEM, LEAF_STONE, 1, LEAFEON
+	db EVOLVE_ITEM, MOON_STONE, 1, UMBREON
+	db EVOLVE_ITEM, SUN_STONE, 1, ESPEON
+	db EVOLVE_ITEM, ICE_STONE, 1, GLACEON
+	db EVOLVE_LEVEL, 55, SYLVEON
 	db 0
 ; Learnset
 	db 20, DOUBLE_EDGE

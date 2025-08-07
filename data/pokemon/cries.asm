@@ -74,7 +74,7 @@ CryData::
 	mon_cry SFX_CRY_0F, $3C, $C0 ; Dragonite
 	mon_cry SFX_CRY_12, $00, $80 ; Tangrowth
 	mon_cry SFX_CRY_1A, $AA, $FF ; Leafeon
-	mon_cry SFX_CRY_1D, $E0, $80 ; MissingNo.
+	mon_cry SFX_CRY_1A, $AA, $FF ; Glaceon
 	mon_cry SFX_CRY_0B, $BB, $01 ; Doduo
 	mon_cry SFX_CRY_0E, $FF, $FF ; Poliwag
 	mon_cry SFX_CRY_0D, $FF, $FF ; Jynx
@@ -84,9 +84,9 @@ CryData::
 	mon_cry SFX_CRY_0E, $FF, $FF ; Ditto
 	mon_cry SFX_CRY_19, $77, $10 ; Meowth
 	mon_cry SFX_CRY_20, $20, $E0 ; Krabby
-	mon_cry SFX_CRY_22, $FF, $40 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_0E, $E0, $60 ; MissingNo.
+	mon_cry SFX_CRY_1A, $AA, $FF ; Espeon
+	mon_cry SFX_CRY_1A, $AA, $FF ; Umbreon
+	mon_cry SFX_CRY_1A, $AA, $FF ; Sylveon
 	mon_cry SFX_CRY_24, $4F, $10 ; Vulpix
 	mon_cry SFX_CRY_24, $88, $60 ; Ninetales
 	mon_cry SFX_CRY_0F, $EE, $01 ; Pikachu

@@ -165,5 +165,9 @@
 	const DEX_BELLOSSOM  ; 159
 	const DEX_TANGROWTH  ; 160
 	const DEX_LEAFEON    ; 161
+	const DEX_GLACEON    ; 162
+	const DEX_ESPEON     ; 163
+	const DEX_UMBREON    ; 164
+	const DEX_SYLVEON    ; 165
 
 DEF NUM_POKEMON EQU const_value - 1

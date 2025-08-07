@@ -673,6 +673,13 @@ LeafeonDexEntry:
 	text_far _LeafeonDexEntry
 	text_end
 
+GlaceonDexEntry:
+	db "FRESH SNOW@"
+	db 2,7
+	dw 259
+	text_far _GlaceonDexEntry
+	text_end
+
 DoduoDexEntry:
 	db "TWIN BIRD@"
 	db 4,7
@@ -734,6 +741,27 @@ KrabbyDexEntry:
 	db 1,4
 	dw 140
 	text_far _KrabbyDexEntry
+	text_end
+
+EspeonDexEntry:
+	db "SUN@"
+	db 2,11
+	dw 265
+	text_far _EspeonDexEntry
+	text_end
+
+UmbreonDexEntry:
+	db "MOONLIGHT@"
+	db 3,3
+	dw 270
+	text_far _UmbreonDexEntry
+	text_end
+
+SylveonDexEntry:
+	db "INTERTWINE@"
+	db 3,3
+	dw 235
+	text_far _SylveonDexEntry
 	text_end
 
 VulpixDexEntry:

@@ -160,5 +160,9 @@ MonPartyData:
 	nybble ICON_SNAKE     ; Steelix
 	nybble ICON_GRASS     ; Bellossom
 	nybble ICON_GRASS     ; Tangrowth
-	nybble ICON_GRASS     ; Leafeon
+	nybble ICON_QUADRUPED ; Leafeon
+	nybble ICON_QUADRUPED ; Glaceon
+	nybble ICON_QUADRUPED ; Espeon
+	nybble ICON_QUADRUPED ; Umbreon
+	nybble ICON_QUADRUPED ; Sylveon
 	end_nybble_array NUM_POKEMON

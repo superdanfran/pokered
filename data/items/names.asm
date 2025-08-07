@@ -83,6 +83,9 @@ ItemNames::
 	li "MAX ETHER"
 	li "ELIXER"
 	li "MAX ELIXER"
+	li "SUN STONE"
+	li "ICE STONE"
+	li "METAL COAT"
 	assert_list_length NUM_ITEMS
 	li "B2F"
 	li "B1F"
