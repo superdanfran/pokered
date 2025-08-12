@@ -86,4 +86,5 @@ KeyItemFlags:
 	dbit FALSE ; SUN_STONE
 	dbit FALSE ; ICE_STONE
 	dbit FALSE ; METAL_COAT
+	dbit FALSE ; KINGS_ROCK
 	end_bit_array NUM_ITEMS

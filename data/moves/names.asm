@@ -211,5 +211,9 @@ MoveNames::
 	li "ACCELEROCK"
 	li "HEAD SMASH"
 	li "CROSS POISON"
+	li "CRUNCH"
+	li "MOONLIGHT"
+	li "ICY WIND"
+	li "ROCK TOMB"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

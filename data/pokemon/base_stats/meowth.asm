@@ -7,8 +7,8 @@
 	db 255 ; catch rate
 	db 69 ; base exp
 
-	INCBIN "gfx/pokemon/front/meowth.pic", 0, 1 ; sprite dimensions
-	dw MeowthPicFront, MeowthPicBack
+	INCBIN "gfx/pokemon/front/ameowth.pic", 0, 1 ; sprite dimensions
+	dw MeowthAPicFront, MeowthAPicBack
 
 	db BITE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -20,5 +20,5 @@
 	     REST,         SUBSTITUTE
 	; end
 
-	db BANK(MeowthPicFront)
-	assert BANK(MeowthPicFront) == BANK(MeowthPicBack)
+	db BANK(MeowthAPicFront)
+	assert BANK(MeowthAPicFront) == BANK(MeowthAPicBack)

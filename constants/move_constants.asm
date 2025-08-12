@@ -217,7 +217,11 @@
 	const ACCELEROCK   ; e4
 	const HEAD_SMASH   ; e5
 	const CROSS_POISON ; e6
- 	const STRUGGLE     ; e7
+	const CRUNCH       ; e7
+	const MOONLIGHT    ; e8
+	const ICY_WIND     ; e9
+	const ROCK_TOMB    ; ea
+ 	const STRUGGLE     ; eb
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

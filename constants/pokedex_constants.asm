@@ -169,5 +169,18 @@
 	const DEX_ESPEON     ; 163
 	const DEX_UMBREON    ; 164
 	const DEX_SYLVEON    ; 165
+	const DEX_RHYPERIOR  ; 166
+	const DEX_RAICHU_A   ; 167
+	const DEX_VULPIX_A   ; 168
+	const DEX_NINETALES_A ; 169
+	const DEX_SANDSHREW_A ; 170
+	const DEX_SANDSLASH_A ; 171
+	const DEX_SCIZOR     ; 172
+	const DEX_SLOWKING   ; 173
+	const DEX_LICKILICKY ; 174
+	const DEX_MAGNEZONE  ; 175
+	const DEX_BLISSEY    ; 176
+	const DEX_ANNIHILAPE ; 177
+	const DEX_POLITOED   ; 178
 
 DEF NUM_POKEMON EQU const_value - 1

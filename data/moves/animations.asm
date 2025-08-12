@@ -211,6 +211,10 @@ AttackAnimationPointers:
 	dw AccelerockAnim
 	dw HeadSmashAnim
 	dw CrossPoisonAnim
+	dw CrunchAnim
+	dw MoonlightAnim
+	dw IcyWindAnim
+	dw RockTombAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -571,6 +575,7 @@ FlamethrowerAnim:
 	battle_anim FLAMETHROWER, SUBANIM_1_FLAME_COLUMN_2, 1, 6
 	db -1 ; end
 
+IcyWindAnim:
 MistAnim:
 	battle_anim NO_MOVE, SE_LIGHT_SCREEN_PALETTE
 	battle_anim SURF, SE_WATER_DROPLETS_EVERYWHERE
@@ -781,6 +786,7 @@ ThunderAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+RockTombAnim:
 RockThrowAnim:
 	battle_anim ROCK_THROW, SUBANIM_0_ROCKS_FALL_ENEMY, 0, 4
 	db -1 ; end
@@ -821,6 +827,7 @@ HypnosisAnim:
 	battle_anim HYPNOSIS, SE_FLASH_SCREEN_LONG
 	db -1 ; end
 
+MoonlightAnim:
 MeditateAnim:
 	battle_anim MEDITATE, SE_LIGHT_SCREEN_PALETTE
 	battle_anim NO_MOVE, SUBANIM_0_CIRCLE_1_SQUARE_CLOSING, 1, 6
@@ -1194,6 +1201,7 @@ RockSlideAnim:
 	battle_anim HYPER_FANG, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
 
+CrunchAnim:
 HyperFangAnim:
 	battle_anim HYPER_FANG, SUBANIM_0_STAR_THRICE, 0, 6
 	db -1 ; end

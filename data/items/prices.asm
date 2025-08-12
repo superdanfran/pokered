@@ -86,6 +86,7 @@ ItemPrices::
 	bcd3 2100  ; SUN_STONE
 	bcd3 2100  ; ICE_STONE
 	bcd3 2100  ; METAL_COAT
+	bcd3 2100  ; KINGS_ROCK
 	assert_table_length NUM_ITEMS
 	bcd3 0     ; FLOOR_B2F
 	bcd3 0     ; FLOOR_B1F

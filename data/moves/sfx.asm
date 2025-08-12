@@ -212,6 +212,10 @@ MoveSoundTable:
 	db SFX_BATTLE_14,          $01, $e0 ; ACCELEROCK
 	db SFX_BATTLE_26,          $1e, $20 ; HEAD_SMASH
 	db SFX_BATTLE_0F,          $10, $c0 ; CROSS_POISON
+	db SFX_BATTLE_1E,          $00, $80 ; CRUNCH
+	db SFX_BATTLE_32,          $08, $40 ; MOONLIGHT
+	db SFX_BATTLE_29,          $f0, $e0 ; ICY_WIND
+	db SFX_DAMAGE,             $10, $40 ; ROCK_TOMB
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

@@ -103,6 +103,7 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; SUN_STONE
 	dw ItemUseEvoStone   ; ICE_STONE
 	dw ItemUseEvoStone   ; METAL_COAT
+	dw ItemUseEvoStone   ; KINGS_ROCK
 
 ItemUseHealingKit:
 	ld a, [wIsInBattle]

@@ -792,6 +792,20 @@ RaichuDexEntry:
 	text_far _RaichuDexEntry
 	text_end
 
+RhyperiorDexEntry:
+	db "DRILL@"
+	db 7,10
+	dw 2828
+	text_far _RhyperiorDexEntry
+	text_end
+
+RaichuADexEntry:
+	db "MOUSE@"
+	db 2,4
+	dw 463
+	text_far _RaichuADexEntry
+	text_end
+
 DratiniDexEntry:
 	db "DRAGON@"
 	db 5,11
@@ -832,6 +846,20 @@ SeadraDexEntry:
 	db 3,11
 	dw 550
 	text_far _SeadraDexEntry
+	text_end
+
+VulpixADexEntry:
+	db "FOX@"
+	db 2,0
+	dw 220
+	text_far _VulpixDexAEntry
+	text_end
+
+NinetalesADexEntry:
+	db "FOX@"
+	db 3,7
+	dw 440
+	text_far _NinetalesADexEntry
 	text_end
 
 SandshrewDexEntry:
@@ -967,6 +995,13 @@ BeedrillDexEntry:
 	text_far _BeedrillDexEntry
 	text_end
 
+ScizorDexEntry:
+	db "PINCER@"
+	db 5,11
+	dw 1180
+	text_far _ScizorDexEntry
+	text_end
+
 DodrioDexEntry:
 	db "TRIPLEBIRD@"
 	db 5,11
@@ -1002,6 +1037,20 @@ DewgongDexEntry:
 	text_far _DewgongDexEntry
 	text_end
 
+SandshrewADexEntry:
+	db "MOUSE@"
+	db 2,4
+	dw 882
+	text_far _SandshrewADexEntry
+	text_end
+
+SandslashADexEntry:
+	db "MOUSE@"
+	db 3,11
+	dw 1213
+	text_far _SandslashADexEntry
+	text_end
+
 CaterpieDexEntry:
 	db "WORM@"
 	db 1,0
@@ -1028,6 +1077,13 @@ MachampDexEntry:
 	db 5,3
 	dw 2870
 	text_far _MachampDexEntry
+	text_end
+
+SlowkingDexEntry:
+	db "ROYAL@"
+	db 6,7
+	dw 795
+	text_far _SlowkingDexEntry
 	text_end
 
 GolduckDexEntry:
@@ -1072,11 +1128,32 @@ MagikarpDexEntry:
 	text_far _MagikarpDexEntry
 	text_end
 
+LickilickyDexEntry:
+	db "LICKING@"
+	db 5,7
+	dw 1400
+	text_far _LickilickyDexEntry
+	text_end
+
+MagnezoneDexEntry:
+	db "MAGNETAREA@"
+	db 3,11
+	dw 1800
+	text_far _MagnezoneDexEntry
+	text_end
+
 MukDexEntry:
 	db "SLUDGE@"
 	db 3,11
 	dw 660
 	text_far _MukDexEntry
+	text_end
+
+BlisseyDexEntry:
+	db "HAPPINESS@"
+	db 4,11
+	dw 468
+	text_far _BlisseyDexEntry
 	text_end
 
 KinglerDexEntry:
@@ -1091,6 +1168,13 @@ CloysterDexEntry:
 	db 4,11
 	dw 2920
 	text_far _CloysterDexEntry
+	text_end
+
+AnnihilapeDexEntry:
+	db "RAGEMONKEY@"
+	db 3,11
+	dw 560
+	text_far _AnnihilapeDexEntry
 	text_end
 
 ElectrodeDexEntry:
@@ -1126,6 +1210,13 @@ MarowakDexEntry:
 	db 3,3
 	dw 990
 	text_far _MarowakDexEntry
+	text_end
+
+PolitoedDexEntry:
+	db "FROG@"
+	db 3,7
+	dw 339
+	text_far _PolitoedDexEntry
 	text_end
 
 HaunterDexEntry:

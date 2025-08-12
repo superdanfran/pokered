@@ -222,5 +222,9 @@ Moves:
 	move ACCELEROCK,   NO_ADDITIONAL_EFFECT,        40, ROCK,         100, 20
 	move HEAD_SMASH,   RECOIL_EFFECT,			   150, ROCK,         100,  5
 	move CROSS_POISON, POISON_SIDE_EFFECT2,         70, POISON,       100, 20
+	move CRUNCH,       DEFENSE_DOWN_SIDE_EFFECT,    80, DARK,         100, 15
+	move MOONLIGHT,    HEAL_EFFECT,                  0, FAIRY,        100,  2
+	move ICY_WIND,     SPEED_DOWN1_EFFECT,          55, ICE,           95,  5
+	move ROCK_TOMB,    SPEED_DOWN1_EFFECT,          60, ROCK,          95,  5
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

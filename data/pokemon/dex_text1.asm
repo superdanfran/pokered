@@ -845,6 +845,26 @@ _RaichuDexEntry::
 	next "power"
 	dex
 
+_RhyperiorDexEntry::
+	text "From holes in its"
+	next "palms, it fires"
+	next "out rocks and"
+
+	page "GEODUDE. Its cara-"
+	next "pace can withstand"
+	next "volcanic eruptions"
+	dex
+
+_RaichuADexEntry::
+	text "It uses psycho-"
+	next "kinesis to control"
+	next "electricity."
+
+	page "it rides its own"
+	next "tail using psychic"
+	next "power"
+	dex
+
 _DratiniDexEntry::
 	text "Long considered a"
 	next "mythical #MON"
@@ -903,6 +923,26 @@ _SeadraDexEntry::
 	page "its wing-like"
 	next "pectoral fins and"
 	next "stout tail"
+	dex
+
+_VulpixDexAEntry::
+	text "It looks like"
+	next "snow come to"
+	next "life."
+
+	page "Another name"
+	next "for it is"
+	next "Keokeo."
+	dex
+
+_NinetalesADexEntry::
+	text "It lives on"
+	next "snowy mountains."
+	next "It is revered as"
+
+	page "a deity incar-"
+	next "nate. It appears"
+	next "during blizzards."
 	dex
 
 _SandshrewDexEntry::
@@ -1095,6 +1135,16 @@ _BeedrillDexEntry::
 	next "and tail"
 	dex
 
+_ScizorDexEntry::
+	text "Its wings are not"
+	next "used for flying."
+	next "They are flapped"
+
+	page "at high speed to"
+	next "adjust its body"
+	next "temperature"
+	dex
+
 _DodrioDexEntry::
 	text "Uses its three"
 	next "brains to execute"
@@ -1143,6 +1193,26 @@ _DewgongDexEntry::
 	page "steady 8 knots"
 	next "even in intensely"
 	next "cold waters"
+	dex
+
+_SandshrewADexEntry::
+	text "Its ice-"
+	next "covered body"
+	next "lets it slide"
+
+	page "across the"
+	next "ground with"
+	next "bullet-like speed"
+	dex
+
+_SandslashADexEntry::
+	text "Cold air emitted"
+	next "by its body"
+	next "sharpens its"
+
+	page "icy spikes."
+	next "It is adapted to"
+	next "frigid environs."
 	dex
 
 _CaterpieDexEntry::
@@ -1583,64 +1653,4 @@ _CharizardDexEntry::
 	page "Known to cause"
 	next "forest fires"
 	next "unintentionally"
-	dex
-
-_OddishDexEntry::
-	text "During the day,"
-	next "it keeps its face"
-	next "buried in the"
-
-	page "ground. At night,"
-	next "it wanders around"
-	next "sowing its seeds"
-	dex
-
-_GloomDexEntry::
-	text "The fluid that"
-	next "oozes from its"
-	next "mouth isn't drool."
-
-	page "It is a nectar"
-	next "that is used to"
-	next "attract prey"
-	dex
-
-_VileplumeDexEntry::
-	text "The larger its"
-	next "petals, the more"
-	next "toxic pollen it"
-
-	page "contains. Its big"
-	next "head is heavy and"
-	next "hard to hold up"
-	dex
-
-_BellsproutDexEntry::
-	text "A carnivorous"
-	next "#MON that traps"
-	next "and eats bugs."
-
-	page "It uses its root"
-	next "feet to soak up"
-	next "needed moisture"
-	dex
-
-_WeepinbellDexEntry::
-	text "It spits out"
-	next "POISONPOWDER to"
-	next "immobilize the"
-
-	page "enemy and then"
-	next "finishes it with"
-	next "a spray of ACID"
-	dex
-
-_VictreebelDexEntry::
-	text "Said to live in"
-	next "huge colonies"
-	next "deep in jungles,"
-
-	page "although no one"
-	next "has ever returned"
-	next "from there"
 	dex

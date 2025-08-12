@@ -165,4 +165,17 @@ MonPartyData:
 	nybble ICON_QUADRUPED ; Espeon
 	nybble ICON_QUADRUPED ; Umbreon
 	nybble ICON_QUADRUPED ; Sylveon
+	nybble ICON_MON       ; Rhyperior
+	nybble ICON_FAIRY     ; Raichu_A
+	nybble ICON_QUADRUPED ; Vulpix_A
+	nybble ICON_QUADRUPED ; Ninetales_A
+	nybble ICON_MON       ; Sandshrew_A
+	nybble ICON_MON       ; Sandslash_A
+	nybble ICON_BUG       ; Scizor
+	nybble ICON_MON       ; Slowking
+	nybble ICON_MON       ; Lickilicky
+	nybble ICON_BALL      ; Magnezone
+	nybble ICON_FAIRY     ; Blissey
+	nybble ICON_MON       ; Annihilape
+	nybble ICON_MON       ; Politoed
 	end_nybble_array NUM_POKEMON

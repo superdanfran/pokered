@@ -7,8 +7,8 @@
 	db 190 ; catch rate
 	db 90 ; base exp
 
-	INCBIN "gfx/pokemon/front/grimer.pic", 0, 1 ; sprite dimensions
-	dw GrimerPicFront, GrimerPicBack
+	INCBIN "gfx/pokemon/front/agrimer.pic", 0, 1 ; sprite dimensions
+	dw GrimerAPicFront, GrimerAPicBack
 
 	db POUND, DISABLE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -19,5 +19,5 @@
 	     FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE
 	; end
 
-	db BANK(GrimerPicFront)
-	assert BANK(GrimerPicFront) == BANK(GrimerPicBack)
+	db BANK(GrimerAPicFront)
+	assert BANK(GrimerAPicFront) == BANK(GrimerAPicBack)

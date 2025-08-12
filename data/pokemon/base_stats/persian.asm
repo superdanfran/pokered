@@ -7,8 +7,8 @@
 	db 90 ; catch rate
 	db 148 ; base exp
 
-	INCBIN "gfx/pokemon/front/persian.pic", 0, 1 ; sprite dimensions
-	dw PersianPicFront, PersianPicBack
+	INCBIN "gfx/pokemon/front/apersian.pic", 0, 1 ; sprite dimensions
+	dw PersianAPicFront, PersianAPicBack
 
 	db SLASH, HYPNOSIS, NIGHT_SLASH, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -20,5 +20,5 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE
 	; end
 
-	db BANK(PersianPicFront)
-	assert BANK(PersianPicFront) == BANK(PersianPicBack)
+	db BANK(PersianAPicFront)
+	assert BANK(PersianAPicFront) == BANK(PersianAPicBack)
