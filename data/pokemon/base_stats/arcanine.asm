@@ -1,9 +1,9 @@
 	db DEX_ARCANINE ; pokedex id
 
-	db  90, 110,  80,  95,  80
+	db  90, 115,  80,  90,  80
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
+	db FIRE, ROCK ; type
 	db 30 ; catch rate
 	db 213 ; base exp
 

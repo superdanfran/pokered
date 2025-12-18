@@ -2030,7 +2030,7 @@ CharmanderEvosMoves:
 	db 0
 ; Learnset
 	db 9, BITE
-	db 10, HEADBUTT
+	db 10, METAL_CLAW
 	db 16, FIRE_PUNCH
 	db 30, SLASH
 	db 38, FLAMETHROWER

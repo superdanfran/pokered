@@ -165,7 +165,7 @@ MoveNames::
 	li "SLASH"
 	li "SUBSTITUTE"
 	li "GUNK SHOT"
-	li "WINGBEAT"
+	li "DUALWINGBEAT"
 	li "X-SCISSOR"
 	li "BLAST BURN"
 	li "HYDRO BLAST"
