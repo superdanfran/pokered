@@ -72,6 +72,11 @@ OakSpeech:
 	ld a, 1
 	ld [wItemQuantity], a
 	call AddItemToInventory  ; give REPELLENT
+	ld a, MASTER_BALL
+	ld [wCurItem], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory  ; give MASTER_BALL
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call PrepareForSpecialWarp
