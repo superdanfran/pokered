@@ -212,3 +212,8 @@ _AskHealingKitText:: ; new
 _RefusedHealingKitText:: ; new
 	text "Maybe later."
 	prompt
+
+_UsedRepellentText:: ; new
+	text "<PLAYER> used"
+	line "the REPELLENT."
+	done
