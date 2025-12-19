@@ -104,6 +104,7 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; ICE_STONE
 	dw ItemUseEvoStone   ; METAL_COAT
 	dw ItemUseEvoStone   ; KINGS_ROCK
+	dw ItemUseRepellent  ; REPELLENT
 
 ItemUseHealingKit:
 	ld a, [wIsInBattle]
@@ -1674,6 +1675,26 @@ ItemUseSuperRepel:
 ItemUseMaxRepel:
 	ld b, 250
 	jp ItemUseRepelCommon
+
+ItemUseRepellent: ; new
+	ld b, 250
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, b
+	ld [wRepelRemainingSteps], a
+	ld hl, UsedRepellentText
+	call PrintText
+	ld a, SFX_HEAL_AILMENT
+	call PlaySound
+	call WaitForTextScrollButtonPress ; wait for button press
+	push hl
+	pop hl
+	ret
+
+UsedRepellentText: ; new
+	text_far _UsedRepellentText
+	text_end
 
 ItemUseDireHit:
 	ld a, [wIsInBattle]

@@ -67,6 +67,11 @@ OakSpeech:
 	ld a, 1
 	ld [wItemQuantity], a
 	call AddItemToInventory  ; give HEALING_KIT
+	ld a, REPELLENT
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantity], a
+	call AddItemToInventory  ; give REPELLENT
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call PrepareForSpecialWarp
