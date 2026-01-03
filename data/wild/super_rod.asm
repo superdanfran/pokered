@@ -40,62 +40,46 @@ SuperRodData:
 ; number of monsters, followed by level/monster pairs
 
 .Group1:
-	db 2
-	db 15, TENTACOOL
-	db 15, POLIWAG
+	db 1
+	db 83, GYARADOS
 
 .Group2:
-	db 2
-	db 15, GOLDEEN
-	db 15, POLIWAG
+	db 1
+	db 85, DEWGONG
 
 .Group3:
 	db 3
-	db 15, PSYDUCK
-	db 15, GOLDEEN
-	db 15, KRABBY
+	db 80, POLIWRATH
+	db 80, DEWGONG
+	db 80, SHELLDER
 
 .Group4:
-	db 2
-	db 15, KRABBY
-	db 15, SHELLDER
+	db 1
+	db 85, POLIWRATH
 
 .Group5:
-	db 2
-	db 23, POLIWHIRL
-	db 15, SLOWPOKE
+	db 1
+	db 85, WARTORTLE
 
 .Group6:
-	db 4
-	db 15, DRATINI
-	db 15, KRABBY
-	db 15, PSYDUCK
-	db 15, SLOWPOKE
+	db 1
+	db 83, DRATINI
 
 .Group7:
-	db 4
-	db 5, TENTACOOL
-	db 15, KRABBY
-	db 15, GOLDEEN
-	db 15, MAGIKARP
+	db 1
+	db 85, SHELLDER
 
 .Group8:
-	db 4
-	db 15, STARYU
-	db 15, HORSEA
-	db 15, SHELLDER
-	db 15, GOLDEEN
+	db 1
+	db 85, STARYU
 
 .Group9:
 	db 4
-	db 23, SLOWBRO
-	db 23, SEAKING
-	db 23, KINGLER
-	db 23, SEADRA
+	db 80, SLOWPOKE
+	db 80, SHELLDER
+	db 80, STARYU
+	db 80, DRATINI
 
 .Group10:
-	db 4
-	db 23, SEAKING
-	db 15, KRABBY
-	db 15, GOLDEEN
-	db 15, MAGIKARP
+	db 1
+	db 85, SLOWPOKE
