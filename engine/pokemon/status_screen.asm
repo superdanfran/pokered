@@ -172,6 +172,38 @@ StatusScreen:
 	call LoadFlippedFrontSpriteByMonIndex ; draw Pokémon picture
 	ld a, [wCurPartySpecies]
 	call PlayCry
+	.continue
+; new, to cycle through the different stat printers
+	call JoypadLowSensitivity
+	ldh a, [hJoy5]
+	and PAD_A | PAD_B | PAD_SELECT
+	jr z, .continue
+	ldh a, [hJoy5]
+	and PAD_SELECT
+	jr z, .vanilla
+; we call the next stat printer
+.test
+	SetEvent EVENT_PRESSED_FOR_INFO_IN_STATUS_SCREEN
+	ld a, [wDumbByteToToggleStatusScreen]
+	and a
+	jr z, .advanceTo1
+	cp 1
+; return to 0
+	call ClearStatsValues
+	hlcoord 11, 3
+	predef DrawHP
+	xor a
+	ld [wDumbByteToToggleStatusScreen], a
+	ld d, a
+	call PrintStatsBox
+	jr .continue
+.advanceTo1
+	inc a
+	ld [wDumbByteToToggleStatusScreen], a
+	call PrintStatsBox_DVs
+	jr .continue
+.vanilla
+; back to vanilla
 	call WaitForTextScrollButtonPress
 	pop af
 	ldh [hTileAnimations], a
@@ -251,16 +283,15 @@ PrintStatsBox:
 	and a ; a is 0 from the status screen
 	jr nz, .DifferentBox
 	hlcoord 0, 8
-	ld b, 8
-	ld c, 8
+	lb bc, 8, 8
 	call TextBoxBorder ; Draws the box
+; back to vanilla
 	hlcoord 1, 9 ; Start printing stats from here
 	ld bc, $19 ; Number offset
 	jr .PrintStats
 .DifferentBox
 	hlcoord 9, 2
-	ld b, 8
-	ld c, 9
+	lb bc, 8, 9
 	call TextBoxBorder
 	hlcoord 11, 3
 	ld bc, $18
@@ -272,8 +303,8 @@ PrintStatsBox:
 	pop hl
 	pop bc
 	add hl, bc
-	ld de, wLoadedMonAttack
 	lb bc, 2, 3
+	ld de, wLoadedMonAttack
 	call PrintStat
 	ld de, wLoadedMonDefense
 	call PrintStat
@@ -289,11 +320,122 @@ PrintStat:
 	add hl, de
 	ret
 
+PrintStatsBox_DVs: ; new
+	call ClearStatsValues
+; vanilla-like stuff
+	hlcoord 1, 9 ; Start printing stats from here
+	ld bc, $19 ; Number offset
+.PrintStats
+;	push bc
+;	push hl
+;	ld de, StatsText
+;	call PlaceString
+;	pop hl
+;	pop bc
+	add hl, bc
+	lb bc, 1, 2
+; ATK DV
+	ld de, wLoadedMonDVs
+	ld a, [de]
+	swap a
+	and $f
+	ld [wMultiUseBuffer], a
+	ld de, wMultiUseBuffer
+	call PrintStat
+; DEF DV
+	ld de, wLoadedMonDVs
+	ld a, [de]
+	and $f
+	ld [wMultiUseBuffer], a
+	ld de, wMultiUseBuffer
+	call PrintStat
+; SPEED DV
+	ld de, wLoadedMonDVs
+	inc de
+	ld a, [de]
+	swap a
+	and $f
+	ld [wMultiUseBuffer], a
+	ld de, wMultiUseBuffer
+	call PrintStat
+; SPECIAL DV
+	ld de, wLoadedMonDVs
+	inc de
+	ld a, [de]
+	and $f
+	ld [wMultiUseBuffer], a
+	ld de, wMultiUseBuffer
+	call PrintNumber
+; clear CurHP/MaxHP
+	call ClearCurHpMaxHP
+; HP DV
+	ld de, wLoadedMonDVs
+	ld a, [de]  ; Atk IV
+	swap a
+	and $1
+	sla a
+	sla a
+	sla a
+	ld b, a
+	ld a, [de] ; Def IV
+	inc de
+	and $1
+	sla a
+	sla a
+	add b
+	ld b, a
+	ld a, [de] ; Spd IV
+	swap a
+	and $1
+	sla a
+	add b
+	ld b, a
+	ld a, [de] ; Spc IV
+	and $1
+	add b      ; HP IV: LSB of the other 4 IVs
+	ld [wMultiUseBuffer], a
+	ld de, wMultiUseBuffer
+	hlcoord 13, 4
+	lb bc, 1, 2
+	jp PrintNumber
+
 StatsText:
 	db   "ATTACK"
 	next "DEFENSE"
 	next "SPEED"
 	next "SPECIAL@"
+
+ClearCurHpMaxHP: ; new
+	ld a, " "
+	hlcoord 12, 4
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	ret
+
+ClearStatsValues: ; new
+	ld a, " "
+	hlcoord 6, 10
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	hlcoord 6, 12
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	hlcoord 6, 14
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	hlcoord 6, 16
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	ret
 
 StatusScreen2:
 	ldh a, [hTileAnimations]
