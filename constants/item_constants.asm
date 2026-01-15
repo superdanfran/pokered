@@ -96,24 +96,24 @@ DEF SAFARI_ROCK EQU CASCADEBADGE ; overload
 	const ICE_STONE     ; $55
 	const METAL_COAT    ; $56
 	const KINGS_ROCK    ; $57
-	const REPELLENT     ; $54
+	const REPELLENT     ; $58
 DEF NUM_ITEMS EQU const_value - 1
 
 ; elevator floors use item IDs
-	const FLOOR_B2F     ; $58
-	const FLOOR_B1F     ; $59
-	const FLOOR_1F      ; $5A
-	const FLOOR_2F      ; $5B
-	const FLOOR_3F      ; $5C
-	const FLOOR_4F      ; $5D
-	const FLOOR_5F      ; $5E
-	const FLOOR_6F      ; $5F
-	const FLOOR_7F      ; $60
-	const FLOOR_8F      ; $61
-	const FLOOR_9F      ; $62
-	const FLOOR_10F     ; $63
-	const FLOOR_11F     ; $64
-	const FLOOR_B4F     ; $65
+	const FLOOR_B2F     ; $59
+	const FLOOR_B1F     ; $5A
+	const FLOOR_1F      ; $5B
+	const FLOOR_2F      ; $5C
+	const FLOOR_3F      ; $5D
+	const FLOOR_4F      ; $5E
+	const FLOOR_5F      ; $5F
+	const FLOOR_6F      ; $60
+	const FLOOR_7F      ; $61
+	const FLOOR_8F      ; $62
+	const FLOOR_9F      ; $63
+	const FLOOR_10F     ; $64
+	const FLOOR_11F     ; $65
+	const FLOOR_B4F     ; $66
 DEF NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 
 	const_next $C4
