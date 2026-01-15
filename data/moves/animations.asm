@@ -216,6 +216,8 @@ AttackAnimationPointers:
 	dw IcyWindAnim
 	dw RockTombAnim
 	dw PsystrikeAnim
+	dw CrossChopAnim
+	dw InfestationAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -291,6 +293,11 @@ StruggleAnim:
 
 KarateChopAnim:
 	battle_anim KARATE_CHOP, SUBANIM_0_STAR_DESCENDING, 0, 8
+	db -1 ; end
+
+CrossChopAnim:
+	battle_anim KARATE_CHOP, SUBANIM_0_STAR_TWICE, 0, 5
+	battle_anim KARATE_CHOP, SUBANIM_0_STAR_TWICE, 0, 5
 	db -1 ; end
 
 DoubleSlapAnim:
@@ -463,6 +470,7 @@ BodySlamAnim:
 	battle_anim NO_MOVE, SE_RESET_MON_POSITION
 	db -1 ; end
 
+InfestationAnim:
 WrapAnim:
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4
 	battle_anim WRAP, SUBANIM_0_BIND, 0, 4

@@ -222,7 +222,9 @@
 	const ICY_WIND     ; e9
 	const ROCK_TOMB    ; ea
 	const PSYSTRIKE    ; eb
- 	const STRUGGLE     ; ec
+	const CROSS_CHOP   ; ec
+	const INFESTATION  ; ed
+ 	const STRUGGLE     ; ee
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

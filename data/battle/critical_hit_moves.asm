@@ -7,4 +7,5 @@ HighCriticalMoves:
 	db NIGHT_SLASH
 	db SHADOW_CLAW
 	db DRILL_RUN
+	db CROSS_CHOP
 	db -1 ; end
