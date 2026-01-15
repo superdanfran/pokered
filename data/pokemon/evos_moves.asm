@@ -1599,6 +1599,7 @@ MewtwoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 1, PSYSTRIKE
 	db 63, BARRIER
 	db 66, PSYCHIC_M
 	db 70, RECOVER

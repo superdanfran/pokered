@@ -221,7 +221,8 @@
 	const MOONLIGHT    ; e8
 	const ICY_WIND     ; e9
 	const ROCK_TOMB    ; ea
- 	const STRUGGLE     ; eb
+	const PSYSTRIKE    ; eb
+ 	const STRUGGLE     ; ec
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

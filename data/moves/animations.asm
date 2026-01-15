@@ -215,6 +215,7 @@ AttackAnimationPointers:
 	dw MoonlightAnim
 	dw IcyWindAnim
 	dw RockTombAnim
+	dw PsystrikeAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -817,6 +818,7 @@ ConfusionAnim:
 	battle_anim CONFUSION, SE_FLASH_SCREEN_LONG
 	db -1 ; end
 
+PsystrikeAnim:
 ShadowBallAnim:
 PsychicAnim:
 	battle_anim PSYCHIC_M, SE_FLASH_SCREEN_LONG

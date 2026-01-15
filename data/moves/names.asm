@@ -215,5 +215,6 @@ MoveNames::
 	li "MOONLIGHT"
 	li "ICY WIND"
 	li "ROCK TOMB"
+	li "PSYSTRIKE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

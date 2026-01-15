@@ -98,7 +98,7 @@ BugCatcherData:
 	def_trainer 2, 7
 	tr_mon KAKUNA
 	tr_mon VENONAT
-		tr_moves TOXIC, PSYBEAM, STUN_SPORE
+		;tr_moves TOXIC, PSYBEAM, STUN_SPORE
 	tr_mon PARAS
 	end_trainer
 
@@ -1563,18 +1563,18 @@ BlackbeltData:
 
 Rival1Data:
 	def_trainer_class RIVAL1
-	def_trainer 1, 3
-	tr_mon MEW
+	def_trainer 1, 100
+	tr_mon BLISSEY
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 2, 3
-	tr_mon MEW
+	def_trainer 2, 100
+	tr_mon RHYPERIOR
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 3, 3
-	tr_mon MEW
+	def_trainer 3, 100
+	tr_mon ALAKAZAM
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 

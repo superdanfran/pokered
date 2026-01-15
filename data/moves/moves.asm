@@ -226,5 +226,6 @@ Moves:
 	move MOONLIGHT,    HEAL_EFFECT,                  0, FAIRY,        100,  2
 	move ICY_WIND,     SPEED_DOWN1_EFFECT,          55, ICE,           95,  5
 	move ROCK_TOMB,    SPEED_DOWN1_EFFECT,          60, ROCK,          95,  5
+	move PSYSTRIKE,    NO_ADDITIONAL_EFFECT,       100,	PSYCHIC_TYPE, 100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
