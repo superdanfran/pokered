@@ -218,5 +218,8 @@ MoveNames::
 	li "PSYSTRIKE"
 	li "CROSS CHOP"
 	li "INFESTATION"
+	li "FREEZE GLARE"
+	li "THUNDER KICK"
+	li "FIERY WRATH"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

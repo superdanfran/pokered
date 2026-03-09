@@ -224,7 +224,10 @@
 	const PSYSTRIKE    ; eb
 	const CROSS_CHOP   ; ec
 	const INFESTATION  ; ed
- 	const STRUGGLE     ; ee
+	const FREEZE_GLARE ; ee
+	const THUNDER_KICK ; ef
+	const FIERY_WRATH  ; f1
+ 	const STRUGGLE     ; f2
 DEF NUM_ATTACKS EQU const_value - 1
 
 DEF CANNOT_MOVE EQU $ff

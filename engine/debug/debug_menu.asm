@@ -97,17 +97,23 @@ TestBattle: ; unreferenced except in _DEBUG
 	ld [hl], a
 
 	; Give the player a level 20 Rhydon.
-	ld a, RHYDON
+	ld a, ARTICUNO
 	ld [wCurPartySpecies], a
-	ld a, 20
+	ld a, 50
 	ld [wCurEnemyLevel], a
 	xor a
 	ld [wMonDataLocation], a
 	ld [wCurMap], a
 	call AddPartyMon
 
+	; This function gives you a way to waste a turn, never know when you'll need it.
+	; Alternatively, add a move to test.
+	ld hl, wPartyMon1Moves
+	ld a, SPLASH
+	ld [hli], a
+
 	; Fight against a level 20 Rhydon.
-	ld a, RHYDON
+	ld a, ZAPDOS
 	ld [wCurOpponent], a
 
 	predef InitOpponent

@@ -219,6 +219,9 @@ MoveSoundTable:
 	db SFX_PSYCHIC_M,          $00, $80 ; PSYSTRIKE
 	db SFX_BATTLE_0C,          $10, $80 ; CROSS_CHOP
 	db SFX_BATTLE_1C,          $01, $c0 ; INFESTATION
+	db SFX_BATTLE_28,          $00, $80 ; FREEZE_GLARE
+	db SFX_BATTLE_0D,          $00, $a0 ; THUNDER_KICK
+	db SFX_BATTLE_19,          $21, $e0 ; FIERY_WRATH
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

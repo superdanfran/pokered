@@ -61,7 +61,7 @@ Moves:
 	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        55, 20
 	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,        90, 20
 	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,        55, 20
-	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    40, POISON,       100, 30
+	move ACID,         DEFENSE_DOWN_SIDE_EFFECT3,   40, POISON,       100, 30
 	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
 	move FLAMETHROWER, BURN_SIDE_EFFECT1,           95, FIRE,         100, 15
 	move MIST,         MIST_EFFECT,                  0, ICE,          100, 30
@@ -71,8 +71,8 @@ Moves:
 	move ICE_BEAM,     FREEZE_SIDE_EFFECT1,         95, ICE,          100, 10
 	move BLIZZARD,     FREEZE_SIDE_EFFECT1,        120, ICE,           90,  5
 	move PSYBEAM,      CONFUSION_SIDE_EFFECT,       65, PSYCHIC_TYPE, 100, 20
-	move BUBBLEBEAM,   SPEED_DOWN_SIDE_EFFECT,      65, WATER,        100, 20
-	move AURORA_BEAM,  ATTACK_DOWN_SIDE_EFFECT,     65, ICE,          100, 20
+	move BUBBLEBEAM,   SPEED_DOWN_SIDE_EFFECT3,     65, WATER,        100, 20
+	move AURORA_BEAM,  ATTACK_DOWN_SIDE_EFFECT3,    65, ICE,          100, 20
 	move HYPER_BEAM,   HYPER_BEAM_EFFECT,          150, NORMAL,        90,  5
 	move PECK,         NO_ADDITIONAL_EFFECT,        35, FLYING,       100, 35
 	move DRILL_PECK,   NO_ADDITIONAL_EFFECT,        80, FLYING,       100, 20
@@ -104,7 +104,7 @@ Moves:
 	move DIG,          CHARGE_EFFECT,               75, GROUND,       100, 10
 	move TOXIC,        POISON_EFFECT,                0, POISON,        85, 10
 	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25
-	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10
+	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT3,   90, PSYCHIC_TYPE, 100, 10
 	move HYPNOSIS,     SLEEP_EFFECT,                 0, PSYCHIC_TYPE,  70, 20
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, 100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30
@@ -142,7 +142,7 @@ Moves:
 	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20
 	move SKULL_BASH,   RECOIL_EFFECT,              120, NORMAL,       100,  5
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
-	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      10, NORMAL,       100, 35
+	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT3,     10, NORMAL,       100, 35
 	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20
 	move KINESIS,      ACCURACY_DOWN1_EFFECT,        0, PSYCHIC_TYPE,  80, 15
 	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10
@@ -155,7 +155,7 @@ Moves:
 	move LOVELY_KISS,  SLEEP_EFFECT,                 0, NORMAL,        90, 10
 	move SKY_ATTACK,   FLINCH_SIDE_EFFECT2,        140, FLYING,        90,  5
 	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,       100, 10
-	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,        100, 30
+	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT3,     20, WATER,        100, 30
 	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, NORMAL,       100, 10
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        100, 15
 	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,        70, 20
@@ -188,14 +188,14 @@ Moves:
 	move ROCK_WRECKER, HYPER_BEAM_EFFECT,          150, ROCK,          90,  5
 	move DRAIN_KISS,   DRAIN_HP_EFFECT,				50, FAIRY,		  100, 10
 	move CHARM_VOICE,  SWIFT_EFFECT,				40, FAIRY,        100, 15
-	move MOONBLAST,    SPECIAL_DOWN_SIDE_EFFECT,	95, FAIRY,        100, 15
-	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT,     90, FAIRY,         90, 10
+	move MOONBLAST,    SPECIAL_DOWN_SIDE_EFFECT3,	95, FAIRY,        100, 15
+	move PLAY_ROUGH,   ATTACK_DOWN_SIDE_EFFECT3,    90, FAIRY,         90, 10
 	move DARK_PULSE,   FLINCH_SIDE_EFFECT1,         80, DARK,         100, 15
 	move SUCKER_PUNCH, NO_ADDITIONAL_EFFECT,        40, DARK,         100, 15
 	move NIGHT_SLASH,  NO_ADDITIONAL_EFFECT,        70, DARK,         100, 20
 	move FEINT_ATTACK, SWIFT_EFFECT,				40, DARK,         100, 15
 	move BULLET_PUNCH, NO_ADDITIONAL_EFFECT,        40, STEEL,        100, 15
-	move FLASH_CANNON, SPECIAL_DOWN_SIDE_EFFECT,	80, STEEL,        100, 15
+	move FLASH_CANNON, SPECIAL_DOWN_SIDE_EFFECT3,	80, STEEL,        100, 15
 	move METAL_CLAW,   NO_ADDITIONAL_EFFECT,        50, STEEL,        100, 20
 	move IRON_HEAD,    FLINCH_SIDE_EFFECT1,         80, STEEL,        100, 15
 	move SMART_STRIKE, SWIFT_EFFECT,				70, STEEL,        100, 15
@@ -211,7 +211,7 @@ Moves:
 	move ICE_SHARD,    NO_ADDITIONAL_EFFECT,        40, ICE,          100, 20
 	move ICICLE_SPEAR, TWO_TO_FIVE_ATTACKS_EFFECT,  20, ICE,          100, 15
 	move SLUDGE_BOMB,  POISON_SIDE_EFFECT2,         90, POISON,       100, 10
-	move SHADOW_BALL,  DEFENSE_DOWN_SIDE_EFFECT,    80, GHOST,        100, 15
+	move SHADOW_BALL,  DEFENSE_DOWN_SIDE_EFFECT3,   80, GHOST,        100, 15
 	move SHADOW_PUNCH, SWIFT_EFFECT,				60, GHOST,        100, 20
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 20
 	move AERIAL_ACE,   SWIFT_EFFECT,				60, FLYING,       100, 20
@@ -222,12 +222,15 @@ Moves:
 	move ACCELEROCK,   NO_ADDITIONAL_EFFECT,        40, ROCK,         100, 20
 	move HEAD_SMASH,   RECOIL_EFFECT,			   150, ROCK,         100,  5
 	move CROSS_POISON, POISON_SIDE_EFFECT2,         70, POISON,       100, 20
-	move CRUNCH,       DEFENSE_DOWN_SIDE_EFFECT,    80, DARK,         100, 15
+	move CRUNCH,       DEFENSE_DOWN_SIDE_EFFECT3,   80, DARK,         100, 15
 	move MOONLIGHT,    HEAL_EFFECT,                  0, FAIRY,        100,  2
-	move ICY_WIND,     SPEED_DOWN1_EFFECT,          55, ICE,           95,  5
-	move ROCK_TOMB,    SPEED_DOWN1_EFFECT,          60, ROCK,          95,  5
+	move ICY_WIND,     SPEED_DOWN_SIDE_EFFECT_CERT, 55, ICE,           95,  5
+	move ROCK_TOMB,    SPEED_DOWN_SIDE_EFFECT_CERT, 60, ROCK,          95,  5
 	move PSYSTRIKE,    NO_ADDITIONAL_EFFECT,       100,	PSYCHIC_TYPE, 100, 10
 	move CROSS_CHOP,   NO_ADDITIONAL_EFFECT,       100, FIGHTING,      80,  5
 	move INFESTATION,  TRAPPING_EFFECT,	            20,	BUG,	       80, 20
+	move FREEZE_GLARE, FREEZE_SIDE_EFFECT1,         90, PSYCHIC_TYPE, 100, 10
+	move THUNDER_KICK, DEFENSE_DOWN_SIDE_EFFECT_CERT, 90, FIGHTING,   100, 10
+	move FIERY_WRATH,  FLINCH_SIDE_EFFECT1,         90, DARK,         100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

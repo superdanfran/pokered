@@ -1001,6 +1001,7 @@ MoltresEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db  5, FIERY_WRATH
 	db 51, LEER
 	db 55, AGILITY
 	db 60, SKY_ATTACK
@@ -1010,6 +1011,7 @@ ArticunoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db  5, FREEZE_GLARE
 	db 51, BLIZZARD
 	db 55, AGILITY
 	db 60, MIST
@@ -1019,6 +1021,7 @@ ZapdosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db  5, THUNDER_KICK
 	db 51, THUNDER
 	db 55, AGILITY
 	db 60, LIGHT_SCREEN

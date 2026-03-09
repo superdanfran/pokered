@@ -124,16 +124,16 @@ PoliwagPicFront::     INCBIN "gfx/pokemon/front/poliwag.pic"
 PoliwagPicBack::      INCBIN "gfx/pokemon/back/poliwagb.pic"
 JynxPicFront::        INCBIN "gfx/pokemon/front/jynx.pic"
 JynxPicBack::         INCBIN "gfx/pokemon/back/jynxb.pic"
-MoltresPicFront::     INCBIN "gfx/pokemon/front/moltres.pic"
-MoltresPicBack::      INCBIN "gfx/pokemon/back/moltresb.pic"
+MoltresPicFront::     INCBIN "gfx/pokemon/front/gmoltres.pic"
+MoltresPicBack::      INCBIN "gfx/pokemon/back/gmoltresb.pic"
 
 
 SECTION "Pics 3", ROMX
 
-ArticunoPicFront::    INCBIN "gfx/pokemon/front/articuno.pic"
-ArticunoPicBack::     INCBIN "gfx/pokemon/back/articunob.pic"
-ZapdosPicFront::      INCBIN "gfx/pokemon/front/zapdos.pic"
-ZapdosPicBack::       INCBIN "gfx/pokemon/back/zapdosb.pic"
+ArticunoPicFront::    INCBIN "gfx/pokemon/front/garticuno.pic"
+ArticunoPicBack::     INCBIN "gfx/pokemon/back/garticunob.pic"
+ZapdosPicFront::      INCBIN "gfx/pokemon/front/gzapdos.pic"
+ZapdosPicBack::       INCBIN "gfx/pokemon/back/gzapdosb.pic"
 DittoPicFront::       INCBIN "gfx/pokemon/front/ditto.pic"
 DittoPicBack::        INCBIN "gfx/pokemon/back/dittob.pic"
 MeowthPicFront::      INCBIN "gfx/pokemon/front/meowth.pic"

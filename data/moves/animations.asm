@@ -218,6 +218,9 @@ AttackAnimationPointers:
 	dw PsystrikeAnim
 	dw CrossChopAnim
 	dw InfestationAnim
+	dw FreezeGlareAnim
+	dw ThunderKickAnim
+	dw FieryWrathAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -415,6 +418,7 @@ DoubleKickAnim:
 	battle_anim DOUBLE_KICK, SUBANIM_0_STAR_TWICE, 0, 8
 	db -1 ; end
 
+ThunderKickAnim:
 MegaKickAnim:
 	battle_anim MEGA_KICK, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
@@ -1031,6 +1035,7 @@ BoneClubAnim:
 	battle_anim BONE_CLUB, SUBANIM_0_STAR_THRICE, 0, 8
 	db -1 ; end
 
+FieryWrathAnim:
 BlastBurnAnim:
 FireBlastAnim:
 	battle_anim FIRE_BLAST, SUBANIM_1_FLAME_BEAM, 1, 6
@@ -1097,6 +1102,7 @@ HiJumpKickAnim:
 	battle_anim HI_JUMP_KICK, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
 
+FreezeGlareAnim:
 GlareAnim:
 	battle_anim LEECH_SEED, SE_DARK_SCREEN_PALETTE
 	battle_anim GLARE, SE_DARK_SCREEN_FLASH

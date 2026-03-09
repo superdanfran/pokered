@@ -546,23 +546,52 @@ StatModifierDownEffect:
 	ld hl, wPlayerMonStatMods
 	ld de, wEnemyMoveEffect
 	ld bc, wPlayerBattleStatus1
-	ld a, [wLinkState]
-	cp LINK_STATE_BATTLING
-	jr z, .statModifierDownEffect
-	call BattleRandom
-	cp 25 percent + 1 ; chance to miss by in regular battle
-	jp c, MoveMissed
+; new: removed the 25% chance for opponent to miss a stat-reducer move
 .statModifierDownEffect
 	call CheckTargetSubstitute ; can't hit through substitute
 	jp nz, MoveMissed
 	ld a, [de]
-	cp ATTACK_DOWN_SIDE_EFFECT
+	cp ATTACK_DOWN_SIDE_EFFECT1		; new, was ATTACK_DOWN_SIDE_EFFECT3, which was ATTACK_DOWN_SIDE_EFFECT
 	jr c, .nonSideEffect
+	cp ATTACK_DOWN_SIDE_EFFECT_CERT	; new
+	jr nc, .canLowerFurther			; new
+	ld a, [de] ; necessary to be reloaded
+	cp ATTACK_DOWN_SIDE_EFFECT3		; new
+	jr nc, .goTo30ishChance			; new
+	cp ATTACK_DOWN_SIDE_EFFECT2		; new
+	jr nc, .goTo20Chance			; new
+; would be goTo10Chance, but no need to jump to it if we failed the jr nc above
+	call BattleRandom
+	cp 10 percent + 1 ; chance for side effects
+	jp nc, CantLowerAnymore
+	jp c, .canLowerFurther
+.goTo20Chance
+	call BattleRandom
+	cp 20 percent + 1 ; chance for side effects
+	jp nc, CantLowerAnymore
+	jp c, .canLowerFurther
+.goTo30ishChance
 	call BattleRandom
 	cp 33 percent + 1 ; chance for side effects
 	jp nc, CantLowerAnymore
+.canLowerFurther 			; new
 	ld a, [de]
-	sub ATTACK_DOWN_SIDE_EFFECT ; map each stat to 0-3
+	cp ATTACK_DOWN_SIDE_EFFECT_CERT	; new
+	jr nc, .mappingCert				; new
+	cp ATTACK_DOWN_SIDE_EFFECT3		; new
+	jr nc, .mapping30				; new
+	cp ATTACK_DOWN_SIDE_EFFECT2		; new
+	jr nc, .mapping20				; new
+	sub ATTACK_DOWN_SIDE_EFFECT1 	; map each stat to 0-5 (it said 3 because there was nothing lower accuracy or evasion?)
+	jr .decrementStatMod			; new, bug fix!
+.mappingCert						; new
+	sub ATTACK_DOWN_SIDE_EFFECT_CERT 	; new ; map each stat to 0-5 (it said 3 because there was nothing lower accuracy or evasion?)
+	jr .decrementStatMod
+.mapping30							; new
+	sub ATTACK_DOWN_SIDE_EFFECT3 	; new ; map each stat to 0-5 (it said 3 because there was nothing lower accuracy or evasion?)
+	jr .decrementStatMod
+.mapping20							; new
+	sub ATTACK_DOWN_SIDE_EFFECT2 	; new ; map each stat to 0-5 (it said 3 because there was nothing lower accuracy or evasion?)
 	jr .decrementStatMod
 .nonSideEffect ; non-side effects only
 	push hl
@@ -680,17 +709,14 @@ UpdateLoweredStatDone:
 	call PrintStatText
 	pop de
 	ld a, [de]
-	cp $44
+	cp ATTACK_DOWN_SIDE_EFFECT1 ; new, edited, it was $44, hard-coded number for the no-longer-existing ATTACK_DOWN_SIDE_EFFECT
 	jr nc, .ApplyBadgeBoostsAndStatusPenalties
 	call PlayCurrentMoveAnimation2
 .ApplyBadgeBoostsAndStatusPenalties
 	ldh a, [hWhoseTurn]
 	and a
-	call nz, ApplyBadgeStatBoosts ; whenever the player uses a stat-down move, badge boosts get reapplied again to every stat,
-	                              ; even to those not affected by the stat-up move (will be boosted further)
 	ld hl, MonsStatsFellText
 	call PrintText
-
 ; These where probably added given that a stat-down move affecting speed or attack will override
 ; the stat penalties from paralysis and burn respectively.
 ; But they are always called regardless of the stat affected by the stat-down move.
@@ -704,14 +730,14 @@ CantLowerAnymore_Pop:
 
 CantLowerAnymore:
 	ld a, [de]
-	cp ATTACK_DOWN_SIDE_EFFECT
+	cp ATTACK_DOWN_SIDE_EFFECT1
 	ret nc
 	ld hl, NothingHappenedText
 	jp PrintText
 
 MoveMissed:
 	ld a, [de]
-	cp $44
+	cp ATTACK_DOWN_SIDE_EFFECT1 ; new, edited, it was $44, hard-coded number for the no-longer-existing ATTACK_DOWN_SIDE_EFFECT
 	ret nc
 	jp ConditionalPrintButItFailed
 
@@ -728,10 +754,10 @@ MonsStatsFellText:
 ; check if the move's effect decreases a stat by 2
 	cp BIDE_EFFECT
 	ret c
-	cp ATTACK_DOWN_SIDE_EFFECT
+	cp ATTACK_DOWN_SIDE_EFFECT1 ; edited, it was $44, hard-coded number for the no-longer-existing ATTACK_DOWN_SIDE_EFFECT
 	ret nc
 	ld hl, GreatlyFellText
-	ret
+    ret
 
 GreatlyFellText:
 	text_pause
