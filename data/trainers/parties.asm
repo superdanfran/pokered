@@ -16,40 +16,52 @@ YoungsterData:
 ; Route 3
 	def_trainer 1, 14
 	tr_mon RATTATA
-	tr_mon EKANS
+		tr_moves SUPER_FANG, FOCUS_ENERGY, QUICK_ATTACK
+	tr_mon SPEAROW
+		tr_moves FURY_ATTACK, PECK, LEER
 	end_trainer
 
-	def_trainer 2, 15
-	tr_mon PIDGEOTTO
+	def_trainer 2, 18
+	tr_mon MAGIKARP
+		tr_moves BUBBLE, TACKLE, SPLASH
 	end_trainer
 
 ; Mt. Moon 1F
 	def_trainer 3, 18
-	tr_mon ZUBAT
-	tr_mon KRABBY
-	tr_mon FARFETCHD
+	tr_mon SLOWPOKE
+		tr_moves CONFUSION, BUBBLEBEAM, DARK_PULSE ;slack off when implemented
+	tr_mon PONYTA
+		tr_moves STOMP, EMBER, PLAY_ROUGH
 	end_trainer
 
 ; Route 24
 	def_trainer 4, 22
 	tr_mon BULBASAUR
+		tr_moves RAZOR_LEAF, SLUDGE, SLEEP_POWDER
 	tr_mon CHARMANDER
+		tr_moves METAL_CLAW, FLAMETHROWER, DRAGON_RAGE
 	tr_mon SQUIRTLE
+		tr_moves ICY_WIND, BUBBLEBEAM, HEADBUTT
 	end_trainer
 
 ; Route 25
-	def_trainer 5, 23
-	tr_mon POLIWAG
-	tr_mon GROWLITHE
+	def_trainer 5, 24
+	tr_mon HORSEA
+		tr_moves DRAGON_PULSE, SCALD, ICE_BEAM
+	tr_mon GLOOM
+		tr_moves GIGA_DRAIN, MOONBLAST, MOONLIGHT
 	end_trainer
 
-	def_trainer 6, 23
-	tr_mon DITTO
+	def_trainer 6, 24
+	tr_mon SLOWPOKE
+		tr_moves CONFUSION, AMNESIA ; todo slack off
 	end_trainer
 
-	def_trainer 7, 23
-	tr_mon MEOWTH
+	def_trainer 7, 24
 	tr_mon PIDGEOTTO
+		tr_moves WINGBEAT, QUICK_ATTACK, SAND_ATTACK
+	tr_mon SANDSHREW
+		tr_moves DIG, SLASH, ROCK_TOMB
 	end_trainer
 
 ; SS Anne 1F Rooms
@@ -90,57 +102,72 @@ YoungsterData:
 BugCatcherData:
 	def_trainer_class BUG_CATCHER
 ; Viridian Forest
-	def_trainer 1, 6
-	tr_mon WEEDLE
-	tr_mon CATERPIE
-	end_trainer
-
-	def_trainer 2, 7
-	tr_mon KAKUNA
-	tr_mon VENONAT
-		;tr_moves TOXIC, PSYBEAM, STUN_SPORE
+	def_trainer 1, 7
 	tr_mon PARAS
+		tr_moves SPORE, MEGA_DRAIN, STUN_SPORE, LEECH_LIFE
+	tr_mon VENONAT
+		tr_moves TOXIC, PSYBEAM, STUN_SPORE
 	end_trainer
 
-	def_trainer 3, 10
-	tr_mon BUTTERFREE
+	def_trainer 2, 9
+	tr_mon KAKUNA
+		tr_moves POISON_STING, HARDEN
+	tr_mon METAPOD
+		tr_moves HARDEN, TACKLE
+	end_trainer
+
+	def_trainer 3, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 8, KRABBY,
+		tr_moves CRABHAMMER, VICEGRIP
+	tr_mon 10, BEEDRILL
+		tr_moves TWINEEDLE
 	end_trainer
 
 ; Route 3
 	def_trainer 4, 14
 	tr_mon VENONAT
-	tr_mon PARAS
-	tr_mon BEEDRILL
-	end_trainer
-
-	def_trainer 5, 13
-	tr_mon PARAS
-	tr_mon VENONAT
-	tr_mon METAPOD
-	tr_mon BEEDRILL
-	end_trainer
-
-	def_trainer 6, 15
+		tr_moves TOXIC, PSYBEAM
+	tr_mon POLIWAG
+		tr_moves BUBBLEBEAM, HYPNOSIS, BODY_SLAM, ICY_WIND
 	tr_mon BUTTERFREE
+		tr_moves PSYBEAM, SLEEP_POWDER, WINGBEAT
+	end_trainer
+
+	def_trainer 5, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 16, PARAS
+		tr_moves SPORE, LEECH_LIFE, MEGA_DRAIN
+	tr_mon 12, SCYTHER
+		tr_moves WINGBEAT, QUICK_ATTACK
+	end_trainer
+
+	def_trainer 6, 16
 	tr_mon BEEDRILL
+		tr_moves TWINEEDLE
+	tr_mon BUTTERFREE
+		tr_moves PSYBEAM, SLEEP_POWDER
 	end_trainer
 
 ; Mt. Moon 1F
 	def_trainer 7, 16
-	tr_mon VENONAT
 	tr_mon BEEDRILL
+		tr_moves X_SCISSOR, DRILL_RUN, AERIAL_ACE
+	tr_mon ZUBAT
+		tr_moves WINGBEAT, LEECH_LIFE, CONFUSE_RAY, TOXIC
 	end_trainer
 
 	def_trainer 8, 16
-	tr_mon PARAS
-	tr_mon VENONAT
-	tr_mon BUTTERFREE
+	tr_mon OMANYTE
+		tr_moves ICY_WIND, SCALD
+	tr_mon SCYTHER
+		tr_moves QUICK_ATTACK, NIGHT_SLASH, SMART_STRIKE
 	end_trainer
 
 ; Route 24
-	def_trainer 9, 19
-	tr_mon SCYTHER
-	tr_mon PINSIR
+	def_trainer 9, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 22, PINSIR
+		tr_moves X_SCISSOR, AERIAL_ACE, SEISMIC_TOSS
+	tr_mon 24, BEEDRILL
+		tr_moves LEECH_LIFE, DRILL_RUN, SLUDGE_BOMB, AERIAL_ACE
 	end_trainer
 
 ; Route 6
@@ -179,56 +206,74 @@ LassData:
 ; Route 3
 	def_trainer 1, 14
 	tr_mon PIDGEY
-	tr_mon NIDORAN_F
+		tr_moves WINGBEAT, SWIFT, SAND_ATTACK
+	tr_mon PIKACHU
+		tr_moves NUZZLE, FLASH, HEADBUTT
 	end_trainer
 
-	def_trainer 2, 16
-	tr_mon NIDORAN_M
-	tr_mon SPEAROW
+	def_trainer 2, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 16, ODDISH
+		tr_moves SLEEP_POWDER, ACID, MEGA_DRAIN
+	tr_mon 14, ABRA
+		tr_moves KINESIS, CONFUSION
 	end_trainer
 
-	def_trainer 3, 17
-	tr_mon JIGGLYPUFF
+	def_trainer 3, 18
+	tr_mon CLEFAIRY
+		tr_moves SING, METRONOME
 	end_trainer
 
 ; Route 4
-	def_trainer 4, 18
-	tr_mon PARAS
-	tr_mon PONYTA
-	tr_mon PARASECT
+	def_trainer 4, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 21, PARASECT
+		tr_moves SPORE, LEECH_LIFE, MEGA_DRAIN, SUCKER_PUNCH
+	tr_mon 20, PONYTA
+		tr_moves DRILL_RUN, CHARM_VOICE, FLAMETHROWER
 	end_trainer
 
 ; Mt. Moon 1F
-	def_trainer 5, 11
-	tr_mon ODDISH
-	tr_mon BELLSPROUT
+	def_trainer 5, 16
+	tr_mon CLEFAIRY
+		tr_moves MOONBLAST, SING, SEISMIC_TOSS
+	tr_mon JIGGLYPUFF
+		tr_moves DRAIN_KISS, DOUBLE_EDGE, LOVELY_KISS
 	end_trainer
 
-	def_trainer 6, 14
-	tr_mon CLEFAIRY
+	def_trainer 6, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 18, EEVEE
+		tr_moves BODY_SLAM, CHARM_VOICE, SAND_ATTACK
+	tr_mon 16, SHELLDER
+		tr_moves CLAMP, SCALD, SUPERSONIC, ICY_WIND
 	end_trainer
 
 ; Route 24
-	def_trainer 7, 16
-	tr_mon PIDGEY
-	tr_mon NIDORAN_F
+	def_trainer 7, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 24, SPEAROW
+		tr_moves DRILL_PECK, RAZOR_WIND, LEER
+	tr_mon 22, NIDORINA
+		tr_moves DOUBLE_KICK, TOXIC, SLUDGE
 	end_trainer
 
-	def_trainer 8, 14
-	tr_mon PIDGEY
-	tr_mon NIDORAN_F
+	def_trainer 8, 23
+	tr_mon JIGGLYPUFF
+		tr_moves SEISMIC_TOSS, SING, MOONLIGHT
+	tr_mon CLEFAIRY
+		tr_moves METRONOME, MOONLIGHT, MOONBLAST
 	end_trainer
 
 ; Route 25
-	def_trainer 9, 15
-	tr_mon NIDORAN_M
-	tr_mon NIDORAN_F
+	def_trainer 9, 22
+	tr_mon NIDORINA
+		tr_moves SLUDGE, TOXIC, HORN_ATTACK
+	tr_mon NIDORINO
+		tr_moves DRILL_PECK, DRILL_RUN, HORN_ATTACK, SMART_STRIKE
 	end_trainer
 
-	def_trainer 10, 13
-	tr_mon ODDISH
-	tr_mon PIDGEY
-	tr_mon ODDISH
+	def_trainer 10, 24
+	tr_mon VULPIX
+		tr_moves WILL_O_WISP, CONFUSE_RAY, FLAMETHROWER, SOLARBEAM
+	tr_mon GLOOM
+		tr_moves PETAL_DANCE, SLUDGE_BOMB, MOONLIGHT
 	end_trainer
 
 ; SS Anne 1F Rooms
@@ -329,20 +374,27 @@ SailorData:
 JrTrainerMData:
 	def_trainer_class JR_TRAINER_M
 ; Pewter Gym
-	def_trainer 1, 11
-	tr_mon DIGLETT
+	def_trainer 1, 14
 	tr_mon SANDSHREW
+		tr_moves STOMP, SMART_STRIKE, SEISMIC_TOSS
+	tr_mon DIGLETT
+		tr_moves SLASH, ROCK_TOMB, SAND_ATTACK
 	end_trainer
 
 ; Route 24/Route 25
-	def_trainer 2, 14
-	tr_mon RATTATA
-	tr_mon EKANS
+	def_trainer 2, 24
+	tr_mon MANKEY
+		tr_moves DRAIN_PUNCH, ROCK_SLIDE, BODY_SLAM
+	tr_mon GROWLITHE
+		tr_moves ROCK_SLIDE, FLAMETHROWER, BODY_SLAM
 	end_trainer
 
 ; Route 24
-	def_trainer 3, 18
-	tr_mon MANKEY
+	def_trainer 3, 22
+	tr_mon PSYDUCK
+		tr_moves SCALD, AMNESIA, ICY_WIND
+	tr_mon NIDORINO
+		tr_moves TOXIC, SMART_STRIKE, STOMP
 	end_trainer
 
 ; Route 6
@@ -385,8 +437,13 @@ JrTrainerMData:
 JrTrainerFData:
 	def_trainer_class JR_TRAINER_F
 ; Cerulean Gym
-	def_trainer 1, 19
-	tr_mon GOLDEEN
+	def_trainer 1, 25
+	tr_mon SEAKING
+		tr_moves HORN_DRILL, SMART_STRIKE, DRILL_RUN, WATERFALL
+	tr_mon STARYU
+		tr_moves DOUBLE_EDGE, SCALD, ICE_BEAM
+	tr_mon DEWGONG
+		tr_moves HORN_DRILL, ICY_WIND
 	end_trainer
 
 ; Route 6
@@ -575,16 +632,19 @@ PokemaniacData:
 SuperNerdData:
 	def_trainer_class SUPER_NERD
 ; Mt. Moon 1F
-	def_trainer 1, 11
+	def_trainer 1, 16
 	tr_mon MAGNEMITE
-	tr_mon VOLTORB
+		tr_moves SMART_STRIKE, SHOCK_WAVE, SUPERSONIC
+	tr_mon GRIMER
+		tr_moves TOXIC, SLUDGE, SHADOW_PUNCH, EXPLOSION
 	end_trainer
 
 ; Mt. Moon B2F
-	def_trainer 2, 12
+	def_trainer 2, 20
+	tr_mon PORYGON
+		tr_moves PSYBEAM, DARK_PULSE, SHOCK_WAVE, SHADOW_BALL
 	tr_mon GRIMER
-	tr_mon VOLTORB
-	tr_mon KOFFING
+		tr_moves SHADOW_PUNCH, DRAIN_PUNCH, FEINT_ATTACK, TOXIC
 	end_trainer
 
 ; Route 8
@@ -651,27 +711,33 @@ SuperNerdData:
 HikerData:
 	def_trainer_class HIKER
 ; Mt. Moon 1F
-	def_trainer 1, 10
+	def_trainer 1, 16
+	tr_mon CHARMANDER
+		tr_moves METAL_CLAW, FIRE_SPIN, SMOKESCREEN
 	tr_mon GEODUDE
-	tr_mon GEODUDE
+		tr_moves ROCK_TOMB, SEISMIC_TOSS, DIG
 	tr_mon ONIX
+		tr_moves ROCK_TOMB, BIND, SAND_ATTACK
 	end_trainer
 
 ; Route 25
-	def_trainer 2, 15
-	tr_mon MACHOP
+	def_trainer 2, 22
 	tr_mon GEODUDE
+		tr_moves ROCK_SLIDE, DRILL_RUN, BODY_SLAM
+	tr_mon MACHOP
+		tr_moves SUBMISSION, SUBSTITUTE, SEISMIC_TOSS
 	end_trainer
 
-	def_trainer 3, 13
-	tr_mon GEODUDE
-	tr_mon GEODUDE
-	tr_mon MACHOP
-	tr_mon GEODUDE
+	def_trainer 3, 24
+	tr_mon RHYHORN
+		tr_moves SMART_STRIKE, DRILL_RUN, ROCK_TOMB
 	end_trainer
 
-	def_trainer 4, 17
-	tr_mon ONIX
+	def_trainer 4, 24
+	tr_mon GEODUDE
+		tr_moves HEAD_SMASH
+	tr_mon GROWLITHE
+		tr_moves HEAD_SMASH
 	end_trainer
 
 ; Route 9
@@ -910,9 +976,17 @@ EngineerData:
 	end_trainer
 
 
-UnusedJugglerData:
-	def_trainer_class UNUSED_JUGGLER
-; none
+GreenData:
+	def_trainer_class GREEN
+; Viridian Forest
+	def_trainer 1, TRAINERTYPE_MULTI_LEVELS
+	tr_mon 12, VULPIX_A
+		tr_moves ICE_SHARD, DRAIN_KISS, HYPNOSIS
+	tr_mon 12, KABUTO
+		tr_moves BUBBLEBEAM, ROCK_TOMB, MEGA_DRAIN
+	tr_mon 13, EEVEE
+		tr_moves HEADBUTT, SAND_ATTACK, QUICK_ATTACK
+	end_trainer
 
 FisherData:
 	def_trainer_class FISHER
@@ -990,9 +1064,13 @@ FisherData:
 SwimmerData:
 	def_trainer_class SWIMMER
 ; Cerulean Gym
-	def_trainer 1, 16
-	tr_mon HORSEA
-	tr_mon SHELLDER
+	def_trainer 1, 26
+	tr_mon SEADRA
+		tr_moves DRAGON_PULSE, SCALD, ICE_BEAM
+	tr_mon OMANYTE
+		tr_moves SCALD, ICY_WIND, ROCK_SLIDE
+	tr_mon KINGLER
+		tr_moves X_SCISSOR, BODY_SLAM, CRABHAMMER, GUILLOTINE
 	end_trainer
 
 ; Route 19
@@ -1563,18 +1641,18 @@ BlackbeltData:
 
 Rival1Data:
 	def_trainer_class RIVAL1
-	def_trainer 1, 100
-	tr_mon BLISSEY
+	def_trainer 1, 3
+	tr_mon MEW
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 2, 100
-	tr_mon RHYPERIOR
+	def_trainer 2, 3
+	tr_mon MEW
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 3, 100
-	tr_mon ALAKAZAM
+	def_trainer 3, 3
+	tr_mon MEW
 		tr_moves POUND, THUNDER_WAVE
 	end_trainer
 
@@ -1610,7 +1688,7 @@ Rival1Data:
 	def_trainer 7, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 20, PIDGEOT
 		tr_moves QUICK_ATTACK, WINGBEAT, SAND_ATTACK
-	tr_mon 20, GLOOM
+	tr_mon 22, GLOOM
 		tr_moves PETAL_DANCE, STUN_SPORE, SLEEP_POWDER, SLUDGE
 	tr_mon 20, POLIWHIRL
 		tr_moves HYPNOSIS, WATERFALL, ICE_PUNCH
@@ -1621,9 +1699,9 @@ Rival1Data:
 	def_trainer 8, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 20, PIDGEOT
 		tr_moves QUICK_ATTACK, WINGBEAT, SAND_ATTACK
-	tr_mon 20, GLOOM
+	tr_mon 22, GLOOM
 		tr_moves PETAL_DANCE, STUN_SPORE, SLEEP_POWDER, SLUDGE
-	tr_mon 20, POLIWHIRL
+	tr_mon 22, POLIWHIRL
 		tr_moves HYPNOSIS, WATERFALL, ICE_PUNCH
 	tr_mon 20, MEW
 		tr_moves THUNDER_WAVE, HEADBUTT, PSYWAVE, SOFTBOILED
@@ -1632,9 +1710,9 @@ Rival1Data:
 	def_trainer 9, TRAINERTYPE_MULTI_LEVELS
 	tr_mon 20, PIDGEOT
 		tr_moves QUICK_ATTACK, WINGBEAT, SAND_ATTACK
-	tr_mon 20, GLOOM
+	tr_mon 22, GLOOM
 		tr_moves PETAL_DANCE, STUN_SPORE, SLEEP_POWDER, SLUDGE
-	tr_mon 20, POLIWHIRL
+	tr_mon 22, POLIWHIRL
 		tr_moves HYPNOSIS, WATERFALL, ICE_PUNCH
 	tr_mon 20, MEW
 		tr_moves THUNDER_WAVE, HEADBUTT, PSYWAVE, SOFTBOILED
@@ -1837,36 +1915,54 @@ GiovanniData:
 RocketData:
 	def_trainer_class ROCKET
 ; Mt. Moon B2F
-	def_trainer 1, 13
-	tr_mon RATTATA
-	tr_mon ZUBAT
-	end_trainer
-
-	def_trainer 2, 11
+	def_trainer 1, 18
+	tr_mon GASTLY
+		tr_moves SUCKER_PUNCH, ICY_WIND, HYPNOSIS
 	tr_mon SANDSHREW
+		tr_moves EARTHQUAKE, ACCELEROCK, BODY_SLAM
 	tr_mon RATTATA
-	tr_mon ZUBAT
+		tr_moves HYPER_FANG, FOCUS_ENERGY
 	end_trainer
 
-	def_trainer 3, 12
-	tr_mon ZUBAT
-	tr_mon EKANS
+	def_trainer 2, 18
+	tr_mon GOLBAT
+		tr_moves CONFUSE_RAY, WINGBEAT, LEECH_LIFE, MEGA_DRAIN
+	tr_mon DRATINI
+		tr_moves TWISTER, EXTREMESPEED, THUNDER_WAVE
 	end_trainer
 
-	def_trainer 4, 16
+	def_trainer 3, 20
 	tr_mon RATICATE
+		tr_moves HYPER_FANG, HYPER_BEAM, SUCKER_PUNCH, FOCUS_ENERGY
+	end_trainer
+
+	def_trainer 4, 20
+	tr_mon KADABRA
+		tr_moves PSYBEAM, DRAIN_PUNCH, SHOCK_WAVE, KINESIS
+	tr_mon VOLTORB
+		tr_moves SELFDESTRUCT, SHOCK_WAVE, THUNDER_WAVE
+	tr_mon KOFFING
+		tr_moves SELFDESTRUCT, SLUDGE
+	tr_mon SCYTHER
+		tr_moves WINGBEAT, X_SCISSOR
 	end_trainer
 
 ; Cerulean City
-	def_trainer 5, 17
-	tr_mon MACHOP
-	tr_mon DROWZEE
+	def_trainer 5, 28
+	tr_mon PERSIAN
+		tr_moves NIGHT_SLASH, HYPNOSIS, PLAY_ROUGH, SLASH
+	tr_mon MACHOKE
+		tr_moves DRAIN_PUNCH, ROCK_SLIDE, BODY_SLAM, EARTHQUAKE
 	end_trainer
 
 ; Route 24
-	def_trainer 6, 15
-	tr_mon EKANS
-	tr_mon ZUBAT
+	def_trainer 6, 24
+	tr_mon HAUNTER
+		tr_moves SHADOW_PUNCH, SUCKER_PUNCH, HYPNOSIS, GIGA_DRAIN
+	tr_mon HITMONCHAN
+		tr_moves MACH_PUNCH, SHADOW_PUNCH, BULLET_PUNCH
+	tr_mon ARBOK
+		tr_moves GLARE, WRAP, FISSURE
 	end_trainer
 
 ; Game Corner
@@ -2227,12 +2323,14 @@ BrockData:
 		tr_moves ICE_BEAM, WATERFALL, ROCK_SLIDE
 	tr_mon 15, VULPIX
 		tr_moves HYPNOSIS, FLAMETHROWER, WILL_O_WISP
+	tr_mon 15, CUBONE
+		tr_moves BONEMERANG, HEADBUTT, ROCK_SLIDE
 	tr_mon 15, ZUBAT
 		tr_moves SLUDGE, RAZOR_WIND, LEECH_LIFE
-	tr_mon 15, AERODACTYL
-		tr_moves WINGBEAT
-	tr_mon 16, GOLEM
-		tr_moves EXPLOSION, DIG, ROCK_THROW
+	tr_mon 15, MACHOP
+		tr_moves DRAIN_PUNCH, MACH_PUNCH, SEISMIC_TOSS
+	tr_mon 16, ONIX
+		tr_moves HEAD_SMASH
 	end_trainer
 
 

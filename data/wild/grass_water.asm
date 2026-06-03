@@ -1,8 +1,8 @@
 WildDataPointers:
 	table_width 2
-	dw NothingWildMons         ; PALLET_TOWN
-	dw NothingWildMons         ; VIRIDIAN_CITY
-	dw NothingWildMons         ; PEWTER_CITY
+	dw PalletTownWildMons      ; PALLET_TOWN
+	dw ViridianCityWildMons    ; VIRIDIAN_CITY
+	dw PewterCityWildMons      ; PEWTER_CITY
 	dw NothingWildMons         ; CERULEAN_CITY
 	dw NothingWildMons         ; LAVENDER_TOWN
 	dw NothingWildMons         ; VERMILION_CITY
@@ -267,6 +267,7 @@ INCLUDE "data/wild/maps/Route1.asm"
 INCLUDE "data/wild/maps/Route2.asm"
 INCLUDE "data/wild/maps/Route22.asm"
 INCLUDE "data/wild/maps/ViridianForest.asm"
+INCLUDE "data/wild/maps/ViridianCity.asm"
 INCLUDE "data/wild/maps/Route3.asm"
 INCLUDE "data/wild/maps/MtMoon1F.asm"
 INCLUDE "data/wild/maps/MtMoonB1F.asm"
@@ -284,6 +285,8 @@ INCLUDE "data/wild/maps/Route10.asm"
 INCLUDE "data/wild/maps/Route12.asm"
 INCLUDE "data/wild/maps/Route8.asm"
 INCLUDE "data/wild/maps/Route7.asm"
+INCLUDE "data/wild/maps/PalletTown.asm"
+INCLUDE "data/wild/maps/PewterCity.asm"
 INCLUDE "data/wild/maps/PokemonTower1F.asm"
 INCLUDE "data/wild/maps/PokemonTower2F.asm"
 INCLUDE "data/wild/maps/PokemonTower3F.asm"

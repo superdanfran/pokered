@@ -1,10 +1,10 @@
-; good rod encounters
-GoodRodData:
+; old rod encounters
+OldRodData:
 	; map, fishing group
 	dbw PALLET_TOWN,         .Group1
 	dbw VIRIDIAN_CITY,       .Group1
-	dbw CERULEAN_CITY,       .Group3
-	dbw VERMILION_CITY,      .Group4
+	dbw CERULEAN_CITY,       .Group1
+	dbw VERMILION_CITY,      .Group1
 	dbw CELADON_CITY,        .Group5
 	dbw FUCHSIA_CITY,        .Group10
 	dbw CINNABAR_ISLAND,     .Group8
@@ -19,7 +19,7 @@ GoodRodData:
 	dbw ROUTE_19,            .Group8
 	dbw ROUTE_20,            .Group8
 	dbw ROUTE_21,            .Group8
-	dbw ROUTE_22,            .Group2
+	dbw ROUTE_22,            .Group1
 	dbw ROUTE_23,            .Group9
 	dbw ROUTE_24,            .Group3
 	dbw ROUTE_25,            .Group3
@@ -40,9 +40,11 @@ GoodRodData:
 ; number of monsters, followed by level/monster pairs
 
 .Group1:
-	db 2
-	db 15, TENTACOOL
-	db 15, POLIWAG
+	db 4
+	db 5, MAGIKARP
+	db 5, POLIWAG
+	db 5, PSYDUCK
+	db 5, GOLDEEN
 
 .Group2:
 	db 2

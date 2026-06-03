@@ -369,6 +369,7 @@ LoreleiPic::       INCBIN "gfx/trainers/lorelei.pic"
 ChannelerPic::     INCBIN "gfx/trainers/channeler.pic"
 AgathaPic::        INCBIN "gfx/trainers/agatha.pic"
 LancePic::         INCBIN "gfx/trainers/lance.pic"
+GreenPic::         INCBIN "gfx/trainers/green.pic"
 
 SECTION "Pics 7", ROMX
 

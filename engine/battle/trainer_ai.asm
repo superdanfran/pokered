@@ -361,14 +361,16 @@ BrockAI:
 	jp AIUseFullHeal
 
 MistyAI:
-	cp 25 percent + 1
-	ret nc
-	jp AIUseXDefend
+	ld a, [wEnemyMonStatus]
+	and a
+	ret z
+	jp AIUseFullHeal
 
 LtSurgeAI:
-	cp 25 percent + 1
-	ret nc
-	jp AIUseXSpeed
+	ld a, [wEnemyMonStatus]
+	and a
+	ret z
+	jp AIUseFullHeal
 
 ErikaAI:
 	cp 50 percent + 1

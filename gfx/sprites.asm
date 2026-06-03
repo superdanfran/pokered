@@ -71,3 +71,9 @@ AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
 SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
+
+SECTION "NPC Sprites 3", ROMX
+
+GreenSprite::            INCBIN "gfx/sprites/green.2bpp"
+BrockSprite::            INCBIN "gfx/sprites/brock.2bpp"
+MistySprite::            INCBIN "gfx/sprites/misty.2bpp"

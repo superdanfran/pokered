@@ -1,15 +1,15 @@
-Route1WildMons:
+ViridianCityWildMons:
 	def_grass_wildmons 25 ; encounter rate
-	db  3, PIDGEY
 	db  3, RATTATA
-	db  3, SANDSHREW
-	db  3, BELLSPROUT
-	db  3, PIKACHU
 	db  3, ODDISH
-	db  3, CATERPIE
-	db  4, WEEDLE
-	db  4, PSYDUCK
-	db  5, SPEAROW
+	db  3, BELLSPROUT
+	db  3, PIDGEY
+	db  3, VULPIX
+	db  3, POLIWAG
+	db  3, EKANS
+	db  3, MANKEY
+	db  3, VENONAT
+	db  3, MACHOP
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

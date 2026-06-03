@@ -12,7 +12,7 @@ TrainerDataPointers:
 	dba BikerData
 	dba BurglarData
 	dba EngineerData
-	dba UnusedJugglerData
+	dba GreenData
 	dba FisherData
 	dba SwimmerData
 	dba CueBallData
